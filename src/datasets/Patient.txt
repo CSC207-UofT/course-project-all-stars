@@ -1,0 +1,100 @@
+Jeffrey Reyes,318 West Street,Male,18,35,true,Fatigue,Swelling,Unusual bleeding
+Emma Ward,913 Washington Street,Female,32,86,true,Hypothermia,Unconsciousness,Vomiting
+James Philips,266 Pleasant StreetAdams Street ,Male,82,10,true,Jaw cramping,Muscle spasms,Seizures
+Paul Reed,790 Hill Street,Male,84,83,false,Redness of the eyelids,Tearing of the eyelids,Burning sensation
+Joseph Jones,655 West Street,Male,27,90,false,Fatigue,Soar throat,Swollen lymph nodes
+Donald Damon,681 10th Street,Male,83,66,true,Swollen tonsils,Red spots on the back of the mouth,Throat pain
+Ashley Pischello,232 Market Street,Female,53,70,true,Cough,Production of mucus,Fever
+Paul Lopez,761 Pleasant StreetAdams Street ,Male,88,10,true,Agitation,Hallucinations,Partial paralysis
+Noah Chavez,635 Jefferson Avenue,Male,72,10,true,Nausea,Chills,Headache
+Sandra Franchi,407 Pennsylvania Avenue,Female,38,79,true,Hives,Hypotension,Swollen tongue
+John Gray,409 Park Avenue,Male,71,20,true,Loss of Taste and Smell,Fever,Cough
+Mary Harper,685 Cedar Street,Female,64,32,true,Troubles concentrating,Insomnia,Hopelessness
+Sophia James,380 Virginia Avenue,Female,83,66,true,Cold,Fever,Cough
+Richard Bonucci,635 Elm Street,Male,67,15,true,Soar throat,Fatigue,Stomach pain
+Liam Taddei,130 Colonial Drive,Male,49,79,false,Fever,Chills,Fatigue
+Jessica Cruz,69 Jackson Street,Female,42,86,true,Fatigue,Soar throat,Swollen lymph nodes
+Brandon Morgan,504 Hill Street,Male,72,10,true,Fatigue,Swelling,Unusual bleeding
+Mark Philips,849 Front Street,Male,30,79,false,Hives,Hypotension,Swollen tongue
+Anna Young,30 Pennsylvania Avenue,Female,70,66,true,Swollen tonsils,Red spots on the back of the mouth,Throat pain
+Anthony Reed,603 Ridge Road,Male,89,66,true,Fever,Fatigue,Rashes
+Brandon Scott,200 Central Avenue,Male,81,66,true,Cold,Fever,Cough
+Amy Garcia,330 2nd Avenue,Female,40,93,true,Redness of the eyelids,Tearing of the eyelids,Burning sensation
+Gregory Allen,848 East Street,Male,54,70,true,Diarrhea,Fever,Stomach cramps
+Betty Tarantino,973 Academy Street,Female,44,79,true,Hives,Hypotension,Swollen tongue
+Sarah Peterson,711 Hill Street,Female,31,79,false,Diarrhea,Fever,Stomach cramps
+Jack Hill,116 Court Street,Male,33,86,false,Swollen tonsils,Red spots on the back of the mouth,Throat pain
+Timothy Watson,850 Mill Street,Male,16,85,true,Hives,Hypotension,Swollen tongue
+Michael Tarantino,626 Hickory Lane,Male,42,79,false,Hives,Hypotension,Swollen tongue
+Emily Harper,300 Cherry Street,Female,23,90,true,Swollen tonsils,Red spots on the back of the mouth,Throat pain
+Oliver Foster,473 Valley Road,Male,53,90,true,Redness of the eyelids,Tearing of the eyelids,Burning sensation
+Timothy Franchi,974 Elizabeth Street,Male,81,66,true,Fatigue,Soar throat,Swollen lymph nodes
+Donald Torres,524 River Road,Male,65,80,true,Fatigue,Soar throat,Swollen lymph nodes
+Elizabeth Stoner,650 Cherry Street,Female,30,40,true,Loss of Taste and Smell,Fever,Cough
+Betty Parker,798 Summit Avenue,Female,88,83,false,Itching,Sores,Chills
+Nicholas Campbell,233 Grove Street,Male,16,85,true,Pain,Stiffness,Decreased range of motion
+Benjamin Morgan,587 Madison Avenue,Male,31,79,true,Hives,Hypotension,Swollen tongue
+Debra Wright,64 Dogwood Drive,Female,18,95,true,Itching,Sores,Chills
+Ronald Green,191 Market Street,Male,50,80,true,Cold,Fever,Cough
+Melissa James,280 Jackson Street,Female,75,49,true,Fever,Chills,Fatigue
+Christine Martinez,520 Highland Avenue,Female,83,10,true,Soar throat,Fatigue,Stomach pain
+Ryan Cooper,951 Madison Street,Male,59,80,true,Cold,Fever,Cough
+Justin Damon,125 9th Street,Male,67,80,true,Cold,Fever,Cough
+Brenda Marmi,73 Washington Street,Female,78,10,true,Nausea,Chills,Headache
+Mark Taylor,640 2nd Avenue,Male,86,49,false,Cough,Production of mucus,Fever
+Ryan Carter,854 Green Street,Male,59,80,true,Hypothermia,Unconsciousness,Vomiting
+Patrick Gray,581 Lincoln Avenue,Male,28,85,false,Fever,Chills,Fatigue
+Elijah Myers,189 Central Avenue,Male,81,10,true,Chest pain,Shortness of breath,Neck pain
+Thomas Bonucci,802 Franklin Street,Male,46,25,true,Soar throat,Fatigue,Stomach pain
+Jack Wood,495 Washington Street,Male,90,49,false,Cough,Production of mucus,Fever
+Nicholas James,929 Cedar Street,Male,75,10,true,Jaw cramping,Muscle spasms,Seizures
+Melissa Gutierrez,476 2nd Street,Female,78,10,true,Cough,Chest pain,Chills
+Sophia Gray,212 Stoner Street,Female,36,25,true,Jaw cramping,Muscle spasms,Seizures
+Rebecca Jackson,88 Oak Street,Female,47,93,true,Itching,Sores,Chills
+Jessica Jackson,133 Market Street,Female,80,10,true,Nausea,Chills,Headache
+Ava Hughes,232 9th Street,Female,70,66,true,Hypothermia,Unconsciousness,Vomiting
+Stephanie Gomez,360 Meadow Lane,Female,19,90,true,Cold,Fever,Cough
+Steve Ortiz,458 Union Street,Male,85,20,true,Fever,Cough,Rash
+Alex Cook,195 Washington Street,Female,29,35,true,Fatigue,Swelling,Unusual bleeding
+Amy Collins,241 Lincoln Street,Female,77,20,true,Headache,Nausea,Photophobia
+Noah Miller,649 Cherry Street,Male,44,86,true,Pulsing of the forehead,Pain,Photophobia
+Margaret Franchi,631 Cherry Lane,Female,73,49,false,Fever,Chills,Fatigue
+Sarah Morris,884 Mill Street,Female,85,66,true,Hypothermia,Unconsciousness,Vomiting
+Kimberley Edwards,86 Elm Street,Female,86,66,true,Hypothermia,Unconsciousness,Vomiting
+Donna Franchi,831 Court Street,Female,19,90,true,Cold,Fever,Cough
+Anna Robinson,322 11th Street,Female,62,70,true,Cough,Production of mucus,Fever
+Jessica Stoner,769 Front Street,Female,40,25,true,Cough,Chest pain,Chills
+Anna Morgan,266 Winding Way,Female,58,32,true,Loss of Taste and Smell,Fever,Cough
+Nicole Scott,97 Park Avenue,Female,25,90,true,Fatigue,Soar throat,Swollen lymph nodes
+Ava Scott,749 Church Street,Female,53,15,true,Chest pain,Shortness of breath,Neck pain
+Samantha Specter,530 Elm Street,Female,25,95,false,Itching,Sores,Chills
+Donald White,726 Pine Street,Male,45,86,true,Swollen tonsils,Red spots on the back of the mouth,Throat pain
+Elijah Damon,41 Ridge Road,Male,78,10,true,Chest pain,Shortness of breath,Neck pain
+Eric Bennet,483 Grove Street,Male,83,49,true,Cough,Production of mucus,Fever
+Anthony Poulsen,285 Prospect Street,Male,23,95,false,Redness of the eyelids,Tearing of the eyelids,Burning sensation
+Helen Cruz,336 River Road,Female,25,48,true,Loss of Taste and Smell,Fever,Cough
+Linda Wood,764 Pine Street,Female,27,85,true,Diarrhea,Fever,Stomach cramps
+Jennifer Cole,845 Lincoln Avenue,Female,16,90,true,Fever,Fatigue,Rashes
+Kimberley Lee,253 Court Street,Female,43,40,false,Loss of Taste and Smell,Fever,Cough
+Mark Ward,53 Chestnut Street,Male,25,90,true,Pulsing of the forehead,Pain,Photophobia
+Dennis Gutierrez,531 Walnut Street,Male,62,15,true,Nausea,Chills,Headache
+Jonathan Roberts,813 Pennsylvania Avenue,Male,15,48,true,Headache,Nausea,Photophobia
+Nancy Nadeau,593 Dogwood Drive,Female,20,85,true,Pain,Fatigue,Cognitive difficulties
+George Baker,56 Center Street,Male,54,70,true,Fever,Chills,Fatigue
+Elizabeth Peterson,439 Jefferson Street,Female,21,48,true,Loss of Taste and Smell,Fever,Cough
+Jack Pesci,909 Academy Street,Male,86,66,true,Hypothermia,Unconsciousness,Vomiting
+Thomas Moore,922 Main Street North,Male,76,66,false,Cold,Fever,Cough
+Cynthia Harper,325 River Road,Female,28,85,false,Pain,Stiffness,Decreased range of motion
+Evelyn Gray,513 Fairway Drive,Female,29,35,false,Chest pain,Shortness of breath,Neck pain
+Debra Clark,856 Lincoln Avenue,Female,55,80,true,Fatigue,Soar throat,Swollen lymph nodes
+Debra Cole,521 Lincoln Avenue,Female,28,48,true,Fever,Cough,Rash
+Patrick Smith,410 12th Street,Male,48,86,true,Cold,Fever,Cough
+Paul Cooper,156 Madison Avenue,Male,81,10,true,Cough,Chest pain,Chills
+Harper Young,392 9th Street,Female,82,20,true,Troubles concentrating,Insomnia,Hopelessness
+James Adams,692 Virginia Avenue,Male,44,93,true,Redness of the eyelids,Tearing of the eyelids,Burning sensation
+Ashley De Niro,32 Madison Avenue,Female,25,35,true,Agitation,Hallucinations,Partial paralysis
+Olivia Simunec,138 Locust Street,Female,66,70,true,Cough,Production of mucus,Fever
+Nicole James,625 Central Avenue,Female,84,10,true,Nausea,Chills,Headache
+Henry Chavez,340 Jefferson Avenue,Male,66,15,true,Agitation,Hallucinations,Partial paralysis
+Anthony Anderson,539 Market Street,Male,42,79,true,Diarrhea,Fever,Stomach cramps
+Frank Jones,530 Green Street,Male,65,15,true,Agitation,Hallucinations,Partial paralysis
