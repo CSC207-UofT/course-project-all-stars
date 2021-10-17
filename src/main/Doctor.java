@@ -14,7 +14,7 @@ public class Doctor extends Person {
 
     public boolean treatPatient(Patient p) {
         if (p.getIs_Admitted()) {
-            p.HP = 100;
+            p.health = 100;
             return true;
         }
         else {

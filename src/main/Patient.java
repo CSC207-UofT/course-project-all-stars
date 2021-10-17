@@ -55,6 +55,7 @@ public class Patient extends Person {
     public void setDiagnose(String disease){
         this.Diagnose = disease;
     }
+    public void setIs_admitted(Boolean tf){this.is_admitted = tf;}
 
     /*
     constructPatient() creates all Patient object using "database" Patient.txt and returns an ArrayList containing

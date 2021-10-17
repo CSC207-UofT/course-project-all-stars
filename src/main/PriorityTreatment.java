@@ -1,7 +1,5 @@
 package main;
 
-import org.jetbrains.annotations.NotNull;
-
 public class PriorityTreatment extends Container {
 
     public PriorityTreatment() {
@@ -30,9 +28,9 @@ public class PriorityTreatment extends Container {
     }
 
 
-    private boolean higherPriority(@NotNull Patient p, @NotNull Patient newPatient) {
+    private boolean higherPriority(Patient p, Patient newPatient) {
         //Order by lowest HP and who got into the queue first for now
         //Later, will also sort by urgency level once the patient has been diagnosed
-        return p.HP > newPatient.HP;
+        return p.health > newPatient.health;
     }
 }

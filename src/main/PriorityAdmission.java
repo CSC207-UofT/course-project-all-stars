@@ -1,6 +1,6 @@
 package main;
 
-import org.jetbrains.annotations.NotNull;
+import java.util.ArrayList;
 
 public class PriorityAdmission extends Container {
 
@@ -30,16 +30,15 @@ public class PriorityAdmission extends Container {
     }
 
 
-    private boolean higherPriority_1(@NotNull Patient p, @NotNull Patient newPatient) {
+    private boolean higherPriority_1(Patient p, Patient newPatient) {
         //Order by lowest HP and who got into the queue first for now
         //For ties, insurance status can be used
         //Might add infectious diseases too later to check for ties and other prioritising strategies
-        if (p.HP == newPatient.HP){
+        if (p.health == newPatient.health){
             return !p.insurance & newPatient.insurance;
         }
-    return p.HP > newPatient.HP;
+    return p.health > newPatient.health;
     }
-
 
 }
 /* 1. Make an abstract Container class with add, remove, isEmpty methods.

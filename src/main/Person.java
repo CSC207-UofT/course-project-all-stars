@@ -6,7 +6,6 @@ public abstract class Person {
     String name;
     String sex;
     String address;
-    int HP;
 
     public Person(String name, String address, String sex, int age) {
         this.name = name;
