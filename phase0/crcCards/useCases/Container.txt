@@ -1,0 +1,13 @@
+Class name: Container
+Parent class: PriorityAdmission, PriorityTreatment
+
+Responsibilities:
+* Stores a list of patients
+* Can delete patients from the list
+* Can add patients to the list
+* Can show the list of patients
+* Can tell whether there are patients in container or not.
+
+Collaborators:
+* Patient
+* ArrayList
