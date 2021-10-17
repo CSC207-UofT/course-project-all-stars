@@ -1,0 +1,25 @@
+Covid,4,30,Loss of Taste and Smell,Fever,Cough
+Seasonal Flu,2,10,Cold,Fever,Cough
+Tuberculosis,5,40,Cough,Chest pain,Chills
+Arthritis,3,20,Pain,Stiffness,Decreased range of motion
+Conjunctivitis,1,8,Redness of the eyelids,Tearing of the eyelids,Burning sensation
+Mononucleosis,2,15,Fatigue,Soar throat,Swollen lymph nodes
+Strep Throat,2,10,Swollen tonsils,Red spots on the back of the mouth,Throat pain
+Headaches,2,10,Pulsing of the forehead,Pain,Photophobia
+Cancer,5,30,Fatigue,Swelling,Unusual bleeding
+Lyme disease,3,10,Fever,Chills,Fatigue
+Malaria,5,30,Nausea,Chills,Headache
+Measles,4,20,Fever,Cough,Rash
+Meningitis,4,25,Headache,Nausea,Photophobia
+Polio,5,30,Soar throat,Fatigue,Stomach pain
+Bronchitis,3,15,Cough,Production of mucus,Fever
+Tetanus,5,20,Jaw cramping,Muscle spasms,Seizures
+Chickenpox,2,10,Fever,Fatigue,Rashes
+Shingles,1,5,Itching,Sores,Chills
+Depression,4,30,Troubles concentrating,Insomnia,Hopelessness
+Fibromyalgia,3,15,Pain,Fatigue,Cognitive difficulties
+Heart Disease,5,25,Chest pain,Shortness of breath,Neck pain
+Alcohol poisoning,2,10,Hypothermia,Unconsciousness,Vomiting
+Anaphylaxis,3,15,Hives,Hypotension,Swollen tongue
+Rabies,5,30,Agitation,Hallucinations,Partial paralysis
+Salmonella,3,15,Diarrhea,Fever,Stomach cramps
