@@ -76,7 +76,8 @@ Alessandro created a dataset containing 25 disease distinct disease, each having
 
 Person 6: Justice
 
-<>
+I (Justice) have been working primarily on creating the priority Queues for admitting and treating patients with Shysta. We designed the initial protocol for admitting and treating patients (in both cases, patients with lower HP are prioritized and admitted/treated first). We have plans to include more instantiations of higherPriority so that we can sort patients by more relevant factors such as insurance factor, type of disease, and age and break ties in the event that two patients have the same HP. I also set up all of the initial classes and laid the groundwork for development performed by my other teammates by outlining methods that needed to be coded and parent classes that needed to be extended.
+
 
 Person 7: Roa
 
