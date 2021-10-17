@@ -1,0 +1,14 @@
+Class name: Affliction
+
+Responsibilities:
+* Stores and can return: the name of a disease, its urgency level, its cure time and its three distinct symptoms
+* Can read diseases dataset and return a list of afflictions and the list of sets of symptoms that each disease has
+
+Collaborators:
+* ArrayList
+* HashSet
+* HashMap
+* Exception
+* BufferedReader
+* FileReader
+

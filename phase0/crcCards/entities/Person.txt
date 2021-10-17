@@ -1,0 +1,13 @@
+Class name: Person
+Sub-classes: Doctor, Patient
+
+Responsibilities:
+* Store name, age, address, sex and health points of a person
+* Return a person's name
+* Return a person's age
+
+Collaborators:
+* Patient
+* Doctor
+* ArrayList
+

@@ -1,0 +1,12 @@
+Class name: Doctor
+Parent class: Person
+
+Responsibilities:
+* Treats patients that are admitted
+* Stores doctor's specialization
+
+Collaborators:
+* Patient
+
+
+

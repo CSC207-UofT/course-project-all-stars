@@ -1,0 +1,16 @@
+Class name: Patient
+Parent class: Person
+
+Responsibilities:
+* Stores and can return whether the patient has been admitted
+* Stores and can return the patient's name, address, age and health
+* Stores and can return whether the patient is insured
+* Stores and can return singularly each of the three symptoms
+* Can return a list of patients if given a database of patients with their informations
+
+Collaborators:
+* Exception
+* FileReader
+* BufferReader
+* ArrayList
+* HashSet
