@@ -1,0 +1,13 @@
+Class name: PriorityAdmission
+Parent class: Container
+
+Responsibilities:
+* Stores a list of patients 
+* Can add patients to the list based on their priority status
+* Determines which patient is admitted first
+
+Collaborators:
+* Patient
+* ArrayList
+
+

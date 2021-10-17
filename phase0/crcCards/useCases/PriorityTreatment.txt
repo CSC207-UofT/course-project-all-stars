@@ -1,0 +1,12 @@
+Class name: PriorityTreatment
+Parent class: Container
+
+Responsibilities:
+* Contains list of patients
+* Can add patients to the list based on their priority status
+* Determines order in which patients in the least should be treated
+
+Collaborators:
+* Patient
+* ArrayList
+
