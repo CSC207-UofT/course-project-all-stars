@@ -1,0 +1,11 @@
+Class name: Diagnosis
+
+Responsibilities:
+* Gets the patient symptoms and compare them against disease database from affliction and sets the diagnosis of the patient
+
+Collaborators:
+* Patient
+* Affliction
+* HashSet
+* HashMap
+
