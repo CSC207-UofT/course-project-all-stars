@@ -1,6 +1,6 @@
 package test;
-import main.Diagnosis;
-import main.Patient;
+import diagnosis.Diagnosis;
+import person.Patient;
 import org.junit.Test;
 
 import java.util.HashSet;

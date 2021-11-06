@@ -1,6 +1,6 @@
-package main;
+package container;
 
-import java.util.ArrayList;
+import person.Patient;
 
 public class PriorityAdmission extends Container {
 

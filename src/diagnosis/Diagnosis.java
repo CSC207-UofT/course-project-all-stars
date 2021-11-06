@@ -1,4 +1,7 @@
-package main;
+package diagnosis;
+
+import affliction.Affliction;
+import person.Patient;
 
 import java.util.Hashtable;
 import java.util.Set;

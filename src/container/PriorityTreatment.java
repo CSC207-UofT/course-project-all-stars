@@ -1,4 +1,6 @@
-package main;
+package container;
+
+import person.Patient;
 
 public class PriorityTreatment extends Container {
 

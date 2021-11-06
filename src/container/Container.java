@@ -1,4 +1,6 @@
-package main;
+package container;
+
+import person.Patient;
 
 import java.util.ArrayList;
 

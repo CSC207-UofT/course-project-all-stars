@@ -1,10 +1,9 @@
 package test;
-import main.Patient;
-import main.PriorityAdmission;
+import person.Patient;
+import container.PriorityAdmission;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.PriorityQueue;
 
 public class AdmissionPriorityTest {
 

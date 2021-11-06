@@ -1,8 +1,7 @@
 package test;
 
-import main.Patient;
-import main.PriorityAdmission;
-import main.PriorityTreatment;
+import person.Patient;
+import container.PriorityTreatment;
 import org.junit.Test;
 
 import java.util.ArrayList;

@@ -1,4 +1,7 @@
-package main;
+package person;
+
+import person.Patient;
+import person.Person;
 
 public class Doctor extends Person {
     String specialization;

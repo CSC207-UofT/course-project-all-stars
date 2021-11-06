@@ -1,14 +1,10 @@
 package test;
 
-import main.Affliction;
-import main.Patient;
+import person.Patient;
 import org.junit.Test;
 
 
-import javax.print.attribute.HashPrintServiceAttributeSet;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 public class PatientTest{
 

@@ -1,4 +1,4 @@
-package main;
+package person;
 
 // Abstract Class Person to define the basic layout
 public abstract class Person {

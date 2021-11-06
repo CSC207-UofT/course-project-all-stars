@@ -1,4 +1,4 @@
-package main;
+package affliction;
 
 import java.io.*;
 import java.util.ArrayList;

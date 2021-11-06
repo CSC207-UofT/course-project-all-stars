@@ -1,11 +1,9 @@
 package test;
 
-import main.Affliction;
-import main.Diagnosis;
+import affliction.Affliction;
 import org.junit.Test;
 
 
-import javax.print.attribute.HashPrintServiceAttributeSet;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Hashtable;

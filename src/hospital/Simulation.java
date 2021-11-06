@@ -1,4 +1,9 @@
-package main;
+package hospital;
+import container.PriorityAdmission;
+import container.PriorityTreatment;
+import diagnosis.Diagnosis;
+import person.Patient;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
