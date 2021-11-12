@@ -3,25 +3,35 @@ package person;
 import person.Patient;
 import person.Person;
 
+import java.util.ArrayList;
+
+    /*
+        A Doctor will be able to cure patients with diseases with a low Urgency Level.
+        Doctors from this class will be doctors that don't have a specific specialization.
+        For this reason
+    */
+
 public class Doctor extends Person {
-    String specialization;
+    final String specialization;
+    ArrayList<String> can_cure = new ArrayList<>();
+
 
     public Doctor(String name, String address, String sex, int age) {
-        super(name, address, sex, age);
-    }
 
-    public Doctor(String name, String address, String sex, int age, String specialization) {
         super(name, address, sex, age);
-        this.specialization = specialization;
+        specialization = "None";
     }
 
     public boolean treatPatient(Patient p) {
         if (p.getIs_Admitted()) {
-            p.health = 100;
-            return true;
-        }
-        else {
+            String disease = p.getDiagnose();
+            if (can_cure.contains(disease)) {
+                p.health = 100;
+                return true;
+            }
+        } else {
             return false;
         }
+        return false;
     }
 }
