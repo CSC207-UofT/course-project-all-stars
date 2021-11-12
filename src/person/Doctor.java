@@ -4,6 +4,7 @@ import person.Patient;
 import person.Person;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
     /*
         A Doctor will be able to cure patients with diseases with a low Urgency Level.
@@ -12,8 +13,9 @@ import java.util.ArrayList;
     */
 
 public class Doctor extends Person {
-    final String specialization;
-    ArrayList<String> can_cure = new ArrayList<>();
+    String specialization;
+    ArrayList<String> can_cure = new ArrayList<>(Arrays.asList("Salmonella", "Anaphylaxis",
+            "Alcohol poisoning", "Fibromyalgia", "Shingles", "Chickenpox"));
 
 
     public Doctor(String name, String address, String sex, int age) {
@@ -34,4 +36,5 @@ public class Doctor extends Person {
         }
         return false;
     }
+
 }
