@@ -14,14 +14,19 @@ public abstract class Person {
         this.age = age;
     }
 
-//    public Person(String name, String address, String sex, int age) {
-//    }
-
     public String getName() {
         return this.name;
     }
 
     public int getAge() {
         return this.age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public String getAddress() {
+        return address;
     }
 }
