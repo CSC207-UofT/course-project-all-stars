@@ -7,12 +7,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
     /*
-        Doctors from this class will be doctors that don't have a specific specialization.
-        For this reason they will not be able to cure all the diseases that a patient can have.
+        Basic type of Doctor, without the specialization variable.
     */
 
 public class Doctor extends Person {
-    String specialization;
     ArrayList<String> can_cure = new ArrayList<>(Arrays.asList("Salmonella", "Anaphylaxis",
             "Alcohol poisoning", "Fibromyalgia", "Shingles", "Chickenpox","Covid", "Seasonal Flu",
             "Tuberculosis", "Arthritis", "Conjunctivitis", "Mononucleosis", "Strep Throat", "Headaches",
@@ -20,9 +18,7 @@ public class Doctor extends Person {
 
 
     public Doctor(String name, String address, String sex, int age) {
-
         super(name, address, sex, age);
-        specialization = "None";
     }
 
     public boolean treatPatient(Patient p) {
