@@ -3,13 +3,14 @@ import container.PriorityAdmission;
 import container.PriorityTreatment;
 import diagnosis.Diagnosis;
 import person.Patient;
+import person.PatientArrayList;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Simulation {
 
-    public static ArrayList <Patient> patients = Patient.constructPatient();
+    public static ArrayList <Patient> patients = PatientArrayList.constructPatient();
     public static PriorityAdmission priority = new PriorityAdmission();
     public static PriorityTreatment priorityTreatment = new PriorityTreatment();
 
@@ -60,7 +61,7 @@ public class Simulation {
         }
         for (Patient top_patient: priority.show()){
             System.out.println("Patient Details:");
-            System.out.println(top_patient.getName() + "\n" +"Patient is " +top_patient.getSex() +" of age "+ top_patient.age);
+            System.out.println(top_patient.getName() + "\n" +"Patient is " +top_patient.getSex() +" of age "+ top_patient.getAge());
             System.out.println("They are experiencing the following symptoms: " + top_patient.getSymptoms());
             System.out.println("1. Diagnose");
             System.out.println("2. Skip to the next patient");
