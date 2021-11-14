@@ -8,7 +8,7 @@ public class PriorityTreatment extends Container {
         super();
     }
 
-    public void add(Patient newPatient) {
+    public void add(Patient newPatient, Method priortization) throws InvocationTargetException, IllegalAccessException {
         //Patient with top priority at the start of the queue
         if (this.patientList.size() == 0) {
             this.patientList.add(newPatient);
@@ -33,6 +33,6 @@ public class PriorityTreatment extends Container {
     private boolean higherPriority(Patient p, Patient newPatient) {
         //Order by lowest HP and who got into the queue first for now
         //Later, will also sort by urgency level once the patient has been diagnosed
-        return p.health > newPatient.health;
+        return p.getHealth() > newPatient.getHealth();
     }
 }

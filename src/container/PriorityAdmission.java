@@ -8,7 +8,7 @@ public class PriorityAdmission extends Container {
         super();
     }
 
-    public void add(Patient person) {
+    public void add(Patient newPatient, Method priortization) throws InvocationTargetException, IllegalAccessException {
         //Patient with top priority at the start of the queue
         if (this.patientList.size() == 0) {
             this.patientList.add(person);
