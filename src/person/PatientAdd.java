@@ -16,8 +16,8 @@ public class PatientAdd {
          * Method to add new Patient object into database.
          * @return void
          */
-
-        Database.writeData(name, address, sex, age, health, insurance, symptomA, symptomB, symptomC);
+        PatientDatabaseText patientDatabaseText = new PatientDatabaseText();
+        patientDatabaseText.writeData(name, address, sex, age, health, insurance, symptomA, symptomB, symptomC);
 
     }
 

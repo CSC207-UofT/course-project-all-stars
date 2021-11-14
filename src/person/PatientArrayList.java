@@ -19,17 +19,18 @@ public class PatientArrayList {
         ArrayList<Patient> patientArrayList = new ArrayList<Patient>();
         int row = 0;
         int column = 0;
-        while(Database.rowExist(row) == true){ // Continue accessing data until end of database
-            String name = Database.readData(row, column);
-            String address = Database.readData(row, column + 1);
-            String sex = Database.readData(row, column + 2);
-            int age = Integer.parseInt(Database.readData(row, column + 3));
-            int health = Integer.parseInt(Database.readData(row, column + 4));
-            boolean insurance = Boolean.parseBoolean(Database.readData(row, column + 5));
+        PatientDatabaseText databaseText = new PatientDatabaseText();
+        while(databaseText.rowExist(row) == true){ // Continue accessing data until end of database
+            String name = databaseText.readData(row, column);
+            String address = databaseText.readData(row, column + 1);
+            String sex = databaseText.readData(row, column + 2);
+            int age = Integer.parseInt(databaseText.readData(row, column + 3));
+            int health = Integer.parseInt(databaseText.readData(row, column + 4));
+            boolean insurance = Boolean.parseBoolean(databaseText.readData(row, column + 5));
             Set<String> symptoms_set = new HashSet<>();
-            symptoms_set.add(Database.readData(row, column + 6));
-            symptoms_set.add(Database.readData(row, column + 7));
-            symptoms_set.add(Database.readData(row, column + 8));
+            symptoms_set.add(databaseText.readData(row, column + 6));
+            symptoms_set.add(databaseText.readData(row, column + 7));
+            symptoms_set.add(databaseText.readData(row, column + 8));
 
             patientArrayList.add(new Patient(name, address, sex, age, health, insurance, symptoms_set));
 

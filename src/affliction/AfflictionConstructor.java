@@ -28,13 +28,14 @@ public class AfflictionConstructor {
          */
         ArrayList<Affliction> afflictionArrayList = new ArrayList<Affliction>();
         int row = 0;
-        while(Database.rowExist(row) == true){ //Continue accessing data
-            String diseaseName = Database.readData(row, NAME);
-            int urgencyLevel = Database.readData(row, URGENCY);
-            int cureTime = Database.readData(row, TIME);
-            String symptom1 = Database.readData(row, SYMPT1);
-            String symptom2 = Database.readData(row, SYMPT2);
-            String symptom3 = Database.readData(row, SYMPT3);
+        AfflictionDatabaseText afflictionDatabaseText = new AfflictionDatabaseText();
+        while(afflictionDatabaseText.rowExist(row) == true){ //Continue accessing data
+            String diseaseName = afflictionDatabaseText.readData(row, NAME);
+            int urgencyLevel = Integer.parseInt(afflictionDatabaseText.readData(row, URGENCY));
+            int cureTime = Integer.parseInt(afflictionDatabaseText.readData(row, TIME));
+            String symptom1 = afflictionDatabaseText.readData(row, SYMPT1);
+            String symptom2 = afflictionDatabaseText.readData(row, SYMPT2);
+            String symptom3 = afflictionDatabaseText.readData(row, SYMPT3);
             afflictionArrayList.add(new Affliction(diseaseName,urgencyLevel,cureTime,symptom1,symptom2,symptom3));
 
             row ++;
