@@ -16,8 +16,7 @@ public interface DatabaseInterface {
          * @return Data contained within the specified row (object) and column (different information within the object)
          */
 
-    public void writeData(String name, String address, String sex, int age, int health, boolean insurance,
-                                   String symptomA, String symptomB, String symptomC);
+    //public void writeData();
         /**
          * Method to write additional data into a new row of the database.
          * Index for row and column starts at 0.
