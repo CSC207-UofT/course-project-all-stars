@@ -15,7 +15,7 @@ public class Affliction {
     String symptom3;
 
     public Affliction(String diseaseName, double urgencyLevel, double cureTime, String symptom1, String symptom2,
-                      String symptom3){
+                      String symptom3) {
         this.diseaseName = diseaseName;
         this.urgencyLevel = urgencyLevel;
         this.cureTime = cureTime;
@@ -57,20 +57,4 @@ public class Affliction {
 
          Make sure there are no spaces between ","
          */
-
-    public static Hashtable<String, Set> disease_data(){
-        Hashtable<String, Set> diseases = new Hashtable<String, Set>();
-        AfflictionConstructor ac = new AfflictionConstructor();
-        for(Affliction i: ac.AfflictionsFromText()){
-            Set<String> set = new HashSet<>();
-            set.add(i.symptom1);
-            set.add(i.symptom2);
-            set.add(i.symptom3);
-            diseases.put(i.getDiseaseName(), set);
-        }
-        return diseases;
-    }
-
-
-
 }
