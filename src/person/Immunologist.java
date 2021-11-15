@@ -10,4 +10,8 @@ public class Immunologist extends Doctor{
         can_cure.add("Seasonal Flu");
         can_cure.add("Conjunctivitis");
     }
+
+    public String getSpecialization() {
+        return specialization;
+    }
 }

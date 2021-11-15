@@ -10,4 +10,7 @@ public class Rheumatologist extends Doctor {
         can_cure.add("Fibromyalgia");
         can_cure.add("Strep Throat");
     }
+    public String getSpecialization() {
+        return specialization;
+    }
 }

@@ -7,4 +7,7 @@ public class Orthopedist extends Doctor{
         specialization = "Orthopedist";
         can_cure.add("Arthritis");
     }
+    public String getSpecialization() {
+        return specialization;
+    }
 }
