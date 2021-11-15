@@ -4,7 +4,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
 
 import database.PatientDatabaseCloud;
 
@@ -29,7 +28,7 @@ public class PatientArrayList {
             int age = dataset.getInt(4);
             int health = dataset.getInt(5);
             boolean insurance = dataset.getBoolean(6);
-            Set<String> symptoms_set = new HashSet<>();
+            HashSet<String> symptoms_set = new HashSet<>();
             symptoms_set.add(dataset.getString(7));
             symptoms_set.add(dataset.getString(8));
             symptoms_set.add(dataset.getString(9));

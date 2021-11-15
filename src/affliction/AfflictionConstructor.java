@@ -39,9 +39,9 @@ public class AfflictionConstructor {
         Hashtable<String, Set> diseases = new Hashtable<>();
         for(Affliction i: afflictionsFromDatabase()){
             Set set = new HashSet<>();
-            set.add(i.symptom1);
-            set.add(i.symptom2);
-            set.add(i.symptom3);
+            set.add(i.getSymptom1());
+            set.add(i.getSymptom2());
+            set.add(i.getSymptom3());
             diseases.put(i.getDiseaseName(), set);
         }
         return diseases;
