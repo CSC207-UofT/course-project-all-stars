@@ -51,9 +51,9 @@ public abstract class Priority {
 
 
     /**
-     * Removes a patient from the hospital's list of patients by reference to the patient.
+     * Removes a patient from the priority queue of patients by reference to the patient.
      *
-     * @param patient patient to be removed from the hospital's collection of patients.
+     * @param patient patient to be removed from the priority queue of patients.
      * @return the patient that was removed.
      */
     public Patient delete_patient(Patient patient) {
@@ -67,9 +67,9 @@ public abstract class Priority {
      * @return the patient that was removed.
      */
     public Patient delete_patient() {
-        Patient x = patientList.get(0);
-        patientList.remove(x);
-        return x;
+        Patient patient = patientList.get(0);
+        patientList.remove(patient);
+        return patient;
     }
 
     /**

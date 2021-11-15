@@ -3,8 +3,9 @@ package Priority;
 import person.Patient;
 
 import java.util.ArrayList;
+
 /**
- * A subclass of the Priority PriorityAdmission that implements COVID and
+ * A subclass of the Priority PriorityAdmission that implements COVID-19 and
  * determines the order in which patients are admitted to the Hospital.
  *
  * @author Shysta and Justice
@@ -21,7 +22,7 @@ public class Admission_COVID extends PriorityAdmission implements COVID {
      *
      * @param patient    A patient currently in the PriorityQueue.
      * @param newPatient A new patient to be added to the PriorityQueue.
-     * @return true if patient has higherer priority than newPatient, false if not.
+     * @return true if patient has higher priority than newPatient, false if not.
      */
     @Override
     public boolean higherPriority(Patient patient, Patient newPatient) {
