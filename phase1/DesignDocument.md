@@ -1,6 +1,6 @@
 # Welcome to the AllStars Design Document!
 
-## A description of any major design decisions your group has made (along with brief explanations of why you made them).
+## Major design decisions / Design patterns.
 
 	The majority of decision-making for the application occurred in Phase 1 while determining a realistic scope. 
 
