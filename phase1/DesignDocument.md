@@ -24,3 +24,21 @@ We were able to repurpose some of the functionality built in phase 0 to meet the
 We modelled our code around the phase 0 text UI, which was a basic command line interface, based on how we plan to implement the UI in the web application. This way, when we work on the front end of our web application, we re-use most of the code in phase 1 for the backend. 
 
 Although we were having issues setting up the cloud SQL Database as there were time constraints, **the cloud database is now complete and completely integrated into the code.**
+
+## SOLID/Clean Architecture (if you notice a violation and aren't sure how to fix it, talk about that too!)
+
+	It was important in phase 0 to have CRC cards that outline each class and were implemented such that each has a single duty. 
+
+Therefore, our model satisfied the specifications while adhering to a clean design. Our project cards follow Clean Architecture layers with Entities for the different use cases, controllers and the datasets that users can access and load through added phase 1 features.
+
+By following the clean architecture approach to building our packages, we were able to structure our code in a way that promotes reuse. By dividing our packages by the purpose of each package rather than the functionality, we created packages that are more reusable and do not cause violations.
+
+Within each package we adhered to clean architecture. Rather than having our packages divided by use case we divided them by relevance to each other, and within the packages we enlisted clean architecture to divide use cases. We chose to create our packages by relevance because it's easier to ensure that each package has the code needed for its purpose. This made it easier to determine what methods belong in a package and what should be moved elsewhere.
+To make changes, our architecture was designed so that the effects of most changes aren't affecting other phase 1 packages. This means that there are at least as many "uses" of a specific method in a phase 1 package now – if not more – as we had used in phase 0. 
+
+	These observations show us reusability is key when we expand functionality in a clean manner.
+
+For example in the Person package we have abstract entities divided from connections with databases. Patient and PatientArrayList are separated because they engage a different use case. Not every package has every level of use case because not every function engages every use case.
+
+By breaking down the functionalities within the Patient object into their respective classes, it made it easier for me to add new features to the patient objects. This is because each class contained only one responsibility, which made sense given that this is a Single Responsibility Principle.
+
