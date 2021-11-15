@@ -1,19 +1,16 @@
 package person;
 
-import java.io.*;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Set;
 
 public class Patient extends Person {
     boolean is_admitted;
     int health;
     boolean insurance;
-    ArrayList<String> symptoms_set;
+    HashSet<String> symptoms_set;
     String Diagnose;
 
     public Patient(String name, String address, String sex, int age, int health, boolean insurance,
-                   ArrayList<String> symptoms_set) {
+                   HashSet<String> symptoms_set) {
         super(name, address, sex, age);
         this.is_admitted = false;
         this.health = health;
@@ -44,7 +41,7 @@ public class Patient extends Person {
     public boolean getInsurance(){
         return insurance;
     }
-    public ArrayList<String> getSymptoms(){
+    public HashSet<String> getSymptoms(){
         return this.symptoms_set;
     }
     public String getDiagnose(){
