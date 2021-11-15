@@ -3,9 +3,27 @@ package Priority;
 import person.Patient;
 
 import java.util.ArrayList;
-
+/**
+ * A subclass of the Priority PriorityAdmission that implements COVID and
+ * determines the order in which patients are admitted to the Hospital.
+ *
+ * @author Shysta and Justice
+ * @version 2.0
+ * @since 1.0
+ */
 public class Admission_COVID extends PriorityAdmission implements COVID {
     @Override
+    /**
+     * Orders patients according to who has more symptoms of COVID-19. A Patient with more symptoms will
+     * be higher priority. In the case of a tie between symptom counts, the Patient with the lower health will
+     * be prioritized. In the case of a tie between health amounts, if one Patient has insurance and the other
+     * does not, the insured Patient will be prioritized. In the event that neither Patient is insured or both
+     * are insured, the existing patient will be prioritized.
+     *
+     * @param patient    A patient currently in the PriorityQueue.
+     * @param newPatient A new patient to be added to the PriorityQueue.
+     * @return true if patient has higherer priority than newPatient, false if not.
+     */
     public boolean higherPriority(Patient patient, Patient new_patient) {
         ArrayList<String> COVID_symptoms = new ArrayList<>();
         COVID_symptoms.add("Loss of Taste and Smell");
