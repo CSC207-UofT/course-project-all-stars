@@ -37,6 +37,17 @@ public class Affliction {
         return cureTime;
     }
 
+    public String getSymptom1() {
+        return symptomSet.get(0);
+    }
+
+    public String getSymptom2() {
+        return symptomSet.get(1);
+    }
+
+    public String getSymptom3() {
+        return symptomSet.get(2);
+    }
     public ArrayList<String> getSymptomSet(){
         return symptomSet;
     }
