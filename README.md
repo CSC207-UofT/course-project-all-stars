@@ -1,4 +1,4 @@
-## Type your name below to confirm you're here!!
+## Hospital Management System
 Team Members: 
 Ratan, 
 Roa, 
