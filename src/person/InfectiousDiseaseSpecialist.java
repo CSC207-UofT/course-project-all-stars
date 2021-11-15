@@ -1,6 +1,8 @@
 package person;
 
 public class InfectiousDiseaseSpecialist extends Doctor{
+    final private String specialization;
+
     public InfectiousDiseaseSpecialist(String name, String address, String sex, int age) {
         super(name, address, sex, age);
         specialization = "Infectious disease";
@@ -13,5 +15,8 @@ public class InfectiousDiseaseSpecialist extends Doctor{
         can_cure.add("Rabies");
         can_cure.add("Shingles");
         can_cure.add("Salmonella");
+    }
+    public String getSpecialization() {
+        return specialization;
     }
 }
