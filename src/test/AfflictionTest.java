@@ -14,7 +14,7 @@ import java.util.Set;
 public class AfflictionTest{
 
     //Test Affliction.java
-    @Test
+
     public void testRead() throws SQLException {
         ArrayList<Affliction> x = AfflictionConstructor.afflictionsFromDatabase();
         for(Affliction affliction : x){
