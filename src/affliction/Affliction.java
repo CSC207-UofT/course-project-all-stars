@@ -1,5 +1,7 @@
 package affliction;
 
+import java.util.ArrayList;
+
 public class Affliction {
     String diseaseName;
     double urgencyLevel;
@@ -7,6 +9,7 @@ public class Affliction {
     String symptom1;
     String symptom2;
     String symptom3;
+    ArrayList<String> symptomSet;
 
     public Affliction(String diseaseName, double urgencyLevel, double cureTime, String symptom1, String symptom2,
                       String symptom3) {
@@ -16,6 +19,9 @@ public class Affliction {
         this.symptom1 = symptom1;
         this.symptom2 = symptom2;
         this.symptom3 = symptom3;
+        this.symptomSet.add(symptom1);
+        this.symptomSet.add(symptom2);
+        this.symptomSet.add(symptom3);
     }
 
     // Getter Methods
@@ -41,6 +47,9 @@ public class Affliction {
 
     public String getSymptom3() {
         return symptom3;
+    }
+    public ArrayList<String> getSymptomSet(){
+        return symptomSet;
     }
 
     /*

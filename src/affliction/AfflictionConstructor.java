@@ -42,11 +42,8 @@ public class AfflictionConstructor {
     public static Hashtable<String, ArrayList<String>> disease_data(){
         Hashtable<String, ArrayList<String>> diseases = new Hashtable<>();
         for(Affliction i: afflictionsFromDatabase()){
-            ArrayList<String> set = new ArrayList<>();
-            set.add(i.symptom1);
-            set.add(i.symptom2);
-            set.add(i.symptom3);
-            diseases.put(i.getDiseaseName(), set);
+            ArrayList<String> symptoms = i.getSymptomSet();
+            diseases.put(i.getDiseaseName(), symptoms);
         }
         return diseases;
     }
