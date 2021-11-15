@@ -97,3 +97,60 @@ A typical directory structure of a package in our project looks like this:
 	projectname - src - Priority - PriorityAdmission
 
 From a version control perspective, the task distribution according to this packaging proved useful when each person was working on a feature in their branch. We believe this use is most effective for our work because within every abstract “idea” there are many use cases. 
+
+
+##  Progress Report
+
+### Open questions your group is struggling with,
+
+- How to organize ourselves to effectively complete tasks on time and motivate open and active communication in our group?
+- We're not sure when to merge the branches that we're working on back to the Main branch.
+
+- How would an interface appropriate extend a class while following the SOLID principles?
+
+
+### What has worked well so far with your design?
+
+
+Breaking down the functionalities within the _**Patient class**_ into their respective classes (Single Responsibility Principle) made the process of adding new features to Patient objects a lot easier. Creating a new _**Database interface**_ also made it easier in the future to change the type of database we plan to use without interrupting the classes from other packages (Dependency Inversion Principle)
+The way we used packages is very clear and allows for easy delegation of tasks and development. We can easily see what needs to be done where and git operations are also ameliorated by this process.
+
+
+###  Brief summary of what each group member has been working on and plans to work on next.
+
+Teammate 1: Ernest
+
+PatientAdd class, and DatabaseInterface, and PatientDatabaseText. 
+Person class is an abstract class responsible for outlining the characteristics of a Person object (e.g. Patient and Doctor). PatientArrayList class is responsible for reading patient information from a database and return an ArrayList containing all the Patient objects. PatientAdd class is responsible for writing patient information into the database. DatabaseInterface is an interface responsible for outlining the implementation of database so that the type of database used (e.g. LinkedList, .csv) does not matter. DatabasePatientText is a concrete class that overrides the methods outlined in DatabaseInterface that reads and writes data off a text based database.
+
+Person 2: Euan
+
+Euan has been working primarily with affliction and database packages since both are interrelated. I plan on expanding on affliction to include contagions and affliction container classes and controllers for contagions. In pursuit of this I will work more closely with the simulation code and integrate the contagions into this.
+
+
+Person 3: Shysta
+
+Shysta worked on the Priority package with Justice. She implemented the template method design pattern for the algorithm used for adding patients in the priority queues. Earlier, patients were being added to the lists in the subclasses PriorityAdmission and PriorityTreatment. Now, most of the skeleton for the algorithm is in the abstract class priority with priority functions specific to admission and treatment being called in the subclasses. Along with that, she also extended the functionality of the package by adding an interface COVID and an admission class which implements this interface. This helps to prioritise patient admission triage according to COVID symptoms. She also refactored and reformatted the code. She also added tests which check if the patients are being added to the priority queues in the different subclasses correctly or not. Finally, she worked on helping other members of the group with diagnosis and other tests, along with checking for errors in different parts of the code. Future plans: Shysta wants to extend the functionality of the program to multiple hospitals instead of a single work, help with the UI, extend the functionality of priority queues to infectious diseases, and include more tests..
+
+Person 4: Ratantej
+
+-
+
+Person 5: Alessandro
+
+For Phase 1 I worked on the "person" branch, and specifically I worked on the Doctor class, the DoctorTest class and its subclasses.
+In fact I modified Doctor by removing the specialization variable and by adding the "can_cure" variable and by modifying the method "treatPatient" and adding the method "LearnHowToCure".
+After having done this, I created the subclasses of Doctor: Cardiologist, Neurologist, Psychiatrist and Oncologist and the correspondent testing classes (OncologistTest, CardiologistTest, PsychiatristTest, NeurologistTest).
+In phase 2 in plan on working on Doctor and its subclasses by adding new diseases and new types of doctors and especially by varying more the "treatPatient" feature by distinguishing different kind of treatments for different diseases and by adding more complex cases.
+
+Person 6: Justice
+
+-   I continued my work on priority queues with Shysta. We expanded our functionality to allow for a new way of prioritizing that checks for covid symptoms, then health, then insurance. We also implemented the template design pattern, keeping the main Priority class as the template and feeding in different ways of prioritizing through higherPriority.
+    
+-   I documented all of the classes and methods within those classes, elucidating what each major piece does, what parameters associated with each do, and what any applicable method returns.
+
+
+Person 7: Roa
+
+Roa mainly worked on the diagnosis package, design document and doctor specialisations. She also helped with design decisions and compiled the progress report of all the active members. She plans on further expanding the functionality of diagnosis after the cloud database has been set up with a wider scope given larger sets of data. The data should ideally have many more symptoms and other parameters such as geolocation, medical history, medication, allergies and laboratory results. In this vein, a natural succession would be an engine for treatment plans and resources. The main next step Roa wants to take is to work on an authentication process for both end users doctors and patients in order to create links such as booking appointments and follow-up tests and scans. Roa also plans to contribute to the front end of the web application, which will provide the doctors and patients with a more user-friendly option to interact with our program.
+
