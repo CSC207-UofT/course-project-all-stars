@@ -120,7 +120,7 @@ The way we used packages is very clear and allows for easy delegation of tasks a
 
 Teammate 1: Ernest
 
-PatientAdd class, and DatabaseInterface, and PatientDatabaseText. 
+PatientArrayList, PatientAdd class, and DatabaseInterface, and PatientDatabaseText. 
 Person class is an abstract class responsible for outlining the characteristics of a Person object (e.g. Patient and Doctor). PatientArrayList class is responsible for reading patient information from a database and return an ArrayList containing all the Patient objects. PatientAdd class is responsible for writing patient information into the database. DatabaseInterface is an interface responsible for outlining the implementation of database so that the type of database used (e.g. LinkedList, .csv) does not matter. DatabasePatientText is a concrete class that overrides the methods outlined in DatabaseInterface that reads and writes data off a text based database.
 
 Person 2: Euan
