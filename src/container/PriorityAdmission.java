@@ -2,6 +2,9 @@ package container;
 
 import person.Patient;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 public class PriorityAdmission extends Container {
 
     public PriorityAdmission() {
@@ -11,17 +14,17 @@ public class PriorityAdmission extends Container {
     public void add(Patient newPatient, Method priortization) throws InvocationTargetException, IllegalAccessException {
         //Patient with top priority at the start of the queue
         if (this.patientList.size() == 0) {
-            this.patientList.add(person);
+            this.patientList.add(newPatient);
         }
         int i = 0;
-        while (!this.patientList.contains(person)) {
-            if (higherPriority_1(this.patientList.get(i), person)) {
+        while (!this.patientList.contains(newPatient)) {
+            if (higherPriority_1(this.patientList.get(i), newPatient)) {
                 int num;
                 num = this.patientList.indexOf(this.patientList.get(i));
-                this.patientList.add(num, person);
+                this.patientList.add(num, newPatient);
             }
             else if ( i == this.patientList.size() - 1) {
-                this.patientList.add(this.patientList.size(), person);
+                this.patientList.add(this.patientList.size(), newPatient);
             }
             else {
                 i += 1;
@@ -34,10 +37,10 @@ public class PriorityAdmission extends Container {
         //Order by lowest HP and who got into the queue first for now
         //For ties, insurance status can be used
         //Might add infectious diseases too later to check for ties and other prioritising strategies
-        if (p.health == newPatient.health){
-            return !p.insurance & newPatient.insurance;
+        if (p.getHealth() == newPatient.getHealth()){
+            return !p.getInsurance() & newPatient.getInsurance();
         }
-    return p.health > newPatient.health;
+    return p.getHealth() > newPatient.getHealth();
     }
 
 }
