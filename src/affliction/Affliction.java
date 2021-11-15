@@ -1,11 +1,5 @@
 package affliction;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.Set;
-
 public class Affliction {
     String diseaseName;
     double urgencyLevel;

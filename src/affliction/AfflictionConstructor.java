@@ -1,9 +1,7 @@
 package affliction;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Hashtable;
-import java.util.Set;
 import database.*;
 
 public class AfflictionConstructor {
@@ -19,12 +17,12 @@ public class AfflictionConstructor {
     final static  int SYMPT3 = 5;
 
     public static ArrayList<Affliction> afflictionsFromDatabase(){
-        /**
-         * Creates an ArrayList of Affliction objects created from a database.
-         * Format: diseaseName, urgencyLevel, cureTime, symptom1, symptom2, symptom3
-         * @return ArrayList<patient> constructed using database
+        /*
+          Creates an ArrayList of Affliction objects created from a database.
+          Format: diseaseName, urgencyLevel, cureTime, symptom1, symptom2, symptom3
+          @return ArrayList<patient> constructed using database
          */
-        ArrayList<Affliction> afflictionArrayList = new ArrayList<Affliction>();
+        ArrayList<Affliction> afflictionArrayList = new ArrayList<>();
         int row = 0;
         AfflictionDatabaseText afflictionDatabaseText = new AfflictionDatabaseText();
         while(afflictionDatabaseText.rowExist(row)){ //Continue accessing data
@@ -41,10 +39,10 @@ public class AfflictionConstructor {
         return afflictionArrayList;
     }
 
-    public static Hashtable<String, Set> disease_data(){
-        Hashtable<String, Set> diseases = new Hashtable<String, Set>();
+    public static Hashtable<String, ArrayList<String>> disease_data(){
+        Hashtable<String, ArrayList<String>> diseases = new Hashtable<>();
         for(Affliction i: afflictionsFromDatabase()){
-            Set<String> set = new HashSet<>();
+            ArrayList<String> set = new ArrayList<>();
             set.add(i.symptom1);
             set.add(i.symptom2);
             set.add(i.symptom3);
