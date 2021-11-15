@@ -9,11 +9,11 @@ public class Patient extends Person {
     boolean is_admitted;
     int health;
     boolean insurance;
-    Set<String> symptoms_set;
+    ArrayList<String> symptoms_set;
     String Diagnose;
 
     public Patient(String name, String address, String sex, int age, int health, boolean insurance,
-                   Set<String> symptoms_set) {
+                   ArrayList<String> symptoms_set) {
         super(name, address, sex, age);
         this.is_admitted = false;
         this.health = health;
@@ -44,7 +44,7 @@ public class Patient extends Person {
     public boolean getInsurance(){
         return insurance;
     }
-    public Set<String> getSymptoms(){
+    public ArrayList<String> getSymptoms(){
         return this.symptoms_set;
     }
     public String getDiagnose(){
