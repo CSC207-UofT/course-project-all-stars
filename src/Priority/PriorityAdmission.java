@@ -16,6 +16,20 @@ public class PriorityAdmission extends Priority {
     }
 
     /**
+     * Overrides the delete_patient method so that the patient in the priority queue for admission gets admitted to
+     * the hospital
+     *
+     * @return the patient who was admitted.
+     */
+    @Override
+    public Patient delete_patient() {
+        Patient patient = patientList.get(0);
+        patientList.remove(patient);
+        patient.setIs_admitted(true);
+        return patient;
+    }
+
+    /**
      * Orders patients by who has the lowest HP and, in the case of a tie, the patient who has insurance is
      * prioritised.
      *

@@ -1,10 +1,9 @@
 package test;
 import org.junit.Test;
-import person.Doctor;
 import person.Oncologist;
 import person.Patient;
 
-import javax.print.Doc;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
 
@@ -13,7 +12,7 @@ public class OncologistTest {
     @Test
     public void OncologistCanTreatCancer(){
         Oncologist doc = new Oncologist("Alex", "1111", "Male", 10);
-        HashSet<String> symptoms = new HashSet<>();
+        ArrayList<String> symptoms = new ArrayList<>();
         symptoms.add("Fatigue");
         symptoms.add("Swelling");
         symptoms.add("Unusual bleeding");
