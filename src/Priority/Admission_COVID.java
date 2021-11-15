@@ -25,15 +25,13 @@ public class Admission_COVID extends PriorityAdmission implements COVID {
                 patient_index += 1;
             }
         }
-        if (patient_index == newPatient_index){
-            if (patient.getHealth() == new_patient.getHealth()){
+        if (patient_index == newPatient_index) {
+            if (patient.getHealth() == new_patient.getHealth()) {
                 return new_patient.getInsurance() & !patient.getInsurance();
-            }
-            else {
+            } else {
                 return patient.getHealth() > new_patient.getHealth();
             }
-        }
-        else {
+        } else {
             return patient_index < newPatient_index;
         }
     }

@@ -12,7 +12,6 @@ public class AdmissionPriorityTest {
     @Test
     public void test_add() throws SQLException {
         ArrayList<Patient> patients = PatientArrayList.constructPatient();
-        assert patients != null;
         Patient P1 = patients.get(0);
         Patient P2 = patients.get(1);
         Patient P3 = patients.get(2);
