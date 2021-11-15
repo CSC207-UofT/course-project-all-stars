@@ -134,7 +134,7 @@ Shysta worked on the Priority package with Justice. She implemented the template
 
 Person 4: Ratantej
 
--
+Ratan worked on getting the database onto the cloud. Using Cloud SQL by Google Cloud, He then set up an instance of Postgres SQL on the cloud and migrated our existing data onto databases on the cloud. He went on integrating the cloud sql with our program so that we can read and write data into respective databases. He also phased out our old text bases database management system. Spent time learning Spring Boot to set us up with a web application which will be ready in Phase 2. Apart from that, I did debugging and fixed discrepancies in the program in multiple files he plans on finish building a comprehensive UI for phase 2 which will be able to show off all the new backend functionality that we just added in phase 1. Our CLI is not capable and limits our projects capability so a web is going to be the main focus
 
 Person 5: Alessandro
 
