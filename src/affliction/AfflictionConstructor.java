@@ -1,13 +1,10 @@
 package affliction;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Set;
 import database.*;
-import person.Patient;
 
 public class AfflictionConstructor {
     /**
@@ -30,7 +27,7 @@ public class AfflictionConstructor {
         ArrayList<Affliction> afflictionArrayList = new ArrayList<Affliction>();
         int row = 0;
         AfflictionDatabaseText afflictionDatabaseText = new AfflictionDatabaseText();
-        while(afflictionDatabaseText.rowExist(row) == true){ //Continue accessing data
+        while(afflictionDatabaseText.rowExist(row)){ //Continue accessing data
             String diseaseName = afflictionDatabaseText.readData(row, NAME);
             int urgencyLevel = Integer.parseInt(afflictionDatabaseText.readData(row, URGENCY));
             int cureTime = Integer.parseInt(afflictionDatabaseText.readData(row, TIME));
@@ -46,8 +43,7 @@ public class AfflictionConstructor {
 
     public static Hashtable<String, Set> disease_data(){
         Hashtable<String, Set> diseases = new Hashtable<String, Set>();
-        AfflictionConstructor ac = new AfflictionConstructor();
-        for(Affliction i: ac.afflictionsFromDatabase()){
+        for(Affliction i: afflictionsFromDatabase()){
             Set<String> set = new HashSet<>();
             set.add(i.symptom1);
             set.add(i.symptom2);
