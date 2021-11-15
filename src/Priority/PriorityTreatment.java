@@ -16,8 +16,8 @@ public class PriorityTreatment extends Priority {
     }
 
 
-    /** Orders patients by who has the lowest HP and, in the case of a tie, the patient who got into the queue
-     * first is prioritized.
+    /** Orders patients by who has the lowest HP and, in the case of a tie, order by giving priority to the older
+     * person.
      * @param patient A patient currently in the PriorityQueue.
      * @param newPatient A new patient to be added to the PriorityQueue.
      * @return true if patient has higher health than newPatient, false if not.
