@@ -28,7 +28,7 @@ public class PatientArrayList {
             int age = dataset.getInt(4);
             int health = dataset.getInt(5);
             boolean insurance = dataset.getBoolean(6);
-            HashSet<String> symptoms_set = new HashSet<>();
+            ArrayList<String> symptoms_set = new ArrayList<>();
             symptoms_set.add(dataset.getString(7));
             symptoms_set.add(dataset.getString(8));
             symptoms_set.add(dataset.getString(9));
