@@ -17,7 +17,7 @@ public abstract class Container {
         this.patientList = new ArrayList<>();
     }
 
-    public abstract void add(Patient item, Method priority_function) throws InvocationTargetException,
+    public abstract void add(Patient item) throws InvocationTargetException,
             IllegalAccessException;
 
     public Patient delete(Patient patient) {
