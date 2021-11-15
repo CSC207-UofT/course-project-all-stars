@@ -22,6 +22,7 @@ public class NeurologistTest {
         Patient patient = new Patient("Mark", "Main Street 1", "Male", 60, 20,
                 false, symptoms);
         patient.setDiagnose("Meningitis");
+        patient.setIs_admitted(true);
         boolean b = doc.treatPatient(patient);
         assert Objects.equals(b, true);
     }

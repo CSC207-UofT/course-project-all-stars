@@ -30,13 +30,13 @@ public class AfflictionTest{
     // Test Disease Data
     @Test
     public void test_disease_data() throws SQLException {
-        HashSet<String> set = new HashSet<String>();
+        ArrayList<String> set = new ArrayList<>();
         set.add("Loss of Taste and Smell");
         set.add("Fever");
         set.add("Cough");
 
-        Hashtable<String, Set> disease_data = AfflictionConstructor.disease_data();
-        Set<String> covid = disease_data.get("Covid");
+        Hashtable<String, ArrayList<String>> disease_data = AfflictionConstructor.disease_data();
+        ArrayList<String> covid = disease_data.get("Covid");
         assert covid.equals(set);
     }
 

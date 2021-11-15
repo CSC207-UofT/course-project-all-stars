@@ -19,6 +19,7 @@ public class DoctorTest {
         Patient patient = new Patient("Mark", "Main Street 1", "Male", 60, 20,
                 false, symptoms);
         patient.setDiagnose("Heart Disease");
+        patient.setIs_admitted(true);
         boolean b = doc.treatPatient(patient);
         assert Objects.equals(b, false);
     }
@@ -33,6 +34,7 @@ public class DoctorTest {
         Patient patient = new Patient("Mark", "Main Street 1", "Male", 60, 20,
                 false, symptoms);
         patient.setDiagnose("Covid");
+        patient.setIs_admitted(true);
         boolean b = doc.treatPatient(patient);
         assert Objects.equals(b, true);
     }
@@ -46,6 +48,7 @@ public class DoctorTest {
         Patient patient = new Patient("Mark", "Main Street 1", "Male", 60, 20,
                 false, symptoms);
         patient.setDiagnose("Heart Disease");
+        patient.setIs_admitted(true);
         doc.LearnHowToCure("Heart Disease");
         boolean b = doc.treatPatient(patient);
         assert Objects.equals(b, true);

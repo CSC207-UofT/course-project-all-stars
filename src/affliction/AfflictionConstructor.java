@@ -35,10 +35,10 @@ public class AfflictionConstructor {
         return afflictionArrayList;
     }
 
-    public static Hashtable<String, Set> disease_data() throws SQLException {
-        Hashtable<String, Set> diseases = new Hashtable<>();
+    public static Hashtable<String, ArrayList<String>> disease_data() throws SQLException {
+        Hashtable<String, ArrayList<String>> diseases = new Hashtable<>();
         for(Affliction i: afflictionsFromDatabase()){
-            Set set = new HashSet<>();
+            ArrayList<String> set = new ArrayList<>();
             set.add(i.getSymptom1());
             set.add(i.getSymptom2());
             set.add(i.getSymptom3());

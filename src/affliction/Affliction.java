@@ -6,7 +6,7 @@ public class Affliction {
     String diseaseName;
     double urgencyLevel;
     double cureTime;
-    ArrayList<String> symptomSet;
+    ArrayList<String> symptomSet = new ArrayList<>();
 
     public Affliction(String diseaseName, double urgencyLevel, double cureTime, String symptom1, String symptom2,
                       String symptom3) {
@@ -48,9 +48,7 @@ public class Affliction {
     public String getSymptom3() {
         return symptomSet.get(2);
     }
-    public ArrayList<String> getSymptomSet(){
-        return symptomSet;
-    }
+    public ArrayList<String> getSymptomSet(){return symptomSet;}
 
     /*
         constructAffliction() creates all Affliction object using "database" Disease.txt and returns an ArrayList containing
