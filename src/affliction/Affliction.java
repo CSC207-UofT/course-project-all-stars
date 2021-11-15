@@ -6,9 +6,6 @@ public class Affliction {
     String diseaseName;
     double urgencyLevel;
     double cureTime;
-    String symptom1;
-    String symptom2;
-    String symptom3;
     ArrayList<String> symptomSet;
 
     public Affliction(String diseaseName, double urgencyLevel, double cureTime, String symptom1, String symptom2,
@@ -16,12 +13,15 @@ public class Affliction {
         this.diseaseName = diseaseName;
         this.urgencyLevel = urgencyLevel;
         this.cureTime = cureTime;
-        this.symptom1 = symptom1;
-        this.symptom2 = symptom2;
-        this.symptom3 = symptom3;
         this.symptomSet.add(symptom1);
         this.symptomSet.add(symptom2);
         this.symptomSet.add(symptom3);
+    }
+    public Affliction(String diseaseName, double urgencyLevel, double cureTime, ArrayList<String> symptomSet) {
+        this.diseaseName = diseaseName;
+        this.urgencyLevel = urgencyLevel;
+        this.cureTime = cureTime;
+        this.symptomSet = symptomSet;
     }
 
     // Getter Methods
@@ -37,17 +37,6 @@ public class Affliction {
         return cureTime;
     }
 
-    public String getSymptom1() {
-        return symptom1;
-    }
-
-    public String getSymptom2() {
-        return symptom2;
-    }
-
-    public String getSymptom3() {
-        return symptom3;
-    }
     public ArrayList<String> getSymptomSet(){
         return symptomSet;
     }
