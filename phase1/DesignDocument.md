@@ -42,3 +42,18 @@ For example in the Person package we have abstract entities divided from connect
 
 By breaking down the functionalities within the Patient object into their respective classes, it made it easier for me to add new features to the patient objects. This is because each class contained only one responsibility, which made sense given that this is a Single Responsibility Principle.
 
+## Packaging strategies
+
+In the beginning, we were unsure of how to organize our packages. We had no guidelines or standards to follow in phase 0 but it was straightforward to come up with a solution that worked for us in phase 1. Our first attempt was organizing our packages by category, but this proved unsustainable where task management is based off of features.
+
+We believe that a package should be a logical grouping of classes and functions. This thought process made it easier for all members to find the code they are looking for and to reduce the amount of clutter in our codebase. 
+
+We chose ***packaging by feature*** and organized our packages along their respective features, however they may relate to end users (doctors), or hospitals, or the databases for our project. 
+
+As mentioned above the Person package has many use cases within it and grouping them into a package was most sensible. By allowing us some freedom we could decide which category would perform best with particular usage situations. Our packages are also named after the features they contain. For example, our package named “Priority” contains all of the code related to priority queues in our application. This packaging structure allows us to be more flexible in the future.
+
+A typical directory structure of a package in our project looks like this: 
+	
+	projectname - src - Priority - PriorityAdmission
+
+From a version control perspective, the task distribution according to this packaging proved useful when each person was working on a feature in their branch. We believe this use is most effective for our work because within every abstract “idea” there are many use cases. 
