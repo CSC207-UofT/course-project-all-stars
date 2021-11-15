@@ -6,6 +6,7 @@ import person.Oncologist;
 import person.Patient;
 
 import javax.print.Doc;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ public class NeurologistTest {
     @Test
     public void NeurologistCanTreatMeningitis(){
         Neurologist doc = new Neurologist("Alex", "1111", "Male", 10);
-        HashSet<String> symptoms = new HashSet<>();
+        ArrayList<String> symptoms = new ArrayList<>();
         symptoms.add("Headache");
         symptoms.add("Nausea");
         symptoms.add("Photophobia");

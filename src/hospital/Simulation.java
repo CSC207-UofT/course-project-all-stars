@@ -1,6 +1,6 @@
 package hospital;
-import container.PriorityAdmission;
-import container.PriorityTreatment;
+import Priority.PriorityAdmission;
+import Priority.PriorityTreatment;
 import database.PatientDatabaseCloud;
 import diagnosis.Diagnosis;
 import person.Patient;
@@ -73,9 +73,9 @@ public class Simulation {
 
     public static void treat() throws SQLException, InvocationTargetException, IllegalAccessException {
         for(Patient p: patients){
-            priority.add(p);
+            priority.add_patient(p);
         }
-        for (Patient top_patient: priority.show()){
+        for (Patient top_patient: priority.show_patientList()){
             System.out.println("Patient Details:");
             System.out.println(top_patient.getName() + "\n" +"Patient is " +top_patient.getSex() +" of age "+ top_patient.getAge());
             System.out.println("They are experiencing the following symptoms: " + top_patient.getSymptoms());
@@ -112,8 +112,8 @@ public class Simulation {
                 }
                 if(choice2 == 1){
                     System.out.println("Patient Admitted");
-                    priorityTreatment.add(top_patient);
-                    priority.delete(top_patient);
+                    priorityTreatment.add_patient(top_patient);
+                    priority.delete_patient(top_patient);
                     top_patient.setIs_admitted(true);
                     System.out.println("1. Next Patient");
                     System.out.println("2. Go Home");
@@ -138,7 +138,7 @@ public class Simulation {
                 }
                 else {
                     System.out.println("Patient Sent Home");
-                    priority.delete(top_patient);
+                    priority.delete_patient(top_patient);
                     System.out.println("1. Next Patient");
                     System.out.println("2. Go Home");
                     int choice3;
@@ -172,8 +172,8 @@ public class Simulation {
 
     public static void discharge() throws SQLException, InvocationTargetException, IllegalAccessException {
         System.out.println("Select a Patient to Discharge:");
-        for (Patient p : priorityTreatment.show()) {
-            if (priorityTreatment.show().size() >= 1) {
+        for (Patient p : priorityTreatment.show_patientList()) {
+            if (priorityTreatment.show_patientList().size() >= 1) {
                 System.out.println("1. " + p.getName());
                 int choice;
                 while (true) {
@@ -184,7 +184,7 @@ public class Simulation {
                         System.out.println("Invalid Input!");
                     } else {
                         p.setIs_admitted(false);
-                        priorityTreatment.delete(p);
+                        priorityTreatment.delete_patient(p);
                         System.out.println("Patient Discharged");
                         System.out.println("1. Go Home");
                         int choice2;
