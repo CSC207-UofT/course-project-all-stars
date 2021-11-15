@@ -12,6 +12,7 @@ public class Neurologist extends Doctor {
         specialization = "Neurology";
         can_cure.add("Meningitis");
         can_cure.add("Depression");
+        can_cure.add("Headaches");
     }
 
     public String getSpecialization() {
