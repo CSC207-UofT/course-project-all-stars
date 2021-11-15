@@ -1,6 +1,7 @@
 package person;
 
 public class Immunologist extends Doctor{
+    final private String specialization;
     public Immunologist(String name, String address, String sex, int age) {
         super(name, address, sex, age);
         specialization = "Immunology";

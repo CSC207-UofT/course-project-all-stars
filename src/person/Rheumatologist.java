@@ -1,6 +1,7 @@
 package person;
 
 public class Rheumatologist extends Doctor {
+    final private String specialization;
     public Rheumatologist(String name, String address, String sex, int age) {
         super(name, address, sex, age);
         specialization = "Rheumatology";

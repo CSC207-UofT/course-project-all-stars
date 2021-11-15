@@ -1,9 +1,11 @@
 package test;
 
 import affliction.Affliction;
+import affliction.AfflictionConstructor;
 import org.junit.Test;
 
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Hashtable;
@@ -13,8 +15,8 @@ public class AfflictionTest{
 
     //Test Affliction.java
     @Test
-    public void testRead(){
-        ArrayList<Affliction> x = Affliction.constructAffliction();
+    public void testRead() throws SQLException {
+        ArrayList<Affliction> x = AfflictionConstructor.afflictionsFromDatabase();
         for(Affliction affliction : x){
             System.out.println(affliction.getDiseaseName());
             System.out.println(affliction.getUrgencyLevel());
@@ -27,13 +29,13 @@ public class AfflictionTest{
 
     // Test Disease Data
     @Test
-    public void test_disease_data(){
+    public void test_disease_data() throws SQLException {
         HashSet<String> set = new HashSet<String>();
         set.add("Loss of Taste and Smell");
         set.add("Fever");
         set.add("Cough");
 
-        Hashtable<String, Set> disease_data = Affliction.disease_data();
+        Hashtable<String, Set> disease_data = AfflictionConstructor.disease_data();
         Set<String> covid = disease_data.get("Covid");
         assert covid.equals(set);
     }

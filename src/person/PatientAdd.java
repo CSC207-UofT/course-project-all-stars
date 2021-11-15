@@ -1,9 +1,7 @@
 package person;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-import database.*;
+import database.PatientDatabaseCloud;
+
 
 public class PatientAdd {
     /**
@@ -16,8 +14,8 @@ public class PatientAdd {
          * Method to add new Patient object into database.
          * @return void
          */
-        PatientDatabaseText patientDatabaseText = new PatientDatabaseText();
-        patientDatabaseText.writeData(name, address, sex, age, health, insurance, symptomA, symptomB, symptomC);
+        PatientDatabaseCloud database = new PatientDatabaseCloud();
+        database.writeData(name, address, sex, age, health, insurance, symptomA, symptomB, symptomC);
 
     }
 

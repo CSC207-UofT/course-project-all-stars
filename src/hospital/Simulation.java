@@ -5,20 +5,30 @@ import diagnosis.Diagnosis;
 import person.Patient;
 import person.PatientArrayList;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Simulation {
 
-    public static ArrayList <Patient> patients = PatientArrayList.constructPatient();
+    public static ArrayList <Patient> patients;
+
+    static {
+        try {
+            patients = PatientArrayList.constructPatient();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static PriorityAdmission priority = new PriorityAdmission();
     public static PriorityTreatment priorityTreatment = new PriorityTreatment();
 
-    public static void main(String args[]){
+    public static void main(String args[]) throws SQLException {
         home();
     }
 
-    public static void home(){
+    public static void home() throws SQLException {
         int choice;
         System.out.println("Welcome Doctor!" + "\n" + "Select one of the following menu options:");
         System.out.println("1. Treat Patient");
@@ -55,9 +65,9 @@ public class Simulation {
         }
     }
 
-    public static void treat(){
+    public static void treat() throws SQLException {
         for(Patient p: patients){
-            priority.add(p);
+//            priority.add(p);
         }
         for (Patient top_patient: priority.show()){
             System.out.println("Patient Details:");
@@ -96,7 +106,7 @@ public class Simulation {
                 }
                 if(choice2 == 1){
                     System.out.println("Patient Admitted");
-                    priorityTreatment.add(top_patient);
+//                    priorityTreatment.add(top_patient);
                     priority.delete(top_patient);
                     top_patient.setIs_admitted(true);
                     System.out.println("1. Next Patient");
@@ -154,7 +164,7 @@ public class Simulation {
 
     }
 
-    public static void discharge() {
+    public static void discharge() throws SQLException {
         System.out.println("Select a Patient to Discharge:");
         for (Patient p : priorityTreatment.show()) {
             if (priorityTreatment.show().size() >= 1) {
@@ -201,7 +211,7 @@ public class Simulation {
         }
     }
 
-    public static void patient_details(){
+    public static void patient_details() throws SQLException {
         System.out.println("Coming Soon in Phase 1");
         System.out.println("1. Go Back");
         int choice;
@@ -216,7 +226,7 @@ public class Simulation {
         }
     }
 
-    public static void Hospital_details(){
+    public static void Hospital_details() throws SQLException {
         System.out.println("Coming Soon in Phase 1");
         System.out.println("1. Go Back");
         int choice;
