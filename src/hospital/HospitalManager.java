@@ -24,6 +24,6 @@ public class HospitalManager {
                 return p.getName() + " has been transferred from " + from.getName() + " to " + to.getName();
             }
         }
-        return "Patient with ID: " + patientID + "not found in Hospital " + from.getName();
+        return "Patient with ID: " + patientID + " not found in Hospital " + from.getName();
     }
 }
