@@ -16,7 +16,7 @@ public class DiagnosisTest {
         set.add("Fever");
         set.add("Cough");
 
-        Patient p = new Patient(20, "Carl", "Your Mom", "Yes Please", 99, 30, false, set);
+        Patient p = new Patient("Carl", "Your Mom", "Yes Please", 99, 30, false, set);
 
         Diagnosis.diagnose_patient(p);
 
