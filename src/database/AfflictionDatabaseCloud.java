@@ -19,6 +19,7 @@ public class AfflictionDatabaseCloud implements DataInterfaceCloud{
      * Reads patient data and returns a result set
      * @return
      */
+
     @Override
     public ResultSet readData() {
         String sql = "SELECT * FROM diseases.diseasedata";

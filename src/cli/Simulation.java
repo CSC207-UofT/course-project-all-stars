@@ -1,4 +1,4 @@
-package hospital;
+package cli;
 import Priority.PriorityAdmission;
 import Priority.PriorityTreatment;
 import database.PatientDatabaseCloud;
@@ -77,7 +77,7 @@ public class Simulation {
         }
         for (Patient top_patient: priority.show_patientList()){
             System.out.println("Patient Details:");
-            System.out.println(top_patient.getName() + "\n" +"Patient is " +top_patient.getSex() +" of age "+ top_patient.getAge());
+            System.out.println(top_patient.getName() + "\n" +"Patient is " + top_patient.getSex() +" of age "+ top_patient.getAge());
             System.out.println("They are experiencing the following symptoms: " + top_patient.getSymptoms());
             System.out.println("1. Diagnose");
             System.out.println("2. Skip to the next patient");
