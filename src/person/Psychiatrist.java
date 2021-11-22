@@ -3,8 +3,8 @@ package person;
 public class Psychiatrist extends Doctor{
     final private String specialization;
 
-    public Psychiatrist(String name, String address, String sex, int age){
-        super(name, address, sex, age);
+    public Psychiatrist(int id, String name, String address, String sex, int age){
+        super(id, name, address, sex, age);
         specialization = "Psychiatry";
         can_cure.add("Depression");
     }

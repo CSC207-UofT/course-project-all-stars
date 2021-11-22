@@ -32,8 +32,8 @@ public class PatientArrayList {
             symptoms_set.add(dataset.getString(7));
             symptoms_set.add(dataset.getString(8));
             symptoms_set.add(dataset.getString(9));
-
-            patientArrayList.add(new Patient(name, address, sex, age, health, insurance, symptoms_set));
+            int id = dataset.getInt(10);
+            patientArrayList.add(new Patient(id, name, address, sex, age, health, insurance, symptoms_set));
         }
         return patientArrayList;
     }

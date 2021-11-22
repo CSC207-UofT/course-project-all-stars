@@ -20,7 +20,7 @@ public class PriorityTest {
         patient1_symptoms.add("Fever");
         patient1_symptoms.add("Cough");
 
-        Patient patient1 = new Patient("Elon", "14 York St", "male", 54, 30,
+        Patient patient1 = new Patient(1, "Elon", "14 York St", "male", 54, 30,
                 true, patient1_symptoms);
 
         ArrayList<String> patient2_symptoms = new ArrayList<>();
@@ -28,7 +28,7 @@ public class PriorityTest {
         patient2_symptoms.add("Chills");
         patient2_symptoms.add("Cough");
 
-        Patient patient2 = new Patient("Nina", "10 York St", "female", 20, 30,
+        Patient patient2 = new Patient(2, "Nina", "10 York St", "female", 20, 30,
                 false, patient2_symptoms);
 
         ArrayList<String> patient3_symptoms = new ArrayList<>();
@@ -36,7 +36,7 @@ public class PriorityTest {
         patient3_symptoms.add("Chills");
         patient3_symptoms.add("Headache");
 
-        Patient patient3 = new Patient("Justice", "591 dickhead St", "female", 35, 30,
+        Patient patient3 = new Patient(3, "Justice", "591 dickhead St", "female", 35, 30,
                 false,
                 patient3_symptoms);
 
