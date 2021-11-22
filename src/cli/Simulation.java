@@ -72,6 +72,7 @@ public class Simulation {
     }
 
     public static void treat() throws SQLException, InvocationTargetException, IllegalAccessException {
+
         for(Patient p: patients){
             priority.add_patient(p);
         }
