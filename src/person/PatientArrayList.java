@@ -3,7 +3,6 @@ package person;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashSet;
 
 import database.PatientDatabaseCloud;
 
@@ -13,12 +12,14 @@ public class PatientArrayList {
      */
 
     public static ArrayList<Patient> constructPatient() throws SQLException {
+
         /**
          * Creates all Patient objects using a database and return an ArrayList containing the objects
          * Format: Name, Address, Sex, Age, Health, Insurance, Symptom A, Symptom B, Symptom C
          * @return ArrayList<patient> constructed using database
          */
-        ArrayList<Patient> patientArrayList = new ArrayList<Patient>();
+
+        ArrayList<Patient> patientArrayList = new ArrayList<>();
         PatientDatabaseCloud database = new PatientDatabaseCloud();
         ResultSet dataset = database.readData();
         while(dataset.next()){ // Continue accessing data until end of database
