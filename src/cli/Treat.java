@@ -1,24 +1,33 @@
 package cli;
 
 import diagnosis.Diagnosis;
+import hospital.Hospital;
 import person.Patient;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Treat extends Simulation {
+public class Treat {
 
-    public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
-        home();
+    private static Hospital hospital;
+
+    public Treat(Hospital hospital) {
     }
+
+    //    public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
+//        home();
+//    }
 
 
     public static void treat() throws SQLException, InvocationTargetException, IllegalAccessException {
+        ArrayList<Patient> patients = hospital.getPatientsList();
+
         for (Patient p: patients){
-            priority.add_patient(p);
+            hospital.getPriorityTreatment().add_patient(p);
         }
-            for (Patient top_patient: priority.show_patientList()){
+            for (Patient top_patient: hospital.getPriorityTreatment().show_patientList()){
             System.out.println("Patient Details:");
             System.out.println(top_patient.getName() + "\n" +"Patient is " + top_patient.getSex() +" of age "+ top_patient.getAge());
             System.out.println("They are experiencing the following symptoms: " + top_patient.getSymptoms());
@@ -55,8 +64,8 @@ public class Treat extends Simulation {
                 }
                 if(choice2 == 1){
                     System.out.println("Patient Admitted");
-                    priorityTreatment.add_patient(top_patient);
-                    priority.delete_patient(top_patient);
+                    hospital.getPriorityTreatment().add_patient(top_patient);
+                    hospital.getPriorityTreatment().delete_patient(top_patient);
                     top_patient.setIs_admitted(true);
                     System.out.println("1. Next Patient");
                     System.out.println("2. Go Home");
@@ -75,13 +84,13 @@ public class Treat extends Simulation {
                         treat();
                     }
                     else {
-                        home();
+                        break;
                     }
 
                 }
                 else {
                     System.out.println("Patient Sent Home");
-                    priority.delete_patient(top_patient);
+                    hospital.getPriorityTreatment().delete_patient(top_patient);
                     System.out.println("1. Next Patient");
                     System.out.println("2. Go Home");
                     int choice3;
@@ -99,7 +108,7 @@ public class Treat extends Simulation {
                         treat();
                     }
                     else {
-                        home();
+                        break;
                     }
                 }
             }
@@ -107,7 +116,7 @@ public class Treat extends Simulation {
                 continue;
             }
             else if(choice == 3){
-                home();
+                break;
             }
         }
     }

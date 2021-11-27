@@ -1,20 +1,29 @@
 package cli;
 
+import hospital.Hospital;
 import person.Patient;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class Discharge extends Simulation {
+public class Discharge {
 
-    public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
-        home();
+    private static Hospital hospital;
+
+    public Discharge(Hospital hospital)  {
+        this.hospital = hospital;
+
     }
+
+
+    //    public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
+//        home();
+//    }
     public static void discharge() throws SQLException, InvocationTargetException, IllegalAccessException {
         System.out.println("Select a Patient to Discharge:");
-        for (Patient p : priorityTreatment.show_patientList()) {
-            if (priorityTreatment.show_patientList().size() >= 1) {
+        for (Patient p : hospital.getPriorityTreatment().show_patientList()) {
+            if (hospital.getPriorityTreatment().show_patientList().size() >= 1) {
                 System.out.println("1. " + p.getName());
                 int choice;
                 while (true) {
@@ -25,7 +34,7 @@ public class Discharge extends Simulation {
                         System.out.println("Invalid Input!");
                     } else {
                         p.setIs_admitted(false);
-                        priorityTreatment.delete_patient(p);
+                        hospital.getPriorityTreatment().delete_patient(p);
                         System.out.println("Patient Discharged");
                         System.out.println("1. Go Home");
                         int choice2;
@@ -36,7 +45,7 @@ public class Discharge extends Simulation {
                             if ((choice != 1)) {
                                 System.out.println("Invalid Input!");
                             } else
-                                home();
+                                break;
                         }
                     }
                 }
@@ -51,7 +60,7 @@ public class Discharge extends Simulation {
                     if ((choice != 1)) {
                         System.out.println("Invalid Input!");
                     } else
-                        home();
+                        break;
                 }
 
             }

@@ -4,13 +4,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class HospitalDetails extends Simulation {
+public class HospitalDetails {
 
-    public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
-        home();
-    }
+//    public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
+//        home();
+//    }
 
-    public static void Hospital_details() throws SQLException, InvocationTargetException, IllegalAccessException {
+    public static void hospitalDetails() throws SQLException, InvocationTargetException, IllegalAccessException {
         System.out.println("Coming Soon in Phase 2");
         System.out.println("1. Go Back");
         int choice;
@@ -21,7 +21,7 @@ public class HospitalDetails extends Simulation {
             if ((choice != 1)) {
                 System.out.println("Invalid Input!");
             } else
-                home();
+                break;
         }
     }
 }

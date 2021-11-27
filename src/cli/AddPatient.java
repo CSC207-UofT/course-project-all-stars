@@ -6,13 +6,18 @@ import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class AddPatient extends Simulation {
+public class AddPatient {
 
-    public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
-        home();
+
+    public AddPatient() {
+
     }
 
-    public static void Add_Patient(){
+//    public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
+//        home();
+//    }
+
+    public static void addPatient(){
         PatientDatabaseCloud database = new PatientDatabaseCloud();
         final String Name, Address, Sex, symptom_1, symptom_2, symptom_3;
         final int age, health;
