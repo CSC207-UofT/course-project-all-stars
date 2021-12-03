@@ -10,7 +10,7 @@ public class Hospital {
     ArrayList<Doctor> doctorsList;
     int numRooms;
     String priorityProtocol;
-    String name;
+    String name; //Hospital names must be unique
     int foundedWhen;
 
     public Hospital(ArrayList<Patient> patientsList, ArrayList<Doctor> doctorsList, int numRooms,
@@ -21,7 +21,6 @@ public class Hospital {
         this.name = name;
         this.priorityProtocol = priorityProtocol;
         this.foundedWhen = foundedWhen;
-
     }
 
     public String getName(){
