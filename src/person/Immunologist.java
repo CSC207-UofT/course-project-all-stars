@@ -7,7 +7,7 @@ public class Immunologist extends Doctor{
         specialization = "Immunology";
         can_cure.add("Anaphylaxis");
         can_cure.add("Arthritis");
-        can_cure.add("Seasonal Flu");
+        can_cure.add("Covid");
         can_cure.add("Conjunctivitis");
     }
 

@@ -4,7 +4,7 @@ import Priority.PriorityTreatment;
 import database.PatientDatabaseCloud;
 import diagnosis.Diagnosis;
 import person.Patient;
-import person.PatientArrayList;
+import person.PatientsFactory;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
@@ -17,7 +17,8 @@ public class Simulation {
 
     static {
         try {
-            patients = PatientArrayList.constructPatient();
+            PatientsFactory patient_factory = new PatientsFactory();
+            patients = patient_factory.createPatients(50);
         } catch (SQLException e) {
             e.printStackTrace();
         }

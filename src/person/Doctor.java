@@ -12,10 +12,9 @@ import java.util.Arrays;
 
 public class Doctor extends Person {
     ArrayList<String> can_cure = new ArrayList<>(Arrays.asList("Salmonella", "Anaphylaxis",
-            "Alcohol poisoning", "Fibromyalgia", "Shingles", "Chickenpox","Covid", "Seasonal Flu",
-            "Tuberculosis", "Arthritis", "Conjunctivitis", "Mononucleosis", "Strep Throat", "Headaches",
-            "Lyme disease", "Malaria", "Measles", "Polio", "Bronchitis","Tetanus", "Rabies"));
-
+            "Alcohol poisoning", "Shingles", "Chickenpox", "Seasonal Flu",
+            "Tuberculosis", "Conjunctivitis", "Mononucleosis", "Strep Throat", "Headaches",
+            "Lyme disease","Measles","Tetanus", "Rabies"));
 
     public Doctor(String name, String address, String sex, int age) {
         super(name, address, sex, age);
