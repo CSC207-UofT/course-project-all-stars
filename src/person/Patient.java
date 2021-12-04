@@ -20,6 +20,16 @@ public class Patient extends Person {
         this.Diagnose = "Not Yet Diagnosed";
     }
 
+    public Patient(String name, String address, String sex, int age, int id, int health, boolean insurance,
+                   ArrayList<String> symptoms_set) {
+        super(name, address, sex, age, id);
+        this.is_admitted = false;
+        this.health = health;
+        this.insurance = insurance;
+        this.symptoms_set = symptoms_set;
+        this.Diagnose = "Not Yet Diagnosed";
+    }
+
     // Getter Methods
     public boolean getIs_Admitted() {
         return is_admitted;

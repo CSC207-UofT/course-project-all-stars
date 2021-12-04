@@ -2,15 +2,10 @@ package person;
 
 import database.PatientDatabaseCloud;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.GenericArrayType;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Random;
-import java.util.Random.*;
-import java.util.HashMap.*;
 
 import static java.util.Collections.sort;
 
@@ -37,14 +32,15 @@ public class PatientsFactory {
         ResultSet dataset = database.readData();
         ArrayList<Patient> patients = new ArrayList<>();
         ArrayList<Integer> lines = getRandom(numberOfPatients);
-        HashMap<Integer, ArrayList<Integer>> AgeAndHealthHashMap = getPatientAgeAndHealthHashmap(dataset);
-        HashMap<Integer, ArrayList<String>> SymptomsSetHashMap = getPatientSymptomsSetHashMap(dataset);
-        HashMap<Integer, ArrayList<String>> NameAddressSexInsuranceHashMap = getPatientNameAddressSexInsuranceHashMap(dataset);
+        HashMap<Integer, ArrayList<Integer>> AgeHealthIdMap = getPatientAgeHealthIdHashmap(dataset);
+        HashMap<Integer, ArrayList<String>> SymptomsSetMap = getPatientSymptomsSetHashMap(dataset);
+        HashMap<Integer, ArrayList<String>> NameAddressSexInsuranceMap = getPatientNameAddressSexInsuranceHashMap(dataset);
         for (int lineNumber : lines) {
-            boolean is_insured = NameAddressSexInsuranceHashMap.get(lineNumber).get(3).equals("true");
-            patients.add(new Patient(NameAddressSexInsuranceHashMap.get(lineNumber).get(0), NameAddressSexInsuranceHashMap.get(lineNumber).get(1),
-                    NameAddressSexInsuranceHashMap.get(lineNumber).get(2), AgeAndHealthHashMap.get(lineNumber).get(0),
-                    AgeAndHealthHashMap.get(lineNumber).get(1), is_insured, SymptomsSetHashMap.get(lineNumber)));
+            boolean is_insured = NameAddressSexInsuranceMap.get(lineNumber).get(3).equals("true");
+            patients.add(new Patient(NameAddressSexInsuranceMap.get(lineNumber).get(0),
+                    NameAddressSexInsuranceMap.get(lineNumber).get(1), NameAddressSexInsuranceMap.get(lineNumber).get(2),
+                    AgeHealthIdMap.get(lineNumber).get(0), AgeHealthIdMap.get(lineNumber).get(2),
+                    AgeHealthIdMap.get(lineNumber).get(1), is_insured, SymptomsSetMap.get(lineNumber)));
         }
         return patients;
     }
@@ -69,18 +65,19 @@ public class PatientsFactory {
         return patientInfo;
     }
 
-    private ArrayList<Integer> getPatientAgeAndHealthPoints(ResultSet dataset) throws SQLException {
+    private ArrayList<Integer> getPatientAgeHealthPointsAndId(ResultSet dataset) throws SQLException {
         ArrayList<Integer> patientInfo = new ArrayList<>();
         patientInfo.add(dataset.getInt(4)); //age
         patientInfo.add(dataset.getInt(5)); //healthPoints
+        patientInfo.add(dataset.getInt(10)); //Id
         return patientInfo;
     }
 
-    private HashMap<Integer, ArrayList<Integer>> getPatientAgeAndHealthHashmap(ResultSet dataset) throws SQLException {
+    private HashMap<Integer, ArrayList<Integer>> getPatientAgeHealthIdHashmap(ResultSet dataset) throws SQLException {
         HashMap<Integer, ArrayList<Integer>> PatientInfo = new HashMap<>();
         int index = 0;
         while (dataset.next()) {
-            ArrayList<Integer> PatientAgeAndHealthArray = getPatientAgeAndHealthPoints(dataset);
+            ArrayList<Integer> PatientAgeAndHealthArray = getPatientAgeHealthPointsAndId(dataset);
             PatientInfo.put(index, PatientAgeAndHealthArray);
             index = index + 1;
         }
