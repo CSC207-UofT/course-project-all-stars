@@ -29,19 +29,23 @@ public class Hospital {
 
     public String admitPatient(Patient p) {
         patientsList.add(p);
-        return "A new patient has been admitted!";
-
+        return "A new patient named " + p.getName() + " has been admitted!";
     }
 
-    public void dischargePatient(Patient p) {
-        patientsList.remove(p);
+    public Patient dischargePatient(int patientID) {
+        for(Patient p: patientsList){
+            if(p.getId() == patientID){
+                patientsList.remove(p);
+                return p;
+            }
+        }
+        return null;
     }
 
     public String hireDoctor(Doctor d) {
         doctorsList.add(d);
-        return "A new doctor has been hired!";
+        return "A new doctor named " + d.getName() + " has been hired";
     }
-
 
     public String getHospitalDetails() {
         return "This hospital," + " " +  this.name + " " + "founded in" + " " + this.foundedWhen + " " +
