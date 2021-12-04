@@ -27,6 +27,10 @@ public class Hospital {
         return name;
     }
 
+    public String getName(){
+        return name;
+    }
+
     public String admitPatient(Patient p) {
         //Add a new patient and return a message
         patientsList.add(p);
