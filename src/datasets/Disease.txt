@@ -23,3 +23,38 @@ Alcohol poisoning,2,10,Hypothermia,Unconsciousness,Vomiting
 Anaphylaxis,3,15,Hives,Hypotension,Swollen tongue
 Rabies,5,30,Agitation,Hallucinations,Partial paralysis
 Salmonella,3,15,Diarrhea,Fever,Stomach cramps
+Asthma,2,30,Wheezing,Cough,Shortness of breath
+Dementia,3,10,Facial Paresis,Hallucinations Auditory,Agitation
+Anxiety,4,30,Agitation,Insomnia,Hallucinations Auditory
+Epilepsy,4,30,Seizure,Tremor,Lethargy
+Bipolar Disorder,5,40,Hopelessness,Agitation,Blackout
+Paranoia,4,15,Hallucinations Auditory,Agitation,Blackout
+Pancreatitis,5,40,Vomiting,Diarrhea,Stool Color Yellow
+Schizophrenia,4,30,Hallucinations Auditory,Suicidal,Agitation
+Obesity,3,15,Catatonia,Shortness of breath,Overweight
+Gastritis,2,10,Heme Positive,Nausea,Decreased Body Weight
+Parkinson,4,30,Tremor,Agitation,Facial Paresis
+Lymphoma,3,15,Lesion,Tinnitus,Decreased Body Weight
+Fibroid Tumor,5,40,Heartburn,Haemorrhage,Muscle Hypotonia
+Anemia,2,10,Fatigue,Haemorrhage,Shortness of breath
+Upper Respiratory Infection,3,20,Wheezing,Cystic Lesion,Nasal Discharge
+Hepatitis,3,30,Pain Abdominal,Distress Respiratory,Projectile Vomiting
+Melanoma,5,40,Mass of Body Structure,Fever,Vomiting
+Malignant Neoplasm of Lung,5,40,Lesion,Night Sweat,Decreased Translucency
+Hemorrhoids,1,10,Haemorrhage,Decreased Stool Caliber,Bowel Sounds
+Delirium,5,30,Unresponsiveness,Suicidal,Verbally Abusive
+Neutropenia,4,10,Night Sweat,Lesion,Monoclonal
+Dependence,5,40,Hopelessness,Agitation,Lethargy
+Decubitus Ulcer,2,20,Systolic Murmur,Fever,Frail
+Cystic fibrosis,3,10,Nasal Polyps,Wheezing,Shortness of breath
+Osteoporosis,3,40,Height Loss,Decreased Grip Strength,Receding Gums
+Scoliosis,2,30,Uneven Shoulders,Uneven Waist,Numbness
+Hip Fracture,3,30,Bruising,Severe Hip Pain,Swelling
+Fibromyalgia,2,10,Limited mobility,Fatigue,Insomnia
+Torn Meniscus,3,20,Swelling,Limited mobility,Stiffness
+Pneumonia,2,10,Shortness of breath,Fever,Cough
+Anorexia,4,40,Decreased Body Weight,Dizziness,Insomnia
+Attention Deficit Hyperactivity Disorder,3,10,Impulsiveness,Short attention span,Fidgets
+Breast Cancer,5,40,Mass of Body Structure,Swelling,Decreased Body Weight
+Celiac Disease,3,20,Diarrhea,Vomiting,Abdominal Bloating
+Cerebellar stroke,5,10,Vertigo,Limited mobility,Abnormal Reflexes

@@ -14,7 +14,8 @@ public class Doctor extends Person {
     ArrayList<String> can_cure = new ArrayList<>(Arrays.asList("Salmonella", "Anaphylaxis",
             "Alcohol poisoning", "Shingles", "Chickenpox", "Seasonal Flu",
             "Tuberculosis", "Conjunctivitis", "Mononucleosis", "Strep Throat", "Headaches",
-            "Lyme disease","Measles","Tetanus", "Rabies"));
+            "Lyme disease","Measles","Tetanus","Obesity", "Rabies", "Gastritis", "Anemia",
+            "Hemorrhoids", "Decubitus Ulcer", "Celiac Disease"));
 
     public Doctor(String name, String address, String sex, int age) {
         super(name, address, sex, age);
