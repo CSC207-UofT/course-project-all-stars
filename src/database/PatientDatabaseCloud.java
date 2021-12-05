@@ -4,9 +4,14 @@ import java.sql.*;
 
 public class PatientDatabaseCloud implements DataInterfaceCloud {
 
-    final String url = "jdbc:postgresql://34.133.180.113/patientdata";
+    final String url = "jdbc:postgresql://34.121.72.40/hospitals";
     final String user = "postgres";
     final String password = "stocks";
+
+    final String hospital_name;
+    public PatientDatabaseCloud(String hospital_name) {
+        this.hospital_name = hospital_name;
+    }
 
     /**
      * Connect to the postgres sql database on Google Cloud
@@ -23,7 +28,7 @@ public class PatientDatabaseCloud implements DataInterfaceCloud {
     @Override
     public ResultSet readData() {
 
-        String sql = "SELECT * FROM patients.patientdata";
+        String sql = "SELECT * FROM " + hospital_name + ".patients";
 
         try {
             Connection conn = connect();
@@ -40,24 +45,25 @@ public class PatientDatabaseCloud implements DataInterfaceCloud {
     /**
      * Writes patient data onto the database on Cloud SQL
      */
-    public void writeData(String name, String address, String sex, int age, int health, boolean insurance,
+    public void writeData(int id, String name, String address, String sex, int age, int health, boolean insurance,
                                  String symptomA, String symptomB, String symptomC) {
 
-        String sql = "INSERT INTO patients.patientdata(name, address, sex, age, health, insurance, symptom_1, " +
-                "symptom_2, symptom_3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        String sql = "INSERT INTO "+hospital_name+".patients(id, name, address, sex, age, health, insurance, symptom1, " +
+                "symptom2, symptom3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
         try {
             Connection conn = connect();
             PreparedStatement stat = conn.prepareStatement(sql);
-            stat.setString(1, name);
-            stat.setString(2, address);
-            stat.setString(3, sex);
-            stat.setInt(4, age);
-            stat.setInt(5, health);
-            stat.setBoolean(6, insurance);
-            stat.setString(7, symptomA);
-            stat.setString(8, symptomB);
-            stat.setString(9, symptomC);
+            stat.setInt(1, id);
+            stat.setString(2, name);
+            stat.setString(3, address);
+            stat.setString(4, sex);
+            stat.setInt(5, age);
+            stat.setInt(6, health);
+            stat.setBoolean(7, insurance);
+            stat.setString(8, symptomA);
+            stat.setString(9, symptomB);
+            stat.setString(10, symptomC);
             stat.executeUpdate();
 
         }

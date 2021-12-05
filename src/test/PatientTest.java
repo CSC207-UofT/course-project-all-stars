@@ -14,7 +14,7 @@ public class PatientTest{
     //Test Patient.java
     @Test
     public void testRead() throws SQLException {
-        ArrayList<Patient> x = PatientArrayList.constructPatient();
+        ArrayList<Patient> x = PatientArrayList.constructPatient("test_hospital");
         for(Patient patient : x){
             System.out.println(patient.getName());
             System.out.println(patient.getAddress());
@@ -30,8 +30,8 @@ public class PatientTest{
     //test write
     @Test
     public void testWrite() throws SQLException{
-        PatientDatabaseCloud database = new PatientDatabaseCloud();
-        database.writeData("Test", "UofT", "Male", 69, 100,
+        PatientDatabaseCloud database = new PatientDatabaseCloud("test_hospital");
+        database.writeData(200,"Test", "UofT", "Male", 69, 100,
                 false, "cold", "flu", "butterflies");
     }
 

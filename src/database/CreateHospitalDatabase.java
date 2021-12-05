@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class CreateHospitalDatabase {
 
-    final String url = "jdbc:postgresql://34.133.180.113/";
+    final String url = "jdbc:postgresql://34.121.72.40/hospitals";
     final String user = "postgres";
     final String password = "stocks";
 
@@ -22,7 +22,7 @@ public class CreateHospitalDatabase {
 
     public void createHospital(String name){
 
-        String hospital = "CREATE DATABASE " + name;
+        String hospital = "CREATE schema " + name;
         String patient = "";
         String disease = "";
         try {

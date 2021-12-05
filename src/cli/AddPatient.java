@@ -2,8 +2,6 @@ package cli;
 
 import database.PatientDatabaseCloud;
 
-import java.lang.reflect.InvocationTargetException;
-import java.sql.SQLException;
 import java.util.Scanner;
 
 public class AddPatient {
@@ -18,13 +16,17 @@ public class AddPatient {
 //    }
 
     public static void addPatient(){
-        PatientDatabaseCloud database = new PatientDatabaseCloud();
+        PatientDatabaseCloud database = new PatientDatabaseCloud("test_hospital");
         final String Name, Address, Sex, symptom_1, symptom_2, symptom_3;
-        final int age, health;
+        final int id;
+        final int age;
+        final int health;
         final boolean insurance;
         Scanner option = new Scanner(System.in);
         System.out.println("Enter Name:");
         Name = option.nextLine();
+        System.out.println("Enter Patient Id Number:");
+        id = option.nextInt();
         System.out.println("Enter Address:");
         Address = option.nextLine();
         System.out.println("Enter Sex:");
@@ -42,7 +44,6 @@ public class AddPatient {
         symptom_2 = option.nextLine();
         System.out.println("Enter Symptom 3:");
         symptom_3 = option.nextLine();
-        database.writeData(Name, Address, Sex, age, health, insurance, symptom_1, symptom_2, symptom_3);
-
+        database.writeData(id, Name, Address, Sex, age, health, insurance, symptom_1, symptom_2, symptom_3);
     }
 }
