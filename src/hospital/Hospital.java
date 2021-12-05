@@ -1,7 +1,5 @@
 package hospital;
 
-import Priority.PriorityAdmission;
-import Priority.PriorityTreatment;
 import person.Doctor;
 import person.Patient;
 
@@ -11,22 +9,22 @@ public class Hospital {
     ArrayList<Patient> patientsList;
     ArrayList<Doctor> doctorsList;
     int numRooms;
-    PriorityAdmission priorityAdmission;
-    PriorityTreatment priorityTreatment;
-    String name;
+    String priorityProtocol;
+    String name; //Hospital names must be unique
     int foundedWhen;
 
     public Hospital(ArrayList<Patient> patientsList, ArrayList<Doctor> doctorsList, int numRooms,
-                    PriorityAdmission priorityAdmission, PriorityTreatment priorityTreatment, String name,
-                    int foundedWhen) {
+                    String priorityProtocol, String name, int foundedWhen) {
         this.doctorsList = doctorsList;
         this.patientsList = patientsList;
         this.numRooms = numRooms;
         this.name = name;
-        this.priorityAdmission = priorityAdmission;
-        this.priorityTreatment = priorityTreatment;
+        this.priorityProtocol = priorityProtocol;
         this.foundedWhen = foundedWhen;
+    }
 
+    public String getName(){
+        return name;
     }
 
     public String getName(){
@@ -34,45 +32,33 @@ public class Hospital {
     }
 
     public String admitPatient(Patient p) {
+        //Add a new patient and return a message
         patientsList.add(p);
-        return "A new patient has been admitted!";
-
+        return "A new patient named " + p.getName() + " has been admitted!";
     }
 
-    public void dischargePatient(Patient p) {
-        patientsList.remove(p);
+    public Patient dischargePatient(int patientID) {
+        //Remove a patient given a patientID and return the patient object or a null if the patientID was not found
+        for(Patient p: patientsList){
+            if(p.getId() == patientID){
+                patientsList.remove(p);
+                return p;
+            }
+        }
+        return null;
     }
 
     public String hireDoctor(Doctor d) {
+        //Add a new doctor to the doctorslist
         doctorsList.add(d);
-        return "A new doctor has been hired!";
+        return "A new doctor named " + d.getName() + " has been hired";
     }
 
-
-//    The following function is made redundant by the getter functions I added. Will go back and remove it once I trace
-//    where it's used'
     public String getHospitalDetails() {
+        //Return a short list of facts about the hospital
         return "This hospital," + " " +  this.name + " " + "founded in" + " " + this.foundedWhen + " " +
                 "is currently treating" + " " + this.patientsList.size() + " " + "patients.";
     }
-    public ArrayList<Patient> getPatientsList() {return this.patientsList; }
-    public ArrayList<Doctor> getDoctorsList(){return this.doctorsList;}
-    public int getNumRooms(){return this.numRooms;}
-    public String getHospitalName(){return this.name;}
-    public PriorityAdmission getPriorityAdmission(){return this.priorityAdmission;}
-    public PriorityTreatment getPriorityTreatment(){return this.priorityTreatment;}
-    public int getFoundedWhen(){return this.foundedWhen; }
 
-    // set methods
-
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setPatientsList(ArrayList<Patient> patientsList) {
-        this.patientsList = patientsList;
-    }
-    public void setDoctorsList(ArrayList<Doctor> doctorsList) {
-        this.doctorsList = doctorsList;
-    }
 }
 
