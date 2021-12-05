@@ -36,7 +36,7 @@ public class PatientDatabaseCloud implements DataInterfaceCloud {
 
         try {
             Connection conn = connect();
-            Statement stmt = conn.createStatement();
+            Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet rs = stmt.executeQuery(sql);
             return rs;
         }

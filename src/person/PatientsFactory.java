@@ -55,6 +55,7 @@ public class PatientsFactory {
             PatientInfo.put(index, PatientNameAddressArray);
             index = index + 1;
         }
+        dataset.beforeFirst();
         return PatientInfo;
     }
 
@@ -83,6 +84,7 @@ public class PatientsFactory {
             PatientInfo.put(index, PatientAgeAndHealthArray);
             index = index + 1;
         }
+        dataset.beforeFirst();
         return PatientInfo;
     }
 
@@ -94,6 +96,7 @@ public class PatientsFactory {
             PatientInfo.put(index, PatientSymptomsSet);
             index = index + 1;
         }
+        dataset.beforeFirst();
         return PatientInfo;
     }
 
