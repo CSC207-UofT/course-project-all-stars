@@ -21,7 +21,10 @@ public class hospital_main {
     public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
         home();
     }
-
+    /**
+     * Method .
+     *
+     */
     public static void home() throws SQLException, InvocationTargetException, IllegalAccessException {
         int choice;
         System.out.println("Welcome Doctor!" + "\n" + "Select one of the following menu options:");
@@ -53,8 +56,8 @@ public class hospital_main {
             PatientDetails.patientDetails();
             home();
         } else if (choice == 4) {
-            new HospitalDetails();
-            HospitalDetails.hospitalDetails();
+            new HospitalDetails(hospital);
+//            HospitalDetails.hospitalDetails();
         } else if (choice == 5) {
             new AddPatient();
             AddPatient.addPatient();

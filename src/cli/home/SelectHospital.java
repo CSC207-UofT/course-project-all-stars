@@ -5,7 +5,13 @@ import database.HospitalDatabaseCloud;
 
 import java.sql.SQLException;
 import java.util.Scanner;
-
+/**
+ * Fill in
+ *
+ * @author Ratantej
+ * @version 2.0
+ * @since 1.0
+ */
 public class SelectHospital {
 
     public SelectHospital() throws SQLException {

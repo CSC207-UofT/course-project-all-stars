@@ -2,6 +2,15 @@ package database;
 
 import java.sql.*;
 
+/**
+ * This is a public class that implements the DataInterfaceCloud interface and reads and writes the data from
+ * the hospitals' database hosted on Google Cloud. It takes
+ *
+ * @author Ratantej
+ * @version 2.0
+ * @since 1.0
+ */
+
 public class PatientDatabaseCloud implements DataInterfaceCloud {
 
     final String url = "jdbc:postgresql://34.121.72.40/hospitals";

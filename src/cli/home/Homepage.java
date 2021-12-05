@@ -2,7 +2,13 @@ package cli.home;
 
 import java.sql.SQLException;
 import java.util.Scanner;
-
+/**
+ * Fill out
+ *
+ * @author Ratantej
+ * @version 2.0
+ * @since 1.0
+ */
 public class Homepage {
 
     public Homepage() throws SQLException {
