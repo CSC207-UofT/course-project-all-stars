@@ -1,5 +1,6 @@
 package person;
 
+import database.DataInterfaceCloud;
 import database.PatientDatabaseCloud;
 
 
@@ -14,7 +15,7 @@ public class PatientAdd {
          * Method to add new Patient object into database.
          * @return void
          */
-        PatientDatabaseCloud database = new PatientDatabaseCloud();
+        DataInterfaceCloud database = new PatientDatabaseCloud();
         database.writeData(name, address, sex, age, health, insurance, symptomA, symptomB, symptomC);
 
     }

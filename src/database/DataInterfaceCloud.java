@@ -18,4 +18,10 @@ public interface DataInterfaceCloud {
      * @return Result Set from Cloud SQL patientdata database
      */
 
+    public void writeData(String name, String address, String sex, int age, int health, boolean insurance,
+                          String symptomA, String symptomB, String symptomC);
+    /**
+     * Method to write database to Cloud SQL
+     */
+
 }

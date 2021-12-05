@@ -8,6 +8,7 @@ import java.util.Hashtable;
 import java.util.Set;
 
 import database.AfflictionDatabaseCloud;
+import database.DataInterfaceCloud;
 
 public class AfflictionConstructor {
     /**
@@ -21,7 +22,7 @@ public class AfflictionConstructor {
           @return ArrayList<patient> constructed using database
          */
         ArrayList<Affliction> afflictionArrayList = new ArrayList<>();
-        AfflictionDatabaseCloud database = new AfflictionDatabaseCloud();
+        DataInterfaceCloud database = new AfflictionDatabaseCloud();
         ResultSet dataset = database.readData();
         while(dataset.next()){ //Continue accessing data
             String diseaseName = dataset.getString(1);

@@ -34,4 +34,10 @@ public class AfflictionDatabaseCloud implements DataInterfaceCloud{
         }
         return null;
     }
+
+    @Override
+    public void writeData(String name, String address, String sex, int age, int health, boolean insurance,
+                          String symptomA, String symptomB, String symptomC) {
+        System.out.println("Function unavailable");
+    }
 }

@@ -1,7 +1,9 @@
 package person;
 
+import database.DataInterfaceCloud;
 import database.PatientDatabaseCloud;
 
+import javax.xml.crypto.Data;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -28,7 +30,7 @@ public class PatientsFactory {
     }
 
     public ArrayList<Patient> createPatients(int numberOfPatients) throws SQLException {
-        PatientDatabaseCloud database = new PatientDatabaseCloud();
+        DataInterfaceCloud database = new PatientDatabaseCloud();
         ResultSet dataset = database.readData();
         ArrayList<Patient> patients = new ArrayList<>();
         ArrayList<Integer> lines = getRandom(numberOfPatients);
