@@ -59,5 +59,16 @@ public class Hospital {
     public PriorityTreatment getPriorityTreatment(){return this.priorityTreatment;}
     public int getFoundedWhen(){return this.foundedWhen; }
 
+    // set methods
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setPatientsList(ArrayList<Patient> patientsList) {
+        this.patientsList = patientsList;
+    }
+    public void setDoctorsList(ArrayList<Doctor> doctorsList) {
+        this.doctorsList = doctorsList;
+    }
 }
 

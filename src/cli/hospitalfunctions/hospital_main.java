@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Simulation {
+public class hospital_main {
     public static ArrayList<Patient> patients;
     public static Hospital hospital;
     public static String hospital_name = "test_hospital";

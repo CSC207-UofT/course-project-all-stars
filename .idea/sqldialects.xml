@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/database/AfflictionDatabaseCloud.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/database/CreateHospitalDatabase.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/database/HospitalDatabaseCloud.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/database/PatientDatabaseCloud.java" dialect="GenericSQL" />
   </component>
 </project>
