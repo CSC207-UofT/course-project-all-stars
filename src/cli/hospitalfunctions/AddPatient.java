@@ -16,7 +16,7 @@ public class AddPatient {
 //    }
 
     public static void addPatient(){
-        PatientDatabaseCloud database = new PatientDatabaseCloud("test_hospital");
+        PatientDatabaseCloud database = new PatientDatabaseCloud();
         final String Name, Address, Sex, symptom_1, symptom_2, symptom_3;
         final int id;
         final int age;

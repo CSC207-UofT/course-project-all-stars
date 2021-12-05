@@ -32,7 +32,7 @@ public class PatientTest{
     @Test
     public void testWrite() throws SQLException{
         PatientDatabaseCloud database = new PatientDatabaseCloud();
-        database.writeData("Test", "UofT", "Male", 69, 100,
+        database.writeData(300, "Test", "UofT", "Male", 69, 100,
                 false, "cold", "flu", "butterflies");
     }
 

@@ -22,26 +22,22 @@ public class Hospital {
         this.priorityProtocol = priorityProtocol;
         this.foundedWhen = foundedWhen;
     }
-
-    public String getName(){
-        return name;
-    }
-
-    public String getName(){
-        return name;
-    }
+    /**
+     * Removes a patient from the priority queue of patients by reference to the patient.
+     *
+     * @param p patient to be admitted to the hospital.
+     * @return A string indicating the patient was added.
+     */
 
     public String admitPatient(Patient p) {
-        //Add a new patient and return a message
-        patientsList.add(p);
+        this.patientsList.add(p);
         return "A new patient named " + p.getName() + " has been admitted!";
     }
 
     public Patient dischargePatient(int patientID) {
-        //Remove a patient given a patientID and return the patient object or a null if the patientID was not found
-        for(Patient p: patientsList){
+        for(Patient p: this.patientsList){
             if(p.getId() == patientID){
-                patientsList.remove(p);
+                this.patientsList.remove(p);
                 return p;
             }
         }
@@ -49,8 +45,7 @@ public class Hospital {
     }
 
     public String hireDoctor(Doctor d) {
-        //Add a new doctor to the doctorslist
-        doctorsList.add(d);
+        this.doctorsList.add(d);
         return "A new doctor named " + d.getName() + " has been hired";
     }
 
