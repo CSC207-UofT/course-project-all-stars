@@ -1,8 +1,4 @@
-package cli;
-import Priority.PriorityAdmission;
-import Priority.PriorityTreatment;
-import database.PatientDatabaseCloud;
-import diagnosis.Diagnosis;
+package cli.hospitalfunctions;
 import hospital.Hospital;
 import person.Patient;
 import person.PatientArrayList;

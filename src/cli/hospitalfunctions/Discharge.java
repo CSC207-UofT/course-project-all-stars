@@ -1,4 +1,4 @@
-package cli;
+package cli.hospitalfunctions;
 
 import hospital.Hospital;
 import person.Patient;

@@ -1,4 +1,4 @@
-package cli;
+package cli.hospitalfunctions;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
