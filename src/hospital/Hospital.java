@@ -48,9 +48,10 @@ public class Hospital {
                 if(d.getCurables().contains(p.getDiagnose()) && !d.isFull()){
                     d.assignPatient(p);
                     p.setDoctor(d);
+                    return "A new patient named " + p.getName() + " has been admitted! They have been assigned to " + p.getDoctor().getName();
                 }
             }
-        return "A new patient named " + p.getName() + " has been admitted! They have been assigned to " + p.getDoctor().getName();
+        return "No doctor found that can be assigned to this patient";
     }
     /**
      * Removes a patient from the priority queue of patients by reference to the patient.
