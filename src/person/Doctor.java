@@ -3,6 +3,7 @@ package person;
 import person.Patient;
 import person.Person;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -16,6 +17,9 @@ public class Doctor extends Person {
             "Tuberculosis", "Conjunctivitis", "Mononucleosis", "Strep Throat", "Headaches",
             "Lyme disease","Measles","Tetanus","Obesity", "Rabies", "Gastritis", "Anemia",
             "Hemorrhoids", "Decubitus Ulcer", "Celiac Disease"));
+
+    final int max_patients = 25;
+    ArrayList<Patient> patients;
 
     public Doctor(int id, String name, String address, String sex, int age) {
         super(id, name, address, sex, age);
@@ -38,6 +42,19 @@ public class Doctor extends Person {
         if (!can_cure.contains(disease)) {
             can_cure.add(disease);
         }
+    }
+
+    public boolean isFull(){
+        return patients.size() >= max_patients;
+    }
+
+    public ArrayList<String> getCurables(){
+        return can_cure;
+    }
+
+    public void assignPatient(Patient p){
+        //Assigns Patient p to the doctor's patient list
+        patients.add(p);
     }
 
 }
