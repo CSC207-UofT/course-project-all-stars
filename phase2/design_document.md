@@ -1,7 +1,3 @@
-# Overview
-	A description of any major design decisions your group has made (along with brief explanations of why you made them).
-
-
 
 # SOLID
 	A brief description of how your project is consistent with the SOLID design principles (if you notice a violation and aren't sure how to fix it, talk about that too!)
@@ -45,11 +41,11 @@ Therefore, our model satisfied the specifications while adhering to a clean desi
 
 ### Facade Design Pattern:
 
-The Facade Design Pattern was implemented so that a single facade class can be used to call on methods from other classes. This design pattern allows us to hide the complexities of different CLI menus behind their respective CLI concrete classes.
+The Facade Design Pattern was implemented so that facade classes can be used to call on methods from other child classes. This design pattern allows us to hide the complexities of different CLI menus behind a facade class. For example, the Homepage class calls on CreateHospital class, ManageHospital class, SelectHospital class, and ViewProgramDetails. This makes adding additional CLI menus much easier if we ever plan to introduce new functionalities or menus in the future.
+
+As for the other design patterns, we were unable to apply in other parts of our codebase. For example, we have tried to use the Factory Design Pattern to create a factory class that initializes and creates patients. However, Factory Design Pattern should only be used if there are multiple different objects and not multiple variations of the same object but with different instance attributes. As a result, Factory Design Pattern cannot be applied for the creation of Patient objects.
 
 
-### Factory Design Pattern:
-N/A
 # Packaging
 	A brief description of which packaging strategies you considered, which you decided to use, and why. (see slide 7 from the packages slides)
 
