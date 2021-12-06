@@ -2,6 +2,7 @@ package database.hospitalDatabase;
 
 import person.Doctor;
 
+import javax.print.attribute.standard.MediaSize;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -28,12 +29,28 @@ public class HospitalDatabaseCloud implements HospitalCloudInterface{
     public void createHospital(String name){
 
         String hospital = "CREATE schema " + name;
-        String patient = "";
-        String disease = "";
+
+        String patient_table = "CREATE TABLE " + name +".patients(id serial not null, name text not null, " +
+                "address text not null, sex text not null, age int4 not null, health int4 not null, " +
+                "insurance bool not null, symptom1 text not null, symptom2 text not null, symptom3 text not null);";
+        String index = "create unique index patients_id_uindex on " + name + ".patients (id);" ;
+        String alter = "alter table "+ name + ".patients add constraint patients_pk primary key (id);";
+
+        String doctors = "create table "+ name +".doctors(id int4 not null, name text not null, " +
+                "address text not null, sex text not null, age int4 not null, specialization text not null);";
+        String index2 = "create unique index doctors_id_uindex on " + name + ".doctors (id);";
+        String alter2 = "alter table "+ name + ".doctors add constraint doctors_pk primary key (id);";
+
         try {
             Connection conn = connect();
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(hospital);
+            stmt.executeUpdate(patient_table);
+            stmt.executeUpdate(index);
+            stmt.executeUpdate(alter);
+            stmt.executeUpdate(doctors);
+            stmt.executeUpdate(index2);
+            stmt.executeUpdate(alter2);
         }
         catch(SQLException ex) {
             System.out.println(ex.getMessage());
@@ -150,6 +167,22 @@ public class HospitalDatabaseCloud implements HospitalCloudInterface{
             stat.setString(10, symptomC);
             stat.executeUpdate();
 
+        }
+        catch(SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+    }
+
+    @Override
+    public void deleteHospital(String hospital){
+
+        String sql = "DROP SCHEMA "+ hospital + " CASCADE";
+
+        try {
+            Connection conn = connect();
+            Statement stmt = conn.createStatement();
+            stmt.executeQuery(sql);
         }
         catch(SQLException ex) {
             System.out.println(ex.getMessage());

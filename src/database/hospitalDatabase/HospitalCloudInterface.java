@@ -25,4 +25,6 @@ public interface HospitalCloudInterface{
     void writePatientData(String hospital_name, int id, String name, String address, String sex, int age,
                           int health, boolean insurance,
                           String symptomA, String symptomB, String symptomC);
+
+    void deleteHospital(String hospital);
 }
