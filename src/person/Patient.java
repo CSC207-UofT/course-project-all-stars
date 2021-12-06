@@ -3,13 +3,18 @@ package person;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Patient extends Person {
-    boolean is_admitted;
-    int health;
-    boolean insurance;
-    ArrayList<String> symptoms_set;
-    String Diagnose;
+//Subclass of person, it adds all the information needed in order for a person to be a patient, so it adds health points
+//from 1 to 100, whether the person is currently admitted into any hospital, whether the person is insured and the symptoms
+// that the person is experiencing and, if any, the diagnose that the person received.
 
+public class Patient extends Person {
+    private boolean is_admitted;
+    private int health;
+    private final boolean insurance;
+    private final ArrayList<String> symptoms_set;
+    private String Diagnose;
+
+    //constructor method
     public Patient(int id, String name, String address, String sex, int age, int health, boolean insurance,
                    ArrayList<String> symptoms_set) {
         super(id, name, address, sex, age);
@@ -25,16 +30,12 @@ public class Patient extends Person {
         return is_admitted;
     }
     public String getName() {
-        return name;
+        return super.getName();
     }
-    public String getAddress() {
-        return address;
-    }
-    public String getSex() {
-        return sex;
-    }
+    public String getAddress() {return super.getAddress();}
+    public String getSex() {return super.getSex();}
     public int getAge() {
-        return age;
+        return super.getAge();
     }
     public int getHealth() {
         return health;
@@ -56,5 +57,6 @@ public class Patient extends Person {
     public void setIs_admitted(boolean is_admitted) {
         this.is_admitted = is_admitted;
     }
+    public void setHealth(int health){this.health = health;}
 
 }

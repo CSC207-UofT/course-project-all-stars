@@ -1,5 +1,6 @@
 package person;
 
+//subclass of Doctor having Cardiology as its specialization and that can cure Heart Disease.
 public class Cardiologist extends Doctor{
     final private String specialization;
 

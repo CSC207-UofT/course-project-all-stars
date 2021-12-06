@@ -16,6 +16,7 @@ public class Psychiatrist extends Doctor{
         can_cure.add("Anorexia");
     }
 
+    //getter method
     public String getSpecialization() {
         return specialization;
     }

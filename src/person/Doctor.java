@@ -25,7 +25,7 @@ public class Doctor extends Person {
         if (p.getIs_Admitted()) {
             String disease = p.getDiagnose();
             if (can_cure.contains(disease)) {
-                p.health = 100;
+                p.setHealth(100);
                 return true;
             }
         } else {
