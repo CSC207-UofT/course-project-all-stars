@@ -18,12 +18,11 @@ public class Doctor extends Person {
             "Lyme disease","Measles","Tetanus","Obesity", "Rabies", "Gastritis", "Anemia",
             "Hemorrhoids", "Decubitus Ulcer", "Celiac Disease"));
 
-    int max_patients;
+    final int max_patients = 25;
     ArrayList<Patient> patients;
 
-    public Doctor(int id, String name, String address, String sex, int age, int max_patients) {
+    public Doctor(int id, String name, String address, String sex, int age) {
         super(id, name, address, sex, age);
-        this.max_patients = max_patients;
     }
 
     public boolean treatPatient(Patient p) {
