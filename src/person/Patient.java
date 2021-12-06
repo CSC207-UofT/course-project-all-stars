@@ -9,6 +9,7 @@ public class Patient extends Person {
     boolean insurance;
     ArrayList<String> symptoms_set;
     String Diagnose;
+    Doctor doctor;
 
     public Patient(int id, String name, String address, String sex, int age, int health, boolean insurance,
                    ArrayList<String> symptoms_set) {
@@ -57,4 +58,11 @@ public class Patient extends Person {
         this.is_admitted = is_admitted;
     }
 
+    public void setDoctor(Doctor d) {
+        doctor = d;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
 }
