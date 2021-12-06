@@ -101,7 +101,9 @@ public class HospitalHomepage {
             home();
         }
         else if (choice == 6){
-            // Hospital Details
+            HospitalDetails menu = new HospitalDetails(selected_hospital);
+            menu.hospitalDetails();
+            home();
         }
         else if (choice == 7){
             new Homepage();

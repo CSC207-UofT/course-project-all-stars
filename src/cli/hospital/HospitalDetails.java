@@ -19,17 +19,18 @@ public class HospitalDetails {
 
     public void hospitalDetails()  {
 
+        System.out.println();
         System.out.println("This hospital is named " + this.hospital.getName() + ".");
         System.out.println( this.hospital.getName() + " was founded in " + this.hospital.getFoundedWhen());
-        System.out.println(this.hospital.getName() + "has" + this.hospital.getNumPatients());
         System.out.println(this.hospital.getName() + " is currently serving " + this.hospital.getPatientsList().size()
         + " patients.");
 
+        System.out.println();
         System.out.println("1. Go Back");
+        System.out.println();
         int choice;
         while (true) {
             Scanner option = new Scanner(System.in);
-            System.out.println("Select your option:");
             choice = option.nextInt();
             if ((choice != 1)) {
                 System.out.println("Invalid Input!");
