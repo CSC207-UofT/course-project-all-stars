@@ -29,7 +29,7 @@ public class AddDoctor {
         System.out.println();
         name = option.nextLine();
         System.out.println();
-        System.out.println("Enter Patient Id Number:");
+        System.out.println("Enter Doctor Id Number:");
         System.out.println();
         id = option.nextInt();
         System.out.println();
