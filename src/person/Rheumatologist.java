@@ -9,6 +9,9 @@ public class Rheumatologist extends Doctor {
         can_cure.add("Bronchitis");
         can_cure.add("Fibromyalgia");
         can_cure.add("Strep Throat");
+        can_cure.add("Asthma");
+        can_cure.add("Upper Respiratory Infection");
+        can_cure.add("Pneumonia");
     }
     public String getSpecialization() {
         return specialization;

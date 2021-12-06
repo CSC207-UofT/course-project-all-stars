@@ -13,6 +13,11 @@ public class Neurologist extends Doctor {
         can_cure.add("Meningitis");
         can_cure.add("Depression");
         can_cure.add("Headaches");
+        can_cure.add("Dementia");
+        can_cure.add("Epilepsy");
+        can_cure.add("Parkinson");
+        can_cure.add("Attention Deficit Hyperactivity Disorder");
+        can_cure.add("Cerebellar stroke");
     }
 
     public String getSpecialization() {

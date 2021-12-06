@@ -14,10 +14,13 @@ Custom GUI Size Feature can be added to help users who may have poor eyesight to
 
 Our hospital management program is intended only for a select subgroup of people. For now, the target audience for our program are hospital administrators. 
 
-**Write a paragraph about who you would market your program towards, if you were to sell or license your program to customers. This could be a specific category such as "students" or more vague, such as "people who like games". Try to give a bit more detail along with the category.**
+**Write a paragraph about whom you would market your program towards, if you were to sell or license your program to customers. This could be a specific category such as "students" or more vague, such as "people who like games". Try to give a bit more detail along with the category.**
 
 The hospital management program is marketed specifically toward doctors and hospital administrators. 
 
-**Write a paragraph about whether or not your program is less likely to be used by certain demographics. For example, a program that converts txt files to files that can be printed by a braille printer are less likely to be used by people who do not read braille.**
+**Write a paragraph about whether your program is less likely to be used by certain demographics. For example, a program that converts txt files to files that can be printed by a braille printer are less likely to be used by people who do not read braille.**
 
-Since our program is a hospital management program, we expect only a small subgroup of people such as doctors and hospital administrators to use it. People working outside of a hospital setting are highly unlikely to use it.
+Since our program is a hospital management program, we expect only a small subgroup of people such as doctors and hospital administrators to use it. People working outside a hospital setting are highly unlikely to use it.
+
+### Credits
+#### (c) Ernest

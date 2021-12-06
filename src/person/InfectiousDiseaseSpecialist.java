@@ -12,5 +12,9 @@ public class InfectiousDiseaseSpecialist extends Doctor{
         can_cure.add("Rabies");
         can_cure.add("Shingles");
         can_cure.add("Salmonella");
+        can_cure.add("Hepatitis");
+    }
+    public String getSpecialization() {
+        return specialization;
     }
 }
