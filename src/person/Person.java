@@ -2,6 +2,7 @@ package person;
 
 // Abstract Class Person to define the basic layout
 public abstract class Person {
+    int id;
     int age;
     String name;
     String sex;
@@ -12,6 +13,14 @@ public abstract class Person {
         this.address = address;
         this.sex = sex;
         this.age = age;
+    }
+
+    public Person(String name, String address, String sex, int age, int id) {
+        this.name = name;
+        this.address = address;
+        this.sex = sex;
+        this.age = age;
+        this.id = id;
     }
 
     public String getName() {
@@ -28,5 +37,9 @@ public abstract class Person {
 
     public String getAddress() {
         return address;
+    }
+
+    public int getId(){
+        return id;
     }
 }

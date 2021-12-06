@@ -3,7 +3,7 @@ package test;
 import database.PatientDatabaseCloud;
 import person.Patient;
 import org.junit.Test;
-import person.PatientArrayList;
+import person.PatientsFactory;
 
 
 import java.sql.SQLException;
@@ -14,7 +14,8 @@ public class PatientTest{
     //Test Patient.java
     @Test
     public void testRead() throws SQLException {
-        ArrayList<Patient> x = PatientArrayList.constructPatient();
+        PatientsFactory PatientFactory = new PatientsFactory();
+        ArrayList<Patient> x = PatientFactory.createPatients(50);
         for(Patient patient : x){
             System.out.println(patient.getName());
             System.out.println(patient.getAddress());
@@ -31,7 +32,7 @@ public class PatientTest{
     @Test
     public void testWrite() throws SQLException{
         PatientDatabaseCloud database = new PatientDatabaseCloud();
-        database.writeData("Test", "UofT", "Male", 69, 100,
+        database.writeData(300, "Test", "UofT", "Male", 69, 100,
                 false, "cold", "flu", "butterflies");
     }
 

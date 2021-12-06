@@ -48,6 +48,7 @@ public class Affliction {
     public String getSymptom3() {
         return symptomSet.get(2);
     }
+
     public ArrayList<String> getSymptomSet(){return symptomSet;}
 
     /*

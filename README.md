@@ -14,9 +14,8 @@ The Hospital Management System designed by All Stars, is a state of the art pati
 Postgres SQL Driver - https://jdbc.postgresql.org/download.html
 
 ## Google Cloud SQL Connection Details
-Public IP Address: 34.133.180.113
-
-Connection Name: hospitalmanagemnetsystem207:us-central1:patientdata
+Public IP Address: 34.121.72.40
+Connection Name: stone-dispatch-334004:us-central1:hospitaldatabase
 
 ## Last Release
 Latest Release (November 15, 2021): v1.2.0
