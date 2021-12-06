@@ -21,10 +21,9 @@ public class Doctor extends Person {
     int max_patients;
     ArrayList<Patient> patients;
 
-    public Doctor(int id, String name, String address, String sex, int age, int max_patients, ArrayList<Patient> patients) {
+    public Doctor(int id, String name, String address, String sex, int age, int max_patients) {
         super(id, name, address, sex, age);
         this.max_patients = max_patients;
-        this.patients = patients;
     }
 
     public boolean treatPatient(Patient p) {
