@@ -52,7 +52,7 @@ public class HospitalHomepage {
         int choice;
 
         System.out.println();
-        System.out.println("Welcome Doctor! " + selected_hospital.getName() +
+        System.out.println("Welcome! " + selected_hospital.getName() +
                 " Hospital selected. Please choose one of the " +
                 "following menu options to proceed:");
         System.out.println();
