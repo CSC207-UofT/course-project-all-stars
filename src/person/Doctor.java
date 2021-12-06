@@ -24,7 +24,7 @@ public class Doctor extends Person {
             "Hemorrhoids", "Decubitus Ulcer", "Celiac Disease"));
 
     final int max_patients = 25;
-    ArrayList<Patient> patients;
+    ArrayList<Patient> patients = new ArrayList<Patient>();
     public String specialization;
 
     public Doctor(int id, String name, String address, String sex, int age) {

@@ -1,4 +1,4 @@
-package cli.hospitalfunctions;
+package cli.hospital;
 
 
 import java.util.Scanner;

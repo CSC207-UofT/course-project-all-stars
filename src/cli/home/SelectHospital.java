@@ -1,6 +1,6 @@
 package cli.home;
 
-import cli.hospitalfunctions.HospitalHomepage;
+import cli.hospital.HospitalHomepage;
 import database.hospitalDatabase.HospitalDatabaseCloud;
 
 import java.sql.SQLException;

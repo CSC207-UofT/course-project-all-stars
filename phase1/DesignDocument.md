@@ -90,11 +90,11 @@ We believe that a package should be a logical grouping of classes and functions.
 
 We chose ***packaging by feature*** and organized our packages along their respective features, however they may relate to end users (doctors), or hospitals, or the databases for our project. 
 
-As mentioned above the Person package has many use cases within it and grouping them into a package was most sensible. By allowing us some freedom we could decide which category would perform best with particular usage situations. Our packages are also named after the features they contain. For example, our package named “Priority” contains all of the code related to priority queues in our application. This packaging structure allows us to be more flexible in the future.
+As mentioned above the Person package has many use cases within it and grouping them into a package was most sensible. By allowing us some freedom we could decide which category would perform best with particular usage situations. Our packages are also named after the features they contain. For example, our package named “priority” contains all of the code related to priority queues in our application. This packaging structure allows us to be more flexible in the future.
 
 A typical directory structure of a package in our project looks like this: 
 	
-	projectname - src - Priority - PriorityAdmission
+	projectname - src - priority - PriorityAdmission
 
 From a version control perspective, the task distribution according to this packaging proved useful when each person was working on a feature in their branch. We believe this use is most effective for our work because within every abstract “idea” there are many use cases. 
 
@@ -130,7 +130,7 @@ Euan has been working primarily with affliction and database packages since both
 
 Person 3: Shysta
 
-Shysta worked on the Priority package with Justice. She implemented the template method design pattern for the algorithm used for adding patients in the priority queues. Earlier, patients were being added to the lists in the subclasses PriorityAdmission and PriorityTreatment. Now, most of the skeleton for the algorithm is in the abstract class priority with priority functions specific to admission and treatment being called in the subclasses. Along with that, she also extended the functionality of the package by adding an interface COVID and an admission class which implements this interface. This helps to prioritise patient admission triage according to COVID symptoms. She also refactored and reformatted the code. She also added tests which check if the patients are being added to the priority queues in the different subclasses correctly or not. Finally, she worked on helping other members of the group with diagnosis and other tests, along with checking for errors in different parts of the code. Future plans: Shysta wants to extend the functionality of the program to multiple hospitals instead of a single work, help with the UI, extend the functionality of priority queues to infectious diseases, and include more tests..
+Shysta worked on the priority package with Justice. She implemented the template method design pattern for the algorithm used for adding patients in the priority queues. Earlier, patients were being added to the lists in the subclasses PriorityAdmission and PriorityTreatment. Now, most of the skeleton for the algorithm is in the abstract class priority with priority functions specific to admission and treatment being called in the subclasses. Along with that, she also extended the functionality of the package by adding an interface COVID and an admission class which implements this interface. This helps to prioritise patient admission triage according to COVID symptoms. She also refactored and reformatted the code. She also added tests which check if the patients are being added to the priority queues in the different subclasses correctly or not. Finally, she worked on helping other members of the group with diagnosis and other tests, along with checking for errors in different parts of the code. Future plans: Shysta wants to extend the functionality of the program to multiple hospitals instead of a single work, help with the UI, extend the functionality of priority queues to infectious diseases, and include more tests..
 
 Person 4: Ratantej
 
@@ -145,7 +145,7 @@ In phase 2 in plan on working on Doctor and its subclasses by adding new disease
 
 Person 6: Justice
 
--   I continued my work on priority queues with Shysta. We expanded our functionality to allow for a new way of prioritizing that checks for covid symptoms, then health, then insurance. We also implemented the template design pattern, keeping the main Priority class as the template and feeding in different ways of prioritizing through higherPriority.
+-   I continued my work on priority queues with Shysta. We expanded our functionality to allow for a new way of prioritizing that checks for covid symptoms, then health, then insurance. We also implemented the template design pattern, keeping the main priority class as the template and feeding in different ways of prioritizing through higherPriority.
     
 -   I documented all of the classes and methods within those classes, elucidating what each major piece does, what parameters associated with each do, and what any applicable method returns.
 

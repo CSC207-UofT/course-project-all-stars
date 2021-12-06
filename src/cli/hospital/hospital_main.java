@@ -1,4 +1,4 @@
-package cli.hospitalfunctions;
+package cli.hospital;
 import hospital.Hospital;
 import person.Patient;
 import java.lang.reflect.InvocationTargetException;

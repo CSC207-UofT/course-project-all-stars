@@ -1,4 +1,4 @@
-package Priority;
+package priority;
 
 import person.Patient;
 

@@ -1,6 +1,6 @@
 package hospital;
 
-import Priority.Priority;
+import priority.Priority;
 import person.Doctor;
 import person.Patient;
 
@@ -19,11 +19,15 @@ public class Hospital {
     int foundedWhen;
     final int maxPatients = 10000;
     final int maxDoctors = 1000;
+    ArrayList<Patient> admitedPatients = new ArrayList<Patient>();
+    ArrayList<Patient> treatedPatients = new ArrayList<Patient>();
 
     public Hospital(ArrayList<Patient> patientsList, ArrayList<Doctor> doctorsList, int numPatients,
                     Priority admissionPriority, Priority treatmentPriority, String name, int foundedWhen) {
         this.doctorsList = doctorsList;
         this.patientsList = patientsList;
+        this.admitedPatients = admitedPatients;
+        this.treatedPatients = treatedPatients;
         this.numPatients = numPatients;
         this.name = name;
         this.admissionPriority = admissionPriority;
@@ -39,17 +43,19 @@ public class Hospital {
 
     public String admitPatient(Patient p) {
         //Admits a Patient to this Hospital, diagnoses the Patient and assigns them to a doctor
-        this.patientsList.add(p);
-        p.setIs_admitted(true);
         if(!p.getDiagnose().equals("Not Yet Diagnosed"))
             for(Doctor d: doctorsList){
                 if(d.getCurables().contains(p.getDiagnose()) && !d.isFull()){
+                    this.admitedPatients.add(p);
+                    p.setIs_admitted(true);
                     d.assignPatient(p);
                     p.setDoctor(d);
-                    return "A new patient named " + p.getName() + " has been admitted! They have been assigned to " + p.getDoctor().getName();
+                    return "A new patient named " + p.getName() + " has been admitted! They have been assigned to " +
+                            "Doctor " + p.getDoctor().getName() + ". Check back later in Discharge Menu to see if the " +
+                            "patient is cured.";
                 }
             }
-        return "No doctor found that can be assigned to this patient";
+        return "No doctor found that can be assigned to this patient. Please try again later.";
     }
     /**
      * Removes a patient from the priority queue of patients by reference to the patient.
@@ -60,7 +66,9 @@ public class Hospital {
     public Patient dischargePatient(int patientID) {
         for(Patient p: this.patientsList){
             if(p.getId() == patientID){
+                this.treatedPatients.add(p);
                 this.patientsList.remove(p);
+                this.admitedPatients.remove(p);
                 return p;
             }
         }
@@ -89,5 +97,6 @@ public class Hospital {
     public ArrayList<Patient> getPatientsList() { return this.patientsList; }
     public ArrayList<Doctor> getDoctorsList() { return this.doctorsList; }
     public int getFoundedWhen() { return this.foundedWhen; }
+    public ArrayList<Patient> getTreatedPatients(){ return this.treatedPatients; }
 }
 

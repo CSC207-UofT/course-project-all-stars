@@ -61,7 +61,7 @@ A typical directory structure of a package in our project looks like this:
 
 	projectname - src - Person - Doctor
 
-In which case, the Person package has many use cases within it and grouping them into a package was most sensible. By allowing us some freedom we could decide which category would perform best with particular usage situations. Another instance would be our package named Priority, which contains all the classes and interfaces related to priority queues in our application.
+In which case, the Person package has many use cases within it and grouping them into a package was most sensible. By allowing us some freedom we could decide which category would perform best with particular usage situations. Another instance would be our package named priority, which contains all the classes and interfaces related to priority queues in our application.
 
 From a version control perspective, the task distribution according to this packaging proved useful when each person was working on a feature in their branch. We believe this use is most effective for our work because within every high-level aspect, there are many use cases.
 

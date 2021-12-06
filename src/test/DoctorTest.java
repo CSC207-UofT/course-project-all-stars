@@ -67,22 +67,22 @@ public class DoctorTest {
         assert x.size() == 25;
     }
 
-    @Test
-    public void testWrite() throws SQLException {
-        DoctorsFactory DoctorFactory = new DoctorsFactory();
-        ArrayList<Doctor> x = DoctorFactory.createDoctors();
-        HospitalCloudInterface hospital = new HospitalDatabaseCloud();
-        for(Doctor d: x){
-            hospital.writeDoctorData("test_hospital", d);
-        }
-    }
+//    @Test
+//    public void testWrite() throws SQLException {
+//        DoctorsFactory DoctorFactory = new DoctorsFactory();
+//        ArrayList<Doctor> x = DoctorFactory.createDoctors();
+//        HospitalCloudInterface hospital = new HospitalDatabaseCloud();
+//        for(Doctor d: x){
+//            hospital.writeDoctorData("test_hospital", d);
+//        }
+//    }
 
-    @Test
-    public void testLoad() throws SQLException{
-        DoctorsFactory Factory = new DoctorsFactory();
-        ArrayList<Doctor> doctors = Factory.loadDoctors("test_hospital");
-        assert doctors.size() == 25;
-    }
+//    @Test
+//    public void testLoad() throws SQLException{
+//        DoctorsFactory Factory = new DoctorsFactory();
+//        ArrayList<Doctor> doctors = Factory.loadDoctors("test_hospital");
+//        assert doctors.size() == 25;
+//    }
 
 
 

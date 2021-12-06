@@ -1,8 +1,8 @@
 package test;
 
-import Priority.PriorityAdmission;
-import Priority.PriorityTreatment;
-import Priority.Admission_COVID;
+import priority.PriorityAdmission;
+import priority.PriorityTreatment;
+import priority.Admission_COVID;
 import person.Patient;
 import org.junit.Test;
 
