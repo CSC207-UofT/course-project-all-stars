@@ -7,9 +7,14 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-    /*
-        Basic type of Doctor, without the specialization variable.
-    */
+/**
+ * A subclass of the Person Class. Doctors have a maximum of 25 patients that are stored in an ArrayList.
+ * Doctors can treat patients and have an ArrayList of curable diseases.
+ * Doctors are in the Entity Layer
+ *
+ * @version 2.0
+ * @since 1.0
+ */
 
 public class Doctor extends Person {
     public ArrayList<String> can_cure = new ArrayList<>(Arrays.asList("Salmonella", "Anaphylaxis",
