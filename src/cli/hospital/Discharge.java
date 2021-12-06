@@ -47,6 +47,7 @@ public class Discharge {
 
         System.out.println();
         System.out.println("Enter the ID of the patient you would like to discharge:");
+        System.out.println();
         for (Patient p : admittedPatients) {
             Doctor doctor = p.getDoctor();
             doctor.treatPatient(p);
@@ -63,6 +64,7 @@ public class Discharge {
             System.out.println();
             choice = option.nextInt();
             if (!treated_patient_id.contains(choice)) {
+                System.out.println();
                 System.out.println("Invalid ID. Please try again.");
             } else
                 break;
@@ -79,7 +81,8 @@ public class Discharge {
             Scanner option2 = new Scanner(System.in);
             choice = option2.nextInt();
             if ((choice != 1)) {
-            System.out.println("Invalid Input!");
+                System.out.println();
+                System.out.println("Invalid Input!");
             }
             else
                 HospitalHomepage.home();

@@ -127,4 +127,34 @@ public class HospitalDatabaseCloud implements HospitalCloudInterface{
         return null;
     }
 
+    @Override
+    public void writePatientData(String hospital_name, int id, String name, String address, String sex, int age,
+                                 int health, boolean insurance,
+                          String symptomA, String symptomB, String symptomC) {
+
+        String sql = "INSERT INTO "+ hospital_name+".patients(id, name, address, sex, age, health, insurance, " +
+                "symptom1, symptom2, symptom3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        try {
+            Connection conn = connect();
+            PreparedStatement stat = conn.prepareStatement(sql);
+            stat.setInt(1, id);
+            stat.setString(2, name);
+            stat.setString(3, address);
+            stat.setString(4, sex);
+            stat.setInt(5, age);
+            stat.setInt(6, health);
+            stat.setBoolean(7, insurance);
+            stat.setString(8, symptomA);
+            stat.setString(9, symptomB);
+            stat.setString(10, symptomC);
+            stat.executeUpdate();
+
+        }
+        catch(SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+    }
+
 }

@@ -21,4 +21,8 @@ public interface HospitalCloudInterface{
     void writeDoctorData(String hospital, Doctor doctor);
 
     public ArrayList<String> listHospitals();
+
+    void writePatientData(String hospital_name, int id, String name, String address, String sex, int age,
+                          int health, boolean insurance,
+                          String symptomA, String symptomB, String symptomC);
 }

@@ -86,13 +86,19 @@ public class HospitalHomepage {
             home();
         }
         else if (choice == 3){
-            // Add Patient
+            AddPatient menu = new AddPatient(selected_hospital);
+            menu.addPatient();
+            home();
         }
         else if (choice == 4){
-            // Add Doctor
+            AddDoctor menu = new AddDoctor(selected_hospital);
+            menu.addDoctor();
+            home();
         }
         else if (choice == 5){
-            // Patient Details
+            PatientDetails menu = new PatientDetails(selected_hospital);
+            menu.patientDetails();
+            home();
         }
         else if (choice == 6){
             // Hospital Details
