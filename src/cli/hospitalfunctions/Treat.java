@@ -76,7 +76,7 @@ public class Treat {
                             break;
                     }
                     if(choice4 == 1){
-                        treat();
+                        top_patient.getDoctor().treatPatient(top_patient);
                     }
                     else {
                         break;
