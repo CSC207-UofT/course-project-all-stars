@@ -2,6 +2,7 @@ package cli.home;
 
 import java.sql.SQLException;
 import java.util.Scanner;
+
 /**
  * Fill out
  *
@@ -38,19 +39,19 @@ public class Homepage {
         }
 
         // Option 1: Select Hospital
-        if(choice == 1){
+        if (choice == 1) {
             new SelectHospital();
         }
         // Option 2: Create new Hospital
-        else if(choice == 2){
+        else if (choice == 2) {
             new CreateHospital();
         }
         // Option 3: Manage Hospital
-        else if(choice == 3){
+        else if (choice == 3) {
             new ManageHospital();
         }
         // Option 4: View program details
-        else if(choice == 4){
+        else if (choice == 4) {
             new ViewProgramDetails();
         }
         // Option 5: quit program

@@ -1,4 +1,5 @@
 package cli.home;
+
 /**
  * Fill in
  *
@@ -8,7 +9,7 @@ package cli.home;
  */
 public class ViewProgramDetails {
 
-    public ViewProgramDetails(){
+    public ViewProgramDetails() {
 
         System.out.println();
         System.out.println("Program Details");

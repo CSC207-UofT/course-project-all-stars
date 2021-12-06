@@ -1,16 +1,13 @@
 package cli.hospitalfunctions;
 
-import java.lang.reflect.InvocationTargetException;
-import java.sql.SQLException;
+
 import java.util.Scanner;
 
 public class PatientDetails {
 
-//    public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
-//        home();
-//    }
 
-    public static void patientDetails() throws SQLException, InvocationTargetException, IllegalAccessException {
+
+    public static void patientDetails()  {
         System.out.println("Coming Soon in Phase 2");
         System.out.println("1. Go Back");
         int choice;
