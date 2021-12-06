@@ -10,13 +10,7 @@ public class hospital_main {
     public static ArrayList<Patient> patients;
     public static Hospital hospital;
     public static String hospital_name = "test_hospital";
-//    static {
-//        try {
-//            patients = PatientArrayList.constructPatient(hospital_name);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
+
 
     public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
         home();

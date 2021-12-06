@@ -2,8 +2,6 @@ package cli.hospitalfunctions;
 
 import hospital.Hospital;
 
-import java.lang.reflect.InvocationTargetException;
-import java.sql.SQLException;
 import java.util.Scanner;
 /**
  * A public class that displays the hospital details of the CLI.
@@ -19,7 +17,7 @@ public class HospitalDetails {
         this.hospital = hospital;
     }
 
-    public void hospitalDetails() throws SQLException, InvocationTargetException, IllegalAccessException {
+    public void hospitalDetails()  {
 
         System.out.println("This hospital is named " + this.hospital.getName() + ".");
         System.out.println( this.hospital.getName() + " was founded in " + this.hospital.getFoundedWhen());

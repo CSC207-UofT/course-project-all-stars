@@ -4,7 +4,6 @@ import diagnosis.Diagnosis;
 import hospital.Hospital;
 import person.Patient;
 
-import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -16,12 +15,8 @@ public class Treat {
     public Treat(Hospital hospital) {
     }
 
-    //    public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
-//        home();
-//    }
 
-
-    public static void treat() throws SQLException, InvocationTargetException, IllegalAccessException {
+    public static void treat() throws SQLException {
         ArrayList<Patient> patients = hospital.getPatientsList();
 
         for (Patient p: patients){

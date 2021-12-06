@@ -1,4 +1,5 @@
 package cli.home;
+
 /**
  * Fill in
  *
@@ -8,7 +9,7 @@ package cli.home;
  */
 public class ManageHospital {
 
-    public ManageHospital(){
+    public ManageHospital() {
 
         System.out.println();
         System.out.println("Manage Hospital");
