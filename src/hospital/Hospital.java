@@ -42,6 +42,7 @@ public class Hospital {
     public String admitPatient(Patient p) {
         //Admits a Patient to this Hospital, diagnoses the Patient and assigns them to a doctor
         this.patientsList.add(p);
+        p.setIs_admitted(true);
         if(!p.getDiagnose().equals("Not Yet Diagnosed"))
             for(Doctor d: doctorsList){
                 if(d.getCurables().contains(p.getDiagnose()) && !d.isFull()){
