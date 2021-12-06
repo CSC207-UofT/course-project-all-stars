@@ -8,19 +8,12 @@ public abstract class Person {
     String sex;
     String address;
 
-    public Person(String name, String address, String sex, int age) {
-        this.name = name;
-        this.address = address;
-        this.sex = sex;
-        this.age = age;
-    }
-
-    public Person(String name, String address, String sex, int age, int id) {
-        this.name = name;
-        this.address = address;
-        this.sex = sex;
-        this.age = age;
+    public Person(int id, String name, String address, String sex, int age) {
         this.id = id;
+        this.name = name;
+        this.address = address;
+        this.sex = sex;
+        this.age = age;
     }
 
     public String getName() {

@@ -39,10 +39,12 @@ public class PatientsFactory {
         HashMap<Integer, ArrayList<String>> NameAddressSexInsuranceMap = getPatientNameAddressSexInsuranceHashMap(dataset);
         for (int lineNumber : lines) {
             boolean is_insured = NameAddressSexInsuranceMap.get(lineNumber).get(3).equals("true");
-            patients.add(new Patient(NameAddressSexInsuranceMap.get(lineNumber).get(0),
-                    NameAddressSexInsuranceMap.get(lineNumber).get(1), NameAddressSexInsuranceMap.get(lineNumber).get(2),
-                    AgeHealthIdMap.get(lineNumber).get(0), AgeHealthIdMap.get(lineNumber).get(2),
-                    AgeHealthIdMap.get(lineNumber).get(1), is_insured, SymptomsSetMap.get(lineNumber)));
+            patients.add(new Patient(AgeHealthIdMap.get(lineNumber).get(2),
+                    NameAddressSexInsuranceMap.get(lineNumber).get(0),
+                    NameAddressSexInsuranceMap.get(lineNumber).get(1),
+                    NameAddressSexInsuranceMap.get(lineNumber).get(2),
+                    AgeHealthIdMap.get(lineNumber).get(0), AgeHealthIdMap.get(lineNumber).get(1),
+                    is_insured, SymptomsSetMap.get(lineNumber)));
         }
         return patients;
     }

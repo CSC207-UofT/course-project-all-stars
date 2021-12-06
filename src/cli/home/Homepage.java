@@ -3,7 +3,7 @@ package cli.home;
 import java.sql.SQLException;
 import java.util.Scanner;
 /**
- * Fill out
+ * Main Homepage of the program
  *
  * @author Ratantej
  * @version 2.0

@@ -23,12 +23,12 @@ public class Hospital {
     int foundedWhen;
 
     public Hospital(ArrayList<Patient> patientsList, ArrayList<Doctor> doctorsList, int numRooms,
-                    Priority priorityProtocol, Priority treatmentPriority, String name, int foundedWhen) {
+                    Priority admissionPriority, Priority treatmentPriority, String name, int foundedWhen) {
         this.doctorsList = doctorsList;
         this.patientsList = patientsList;
         this.numRooms = numRooms;
         this.name = name;
-        this.admissionPriority = priorityProtocol;
+        this.admissionPriority = admissionPriority;
         this.treatmentPriority = treatmentPriority;
         this.foundedWhen = foundedWhen;
     }

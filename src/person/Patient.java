@@ -10,19 +10,9 @@ public class Patient extends Person {
     ArrayList<String> symptoms_set;
     String Diagnose;
 
-    public Patient(String name, String address, String sex, int age, int health, boolean insurance,
+    public Patient(int id, String name, String address, String sex, int age, int health, boolean insurance,
                    ArrayList<String> symptoms_set) {
-        super(name, address, sex, age);
-        this.is_admitted = false;
-        this.health = health;
-        this.insurance = insurance;
-        this.symptoms_set = symptoms_set;
-        this.Diagnose = "Not Yet Diagnosed";
-    }
-
-    public Patient(String name, String address, String sex, int age, int id, int health, boolean insurance,
-                   ArrayList<String> symptoms_set) {
-        super(name, address, sex, age, id);
+        super(id, name, address, sex, age);
         this.is_admitted = false;
         this.health = health;
         this.insurance = insurance;

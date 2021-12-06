@@ -11,12 +11,12 @@ public class PsychiatristTest {
 
     @Test
     public void PsychiatristCanTreatDepression(){
-        Psychiatrist doc = new Psychiatrist("Alex", "1111", "Male", 10);
+        Psychiatrist doc = new Psychiatrist(900,"Alex", "1111", "Male", 10);
         ArrayList<String> symptoms = new ArrayList<>();
         symptoms.add("Hopelessness");
         symptoms.add("Insomnia");
         symptoms.add("Troubles concentrating");
-        Patient patient = new Patient("Mark", "Main Street 1", "Male", 60, 20,
+        Patient patient = new Patient(1001, "Mark", "Main Street 1", "Male", 60, 20,
                 false, symptoms);
         patient.setDiagnose("Depression");
         patient.setIs_admitted(true);

@@ -16,8 +16,8 @@ public class Doctor extends Person {
             "Tuberculosis", "Conjunctivitis", "Mononucleosis", "Strep Throat", "Headaches",
             "Lyme disease","Measles","Tetanus", "Rabies"));
 
-    public Doctor(String name, String address, String sex, int age) {
-        super(name, address, sex, age);
+    public Doctor(int id, String name, String address, String sex, int age) {
+        super(id, name, address, sex, age);
     }
 
     public boolean treatPatient(Patient p) {
