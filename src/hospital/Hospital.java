@@ -16,17 +16,19 @@ import java.util.ArrayList;
 public class Hospital {
     ArrayList<Patient> patientsList;
     ArrayList<Doctor> doctorsList;
-    int numRooms;
+    int numPatients;
     Priority admissionPriority;
     Priority treatmentPriority;
     String name; //Hospital names must be unique
     int foundedWhen;
+    final int maxPatients = 10000;
+    final int maxDoctors = 1000;
 
-    public Hospital(ArrayList<Patient> patientsList, ArrayList<Doctor> doctorsList, int numRooms,
+    public Hospital(ArrayList<Patient> patientsList, ArrayList<Doctor> doctorsList, int numPatients,
                     Priority admissionPriority, Priority treatmentPriority, String name, int foundedWhen) {
         this.doctorsList = doctorsList;
         this.patientsList = patientsList;
-        this.numRooms = numRooms;
+        this.numPatients = numPatients;
         this.name = name;
         this.admissionPriority = admissionPriority;
         this.treatmentPriority = treatmentPriority;
@@ -87,7 +89,7 @@ public class Hospital {
     }
     public Priority getPriorityAdmission() { return this.admissionPriority; }
     public Priority getPriorityTreatment() { return this.treatmentPriority; }
-    public int getNumRooms() { return this.numRooms; }
+    public int getNumPatients() { return this.numPatients; }
     public ArrayList<Patient> getPatientsList() { return this.patientsList; }
     public ArrayList<Doctor> getDoctorsList() { return this.doctorsList; }
     public int getFoundedWhen() { return this.foundedWhen; }

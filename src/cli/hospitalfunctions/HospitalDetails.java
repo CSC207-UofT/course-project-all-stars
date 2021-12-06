@@ -21,7 +21,7 @@ public class HospitalDetails {
 
         System.out.println("This hospital is named " + this.hospital.getName() + ".");
         System.out.println( this.hospital.getName() + " was founded in " + this.hospital.getFoundedWhen());
-        System.out.println(this.hospital.getName() + "has" + this.hospital.getNumRooms());
+        System.out.println(this.hospital.getName() + "has" + this.hospital.getNumPatients());
         System.out.println(this.hospital.getName() + " is currently serving " + this.hospital.getPatientsList().size()
         + " patients.");
 

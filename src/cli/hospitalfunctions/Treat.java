@@ -13,6 +13,7 @@ public class Treat {
     private static Hospital hospital;
 
     public Treat(Hospital hospital) {
+        this.hospital = hospital;
     }
 
 
@@ -110,7 +111,7 @@ public class Treat {
             else if(choice == 2){
                 continue;
             }
-            else if(choice == 3){
+            else{
                 break;
             }
         }
