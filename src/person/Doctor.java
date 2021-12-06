@@ -67,4 +67,11 @@ public class Doctor extends Person {
         patients.add(p);
     }
 
+    //Teach the doctor to cure disease
+    public void LearnHowToCure(String disease) {
+        if (!can_cure.contains(disease)) {
+            can_cure.add(disease);
+        }
+    }
+
 }
