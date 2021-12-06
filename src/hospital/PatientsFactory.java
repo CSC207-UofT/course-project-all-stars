@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static java.util.Collections.sort;
+import static hospital.DoctorsFactory.getIntegers;
 
 public class PatientsFactory {
 
@@ -22,20 +22,14 @@ public class PatientsFactory {
             numbersArray.add(i);
         }
         // populating new array with desired number of random elements n
-        ArrayList<Integer> copyArray = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            int pick = (int) (Math.random() * numbersArray.size());
-            copyArray.add(numbersArray.get(pick));
-            numbersArray.remove(pick);
-        }
-        return copyArray;
+        return getIntegers(n, numbersArray);
     }
 
     public static ArrayList<Patient> loadPatients(String hospital_name) throws SQLException {
 
         HospitalCloudInterface hospital = new HospitalDatabaseCloud();
         ResultSet dataset = hospital.readPatientData(hospital_name);
-        ArrayList<Patient> patientArrayList = new ArrayList<Patient>();
+        ArrayList<Patient> patientArrayList = new ArrayList<>();
 
         while(dataset.next()){ // Continue accessing data until end of database
             int id = dataset.getInt(1);

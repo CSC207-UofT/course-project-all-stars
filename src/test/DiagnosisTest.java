@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class DiagnosisTest {
 

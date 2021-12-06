@@ -28,7 +28,7 @@ public class HospitalManager {
     }
 
     public String transferPatient(Hospital from, Hospital to,  int patientID){
-        //Transfers patient with patientID from from hospital to to hospital
+        //Transfers patient with patientID from hospital to hospital
 
         Patient p = from.dischargePatient(patientID);
         if(p != null){

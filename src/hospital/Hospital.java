@@ -19,14 +19,14 @@ public class Hospital {
     int foundedWhen;
     final int maxPatients = 10000;
     final int maxDoctors = 1000;
-    ArrayList<Patient> admitedPatients = new ArrayList<Patient>();
+    ArrayList<Patient> admittedPatients = new ArrayList<Patient>();
     ArrayList<Patient> treatedPatients = new ArrayList<Patient>();
 
     public Hospital(ArrayList<Patient> patientsList, ArrayList<Doctor> doctorsList, int numPatients,
                     Priority admissionPriority, Priority treatmentPriority, String name, int foundedWhen) {
         this.doctorsList = doctorsList;
         this.patientsList = patientsList;
-        this.admitedPatients = admitedPatients;
+        this.admittedPatients = admittedPatients;
         this.treatedPatients = treatedPatients;
         this.numPatients = numPatients;
         this.name = name;
@@ -46,7 +46,7 @@ public class Hospital {
         if(!p.getDiagnose().equals("Not Yet Diagnosed"))
             for(Doctor d: doctorsList){
                 if(d.getCurables().contains(p.getDiagnose()) && !d.isFull()){
-                    this.admitedPatients.add(p);
+                    this.admittedPatients.add(p);
                     p.setIs_admitted(true);
                     d.assignPatient(p);
                     p.setDoctor(d);
@@ -68,7 +68,7 @@ public class Hospital {
             if(p.getId() == patientID){
                 this.treatedPatients.add(p);
                 this.patientsList.remove(p);
-                this.admitedPatients.remove(p);
+                this.admittedPatients.remove(p);
                 return p;
             }
         }

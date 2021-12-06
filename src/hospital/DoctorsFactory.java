@@ -4,6 +4,7 @@ import database.doctorDatabase.DoctorCloudInterface;
 import database.doctorDatabase.DoctorDatabaseCloud;
 import database.hospitalDatabase.HospitalCloudInterface;
 import database.hospitalDatabase.HospitalDatabaseCloud;
+import org.jetbrains.annotations.NotNull;
 import person.*;
 import person.DoctorTypes.*;
 
@@ -24,6 +25,11 @@ public class DoctorsFactory {
             numbersArray.add(i);
         }
         // populating new array with desired number of random elements n
+        return getIntegers(n, numbersArray);
+    }
+
+    @NotNull
+    static ArrayList<Integer> getIntegers(int n, ArrayList<Integer> numbersArray) {
         ArrayList<Integer> copyArray = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             int pick = (int) (Math.random() * numbersArray.size());
@@ -37,7 +43,7 @@ public class DoctorsFactory {
 
         HospitalCloudInterface hospital = new HospitalDatabaseCloud();
         ResultSet dataset = hospital.readDoctorData(hospital_name);
-        ArrayList<Doctor> doctorArrayList = new ArrayList<Doctor>();
+        ArrayList<Doctor> doctorArrayList = new ArrayList<>();
 
         while(dataset.next()){ // Continue accessing data until end of database
             int id = dataset.getInt(1);
@@ -70,17 +76,37 @@ public class DoctorsFactory {
 
     //creates the instance of doctor.
     public static Doctor doctorCreator(String typeOfDoctor, String name, String address, String sex, int id, int age){
-        return switch (typeOfDoctor) {
-            case "Immunologist" -> new Immunologist(id, name, address, sex, age);
-            case "Oncologist" -> new Oncologist(id, name, address, sex, age);
-            case "Orthopedist" -> new Orthopedist(id, name, address, sex, age);
-            case "Rheumatologist" -> new Rheumatologist(id, name, address, sex, age);
-            case "Doctor" -> new Doctor(id, name, address, sex, age);
-            case "Psychiatrist" -> new Psychiatrist(id, name, address, sex, age);
-            case "Infectious" -> new InfectiousDiseaseSpecialist(id, name, address, sex, age);
-            case "Cardiologist" -> new Cardiologist(id, name, address, sex, age);
-            default -> new Neurologist(id, name, address, sex, age);
-        };
+        Doctor doctor;
+        switch (typeOfDoctor) {
+            case "Immunologist":
+                doctor = new Immunologist(id, name, address, sex, age);
+                break;
+            case "Oncologist":
+                doctor = new Oncologist(id, name, address, sex, age);
+                break;
+            case "Orthopedist":
+                doctor = new Orthopedist(id, name, address, sex, age);
+                break;
+            case "Rheumatologist":
+                doctor = new Rheumatologist(id, name, address, sex, age);
+                break;
+            case "Doctor":
+                doctor = new Doctor(id, name, address, sex, age);
+                break;
+            case "Psychiatrist":
+                doctor = new Psychiatrist(id, name, address, sex, age);
+                break;
+            case "Infectious":
+                doctor = new InfectiousDiseaseSpecialist(id, name, address, sex, age);
+                break;
+            case "Cardiologist":
+                doctor = new Cardiologist(id, name, address, sex, age);
+                break;
+            default:
+                doctor = new Neurologist(id, name, address, sex, age);
+                break;
+        }
+        return doctor;
     }
 
     //creates hashmap mapping row index to the doctor's name, address,sex and doctor type at that line.
