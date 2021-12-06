@@ -3,7 +3,7 @@ package database;
 import java.sql.*;
 
 public class AfflictionDatabaseCloud implements DataInterfaceCloud{
-    final String url = "jdbc:postgresql://34.133.180.113/diseasedata";
+    final String url = "jdbc:postgresql://34.121.72.40/hospitals";
     final String user = "postgres";
     final String password = "stocks";
 
@@ -22,7 +22,7 @@ public class AfflictionDatabaseCloud implements DataInterfaceCloud{
 
     @Override
     public ResultSet readData() {
-        String sql = "SELECT * FROM diseases.diseasedata";
+        String sql = "SELECT * FROM diseasedata.diseases";
         try {
             Connection conn = connect();
             Statement stmt = conn.createStatement();
@@ -35,9 +35,4 @@ public class AfflictionDatabaseCloud implements DataInterfaceCloud{
         return null;
     }
 
-    @Override
-    public void writeData(String name, String address, String sex, int age, int health, boolean insurance,
-                          String symptomA, String symptomB, String symptomC) {
-        System.out.println("Function unavailable");
-    }
 }

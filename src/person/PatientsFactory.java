@@ -55,23 +55,24 @@ public class PatientsFactory {
             PatientInfo.put(index, PatientNameAddressArray);
             index = index + 1;
         }
+        dataset.beforeFirst();
         return PatientInfo;
     }
 
     private ArrayList<String> getPatientNameAddressSexInsurance(ResultSet dataset) throws SQLException {
         ArrayList<String> patientInfo = new ArrayList<>();
-        patientInfo.add(dataset.getString(1)); //name
-        patientInfo.add(dataset.getString(2)); //address
-        patientInfo.add(dataset.getString(3)); //sex
-        patientInfo.add(dataset.getString(6)); //insurance (true or false)
+        patientInfo.add(dataset.getString(2)); //name
+        patientInfo.add(dataset.getString(3)); //address
+        patientInfo.add(dataset.getString(4)); //sex
+        patientInfo.add(dataset.getString(7)); //insurance (true or false)
         return patientInfo;
     }
 
     private ArrayList<Integer> getPatientAgeHealthPointsAndId(ResultSet dataset) throws SQLException {
         ArrayList<Integer> patientInfo = new ArrayList<>();
-        patientInfo.add(dataset.getInt(4)); //age
-        patientInfo.add(dataset.getInt(5)); //healthPoints
-        patientInfo.add(dataset.getInt(10)); //Id
+        patientInfo.add(dataset.getInt(5)); //age
+        patientInfo.add(dataset.getInt(6)); //healthPoints
+        patientInfo.add(dataset.getInt(1)); //Id
         return patientInfo;
     }
 
@@ -83,6 +84,7 @@ public class PatientsFactory {
             PatientInfo.put(index, PatientAgeAndHealthArray);
             index = index + 1;
         }
+        dataset.beforeFirst();
         return PatientInfo;
     }
 
@@ -94,14 +96,15 @@ public class PatientsFactory {
             PatientInfo.put(index, PatientSymptomsSet);
             index = index + 1;
         }
+        dataset.beforeFirst();
         return PatientInfo;
     }
 
     private ArrayList<String> getSymptomsSet(ResultSet dataset) throws SQLException {
         ArrayList<String> symptoms_set = new ArrayList<>();
-        symptoms_set.add(dataset.getString(7));
         symptoms_set.add(dataset.getString(8));
         symptoms_set.add(dataset.getString(9));
+        symptoms_set.add(dataset.getString(10));
         return symptoms_set;
     }
 
