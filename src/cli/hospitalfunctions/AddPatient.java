@@ -11,11 +11,7 @@ public class AddPatient {
 
     }
 
-//    public static void main(String[] args) throws SQLException, InvocationTargetException, IllegalAccessException {
-//        home();
-//    }
-
-    public static void addPatient(){
+    public static void addPatient() {
         PatientDatabaseCloud database = new PatientDatabaseCloud();
         final String Name, Address, Sex, symptom_1, symptom_2, symptom_3;
         final int id;

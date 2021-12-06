@@ -5,6 +5,7 @@ import database.HospitalDatabaseCloud;
 
 import java.sql.SQLException;
 import java.util.Scanner;
+
 /**
  * Fill in
  *
@@ -18,13 +19,13 @@ public class SelectHospital {
 
 
         // Hospital Database
-        HospitalDatabaseCloud hospitaldatabse = new HospitalDatabaseCloud();
+        HospitalDatabaseCloud hospital_database = new HospitalDatabaseCloud();
 
         // Output
         System.out.println();
         System.out.println("Please type in the name of a hospital you would like to select from the list below:");
         System.out.println();
-        for(String name: hospitaldatabse.listHospitals()){
+        for (String name : hospital_database.listHospitals()) {
             System.out.println(name);
         }
         System.out.println();
@@ -35,7 +36,7 @@ public class SelectHospital {
             Scanner option = new Scanner(System.in);
             System.out.println();
             choice = option.next();
-            if (!hospitaldatabse.listHospitals().contains(choice)) {
+            if (!hospital_database.listHospitals().contains(choice)) {
                 System.out.println("Invalid Choice. Please try again.");
             } else
                 break;

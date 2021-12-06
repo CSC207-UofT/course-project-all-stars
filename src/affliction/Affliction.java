@@ -17,6 +17,7 @@ public class Affliction {
         this.symptomSet.add(symptom2);
         this.symptomSet.add(symptom3);
     }
+
     public Affliction(String diseaseName, double urgencyLevel, double cureTime, ArrayList<String> symptomSet) {
         this.diseaseName = diseaseName;
         this.urgencyLevel = urgencyLevel;
@@ -49,7 +50,9 @@ public class Affliction {
         return symptomSet.get(2);
     }
 
-    public ArrayList<String> getSymptomSet(){return symptomSet;}
+    public ArrayList<String> getSymptomSet() {
+        return symptomSet;
+    }
 
     /*
         constructAffliction() creates all Affliction object using "database" Disease.txt and returns an ArrayList containing

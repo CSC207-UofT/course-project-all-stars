@@ -16,17 +16,19 @@ import java.util.ArrayList;
 public class Hospital {
     ArrayList<Patient> patientsList;
     ArrayList<Doctor> doctorsList;
-    int numRooms;
+    int numPatients;
     Priority admissionPriority;
     Priority treatmentPriority;
     String name; //Hospital names must be unique
     int foundedWhen;
+    final int maxPatients = 10000;
+    final int maxDoctors = 1000;
 
-    public Hospital(ArrayList<Patient> patientsList, ArrayList<Doctor> doctorsList, int numRooms,
+    public Hospital(ArrayList<Patient> patientsList, ArrayList<Doctor> doctorsList, int numPatients,
                     Priority admissionPriority, Priority treatmentPriority, String name, int foundedWhen) {
         this.doctorsList = doctorsList;
         this.patientsList = patientsList;
-        this.numRooms = numRooms;
+        this.numPatients = numPatients;
         this.name = name;
         this.admissionPriority = admissionPriority;
         this.treatmentPriority = treatmentPriority;
@@ -40,8 +42,18 @@ public class Hospital {
      */
 
     public String admitPatient(Patient p) {
+        //Admits a Patient to this Hospital, diagnoses the Patient and assigns them to a doctor
         this.patientsList.add(p);
-        return "A new patient named " + p.getName() + " has been admitted!";
+        p.setIs_admitted(true);
+        if(!p.getDiagnose().equals("Not Yet Diagnosed"))
+            for(Doctor d: doctorsList){
+                if(d.getCurables().contains(p.getDiagnose()) && !d.isFull()){
+                    d.assignPatient(p);
+                    p.setDoctor(d);
+                    return "A new patient named " + p.getName() + " has been admitted! They have been assigned to " + p.getDoctor().getName();
+                }
+            }
+        return "No doctor found that can be assigned to this patient";
     }
     /**
      * Removes a patient from the priority queue of patients by reference to the patient.
@@ -77,7 +89,7 @@ public class Hospital {
     }
     public Priority getPriorityAdmission() { return this.admissionPriority; }
     public Priority getPriorityTreatment() { return this.treatmentPriority; }
-    public int getNumRooms() { return this.numRooms; }
+    public int getNumPatients() { return this.numPatients; }
     public ArrayList<Patient> getPatientsList() { return this.patientsList; }
     public ArrayList<Doctor> getDoctorsList() { return this.doctorsList; }
     public int getFoundedWhen() { return this.foundedWhen; }
