@@ -1,8 +1,8 @@
-package database;
+package database.afflictionDatabase;
 
 import java.sql.*;
 
-public class AfflictionDatabaseCloud implements DataInterfaceCloud{
+public class AfflictionDatabaseCloud implements AfflictionCloudInterface {
     final String url = "jdbc:postgresql://34.121.72.40/hospitals";
     final String user = "postgres";
     final String password = "stocks";

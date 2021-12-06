@@ -5,8 +5,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-import database.AfflictionDatabaseCloud;
-import database.DataInterfaceCloud;
+import database.afflictionDatabase.AfflictionCloudInterface;
+import database.afflictionDatabase.AfflictionDatabaseCloud;
 
 public class AfflictionConstructor {
     /**
@@ -20,7 +20,7 @@ public class AfflictionConstructor {
           @return ArrayList<patient> constructed using database
          */
         ArrayList<Affliction> afflictionArrayList = new ArrayList<>();
-        DataInterfaceCloud database = new AfflictionDatabaseCloud();
+        AfflictionCloudInterface database = new AfflictionDatabaseCloud();
         ResultSet dataset = database.readData();
         while(dataset.next()){ //Continue accessing data
             String diseaseName = dataset.getString(1);

@@ -1,17 +1,10 @@
-package database;
+package database.doctorDatabase;
+
+import database.patientDatabase.PatientCloudInterface;
 
 import java.sql.*;
 
-/**
- * This is a public class that implements the DataInterfaceCloud interface and reads and writes the data from
- * the hospitals' database hosted on Google Cloud. It takes
- *
- * @author Ratantej
- * @version 2.0
- * @since 1.0
- */
-
-public class PatientDatabaseCloud implements DataInterfaceCloud {
+public class DoctorDatabaseCloud implements DoctorCloudInterface {
 
     final String url = "jdbc:postgresql://34.121.72.40/hospitals";
     final String user = "postgres";
@@ -21,18 +14,15 @@ public class PatientDatabaseCloud implements DataInterfaceCloud {
      * Connect to the postgres sql database on Google Cloud
      */
 
+    @Override
     public Connection connect() throws SQLException {
         return DriverManager.getConnection(url, user, password);
     }
 
-    /**
-     * Reads patient data and returns a result set
-     * @return
-     */
     @Override
     public ResultSet readData() {
 
-        String sql = "SELECT * FROM patientdata.patients";
+        String sql = "SELECT * FROM doctordata.doctors";
 
         try {
             Connection conn = connect();
@@ -46,14 +36,11 @@ public class PatientDatabaseCloud implements DataInterfaceCloud {
         return null;
     }
 
-    /**
-     * Writes patient data onto the database on Cloud SQL
-     */
-    public void writeData(int id, String name, String address, String sex, int age, int health, boolean insurance,
-                                 String symptomA, String symptomB, String symptomC) {
+    @Override
+    public void writeData(int id, String name, String address, String sex, int age, String specialization) {
 
-        String sql = "INSERT INTO patientdata.patients(id, name, address, sex, age, health, insurance, symptom1, " +
-                "symptom2, symptom3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        String sql = "INSERT INTO patientdata.patients(id, name, address, sex, age, specialization) " +
+                "VALUES (?, ?, ?, ?, ?, ?);";
 
         try {
             Connection conn = connect();
@@ -63,11 +50,7 @@ public class PatientDatabaseCloud implements DataInterfaceCloud {
             stat.setString(3, address);
             stat.setString(4, sex);
             stat.setInt(5, age);
-            stat.setInt(6, health);
-            stat.setBoolean(7, insurance);
-            stat.setString(8, symptomA);
-            stat.setString(9, symptomB);
-            stat.setString(10, symptomC);
+            stat.setString(6, specialization);
             stat.executeUpdate();
 
         }
@@ -76,4 +59,6 @@ public class PatientDatabaseCloud implements DataInterfaceCloud {
         }
 
     }
+
+
 }

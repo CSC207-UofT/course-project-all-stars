@@ -1,9 +1,9 @@
 package test;
 
-import database.PatientDatabaseCloud;
+import database.patientDatabase.PatientDatabaseCloud;
 import person.Patient;
 import org.junit.Test;
-import person.PatientsFactory;
+import hospital.PatientsFactory;
 
 
 import java.sql.SQLException;

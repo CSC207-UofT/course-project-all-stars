@@ -55,7 +55,7 @@ public class Patient extends Person {
         return this.Diagnose;
     }
     public Doctor getDoctor() {
-        return doctor;
+        return this.doctor;
     }
 
     //Setter Methods
@@ -71,6 +71,6 @@ public class Patient extends Person {
     }
 
     public void setDoctor(Doctor d) {
-        doctor = d;
+        this.doctor = d;
     }
 }

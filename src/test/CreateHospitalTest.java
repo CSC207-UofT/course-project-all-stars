@@ -1,6 +1,6 @@
 package test;
 
-import database.HospitalDatabaseCloud;
+import database.hospitalDatabase.HospitalDatabaseCloud;
 import org.junit.Test;
 
 public class CreateHospitalTest {

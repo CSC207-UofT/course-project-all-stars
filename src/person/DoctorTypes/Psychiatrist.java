@@ -1,11 +1,13 @@
-package person;
+package person.DoctorTypes;
 
-public class Psychiatrist extends Doctor{
-    final private String specialization;
+import person.Doctor;
+
+public class Psychiatrist extends Doctor {
+
 
     public Psychiatrist(int id, String name, String address, String sex, int age){
         super(id, name, address, sex, age);
-        specialization = "Psychiatry";
+        specialization = "Psychiatrist";
         can_cure.add("Depression");
         can_cure.add("Anxiety");
         can_cure.add("Bipolar Disorder");

@@ -2,7 +2,7 @@ package test;
 import org.junit.Test;
 
 import person.Patient;
-import person.Psychiatrist;
+import person.DoctorTypes.Psychiatrist;
 
 import java.util.ArrayList;
 import java.util.Objects;

@@ -1,13 +1,9 @@
 package test;
 import org.junit.Test;
-import person.Doctor;
-import person.Neurologist;
-import person.Oncologist;
+import person.DoctorTypes.Neurologist;
 import person.Patient;
 
-import javax.print.Doc;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Objects;
 
 public class NeurologistTest {

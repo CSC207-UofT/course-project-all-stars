@@ -7,10 +7,6 @@ import person.Patient;
 import java.util.ArrayList;
 /**
  * This is a public class that creates a Hospital Object.
- *
- * @author Shysta and Justice
- * @version 2.0
- * @since 1.0
  */
 
 public class Hospital {

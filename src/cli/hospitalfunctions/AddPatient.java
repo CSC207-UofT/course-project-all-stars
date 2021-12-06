@@ -1,6 +1,6 @@
 package cli.hospitalfunctions;
 
-import database.PatientDatabaseCloud;
+import database.patientDatabase.PatientDatabaseCloud;
 
 import java.util.Scanner;
 

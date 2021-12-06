@@ -12,7 +12,7 @@ import java.util.Arrays;
     */
 
 public class Doctor extends Person {
-    ArrayList<String> can_cure = new ArrayList<>(Arrays.asList("Salmonella", "Anaphylaxis",
+    public ArrayList<String> can_cure = new ArrayList<>(Arrays.asList("Salmonella", "Anaphylaxis",
             "Alcohol poisoning", "Shingles", "Chickenpox", "Seasonal Flu",
             "Tuberculosis", "Conjunctivitis", "Mononucleosis", "Strep Throat", "Headaches",
             "Lyme disease","Measles","Tetanus","Obesity", "Rabies", "Gastritis", "Anemia",
@@ -20,9 +20,11 @@ public class Doctor extends Person {
 
     final int max_patients = 25;
     ArrayList<Patient> patients;
+    public String specialization;
 
     public Doctor(int id, String name, String address, String sex, int age) {
         super(id, name, address, sex, age);
+        this.specialization = "General";
     }
 
     public boolean treatPatient(Patient p) {
@@ -51,6 +53,11 @@ public class Doctor extends Person {
     public ArrayList<String> getCurables(){
         return can_cure;
     }
+
+    public String getSpecialization(){
+        return this.specialization;
+    }
+
 
     public void assignPatient(Patient p){
         //Assigns Patient p to the doctor's patient list

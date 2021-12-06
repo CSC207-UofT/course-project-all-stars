@@ -1,5 +1,5 @@
 package test;
-import database.HospitalDatabaseCloud;
+import database.hospitalDatabase.HospitalDatabaseCloud;
 import org.junit.Test;
 
 import java.sql.SQLException;

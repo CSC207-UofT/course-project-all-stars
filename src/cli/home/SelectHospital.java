@@ -1,7 +1,7 @@
 package cli.home;
 
 import cli.hospitalfunctions.HospitalHomepage;
-import database.HospitalDatabaseCloud;
+import database.hospitalDatabase.HospitalDatabaseCloud;
 
 import java.sql.SQLException;
 import java.util.Scanner;

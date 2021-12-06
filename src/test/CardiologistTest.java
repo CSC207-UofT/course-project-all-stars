@@ -1,6 +1,6 @@
 package test;
 import org.junit.Test;
-import person.Oncologist;
+import person.DoctorTypes.Oncologist;
 import person.Patient;
 
 import java.util.ArrayList;

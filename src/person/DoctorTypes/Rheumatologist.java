@@ -1,12 +1,14 @@
-package person;
+package person.DoctorTypes;
+
+import person.Doctor;
 
 //subclass of Doctor having Rheumatology as its specialization and that can cure Tuberculosis.
 public class Rheumatologist extends Doctor {
-    final private String specialization;
+
     //constructor
     public Rheumatologist(int id, String name, String address, String sex, int age) {
         super(id, name, address, sex, age);
-        specialization = "Rheumatology";
+        specialization = "Rheumatologist";
         can_cure.add("Tuberculosis");
         can_cure.add("Bronchitis");
         can_cure.add("Fibromyalgia");

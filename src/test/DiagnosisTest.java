@@ -18,7 +18,7 @@ public class DiagnosisTest {
 
         Patient p = new Patient(1000, "Carl", "Your Mom", "Yes Please", 99, 30, false, set);
 
-        //Diagnosis.diagnosePatient(p);
+        Diagnosis.diagnose_patient(p);
 
         assert p.getDiagnose().equals("Covid");
     }

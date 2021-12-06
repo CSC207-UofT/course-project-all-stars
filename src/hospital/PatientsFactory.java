@@ -1,19 +1,21 @@
-package person;
+package hospital;
 
-import database.DataInterfaceCloud;
-import database.PatientDatabaseCloud;
+import database.hospitalDatabase.HospitalCloudInterface;
+import database.hospitalDatabase.HospitalDatabaseCloud;
+import database.patientDatabase.PatientCloudInterface;
+import database.patientDatabase.PatientDatabaseCloud;
+import person.Patient;
 
-import javax.xml.crypto.Data;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-//This class is used to create a specific amount of patients that can go up to 10000.
+import static java.util.Collections.sort;
+
 public class PatientsFactory {
 
-    //returns n random integers from the 10000 possible lines
-    private ArrayList<Integer> getRandom(int n) {
+    private static ArrayList<Integer> getRandom(int n) {
         // populating array list with numbers in the range [1, 10^4]
         ArrayList<Integer> numbersArray = new ArrayList<>();
         for (int i = 1; i <= 10000; i++) {
@@ -29,13 +31,36 @@ public class PatientsFactory {
         return copyArray;
     }
 
-    //method that returns numberOfPatients different patients
-    public ArrayList<Patient> createPatients(int numberOfPatients) throws SQLException {
-        DataInterfaceCloud database = new PatientDatabaseCloud(); //database containing patients' info
+    public static ArrayList<Patient> loadPatients(String hospital_name) throws SQLException {
+
+        HospitalCloudInterface hospital = new HospitalDatabaseCloud();
+        ResultSet dataset = hospital.readPatientData(hospital_name);
+        ArrayList<Patient> patientArrayList = new ArrayList<Patient>();
+
+        while(dataset.next()){ // Continue accessing data until end of database
+            int id = dataset.getInt(1);
+            String name = dataset.getString(2);
+            String address = dataset.getString(3);
+            String sex = dataset.getString(4);
+            int age = dataset.getInt(5);
+            int health = dataset.getInt(6);
+            boolean insurance = dataset.getBoolean(7);
+            ArrayList<String> symptoms_set = new ArrayList<>();
+            symptoms_set.add(dataset.getString(8));
+            symptoms_set.add(dataset.getString(9));
+            symptoms_set.add(dataset.getString(10));
+            patientArrayList.add(new Patient(id, name, address, sex, age, health, insurance, symptoms_set));
+        }
+        return patientArrayList;
+
+    }
+
+    public static ArrayList<Patient> createPatients(int numberOfPatients) throws SQLException {
+        PatientCloudInterface database = new PatientDatabaseCloud();
         ResultSet dataset = database.readData();
-        ArrayList<Patient> patients = new ArrayList<>();  //list of patient that needs to be populated
-        ArrayList<Integer> lines = getRandom(numberOfPatients); //random distinct lines from which patients info are gonna be picked.
-        HashMap<Integer, ArrayList<Integer>> AgeHealthIdMap = getPatientAgeHealthIdHashmap(dataset); //hashmaps mapping line number in database to info
+        ArrayList<Patient> patients = new ArrayList<>();
+        ArrayList<Integer> lines = getRandom(numberOfPatients);
+        HashMap<Integer, ArrayList<Integer>> AgeHealthIdMap = getPatientAgeHealthIdHashmap(dataset);
         HashMap<Integer, ArrayList<String>> SymptomsSetMap = getPatientSymptomsSetHashMap(dataset);
         HashMap<Integer, ArrayList<String>> NameAddressSexInsuranceMap = getPatientNameAddressSexInsuranceHashMap(dataset);
         for (int lineNumber : lines) {
@@ -49,25 +74,20 @@ public class PatientsFactory {
         }
         return patients;
     }
-
-    //Method getting hashmap mapping row number in data set to arraylist containing Name,Address,Sex and insurance of the patient.
-    private HashMap<Integer, ArrayList<String>> getPatientNameAddressSexInsuranceHashMap(ResultSet dataset)
+    public static HashMap<Integer, ArrayList<String>> getPatientNameAddressSexInsuranceHashMap(ResultSet dataset)
             throws SQLException {
         HashMap<Integer, ArrayList<String>> PatientInfo = new HashMap<>();
         int index = 0;
-        //will iterate through whole dataset
         while (dataset.next()) {
             ArrayList<String> PatientNameAddressArray = getPatientNameAddressSexInsurance(dataset);
             PatientInfo.put(index, PatientNameAddressArray);
             index = index + 1;
         }
-        //sends dataset back to beginning:
         dataset.beforeFirst();
         return PatientInfo;
     }
 
-    //
-    private ArrayList<String> getPatientNameAddressSexInsurance(ResultSet dataset) throws SQLException {
+    private static ArrayList<String> getPatientNameAddressSexInsurance(ResultSet dataset) throws SQLException {
         ArrayList<String> patientInfo = new ArrayList<>();
         patientInfo.add(dataset.getString(2)); //name
         patientInfo.add(dataset.getString(3)); //address
@@ -76,7 +96,7 @@ public class PatientsFactory {
         return patientInfo;
     }
 
-    private ArrayList<Integer> getPatientAgeHealthPointsAndId(ResultSet dataset) throws SQLException {
+    private static ArrayList<Integer> getPatientAgeHealthPointsAndId(ResultSet dataset) throws SQLException {
         ArrayList<Integer> patientInfo = new ArrayList<>();
         patientInfo.add(dataset.getInt(5)); //age
         patientInfo.add(dataset.getInt(6)); //healthPoints
@@ -84,8 +104,7 @@ public class PatientsFactory {
         return patientInfo;
     }
 
-    //creates hashmap mapping row numbers to the patient's age, health and id.
-    private HashMap<Integer, ArrayList<Integer>> getPatientAgeHealthIdHashmap(ResultSet dataset) throws SQLException {
+    private static HashMap<Integer, ArrayList<Integer>> getPatientAgeHealthIdHashmap(ResultSet dataset) throws SQLException {
         HashMap<Integer, ArrayList<Integer>> PatientInfo = new HashMap<>();
         int index = 0;
         while (dataset.next()) {
@@ -96,8 +115,8 @@ public class PatientsFactory {
         dataset.beforeFirst();
         return PatientInfo;
     }
-    //creates hashmap mapping row numbers to symptoms sets.
-    private HashMap<Integer, ArrayList<String>> getPatientSymptomsSetHashMap(ResultSet dataset) throws SQLException {
+
+    private static HashMap<Integer, ArrayList<String>> getPatientSymptomsSetHashMap(ResultSet dataset) throws SQLException {
         HashMap<Integer, ArrayList<String>> PatientInfo = new HashMap<>();
         int index = 0;
         while (dataset.next()) {
@@ -109,8 +128,7 @@ public class PatientsFactory {
         return PatientInfo;
     }
 
-    //creates symptoms set from info contained in the row at which the dataset is
-    private ArrayList<String> getSymptomsSet(ResultSet dataset) throws SQLException {
+    private static ArrayList<String> getSymptomsSet(ResultSet dataset) throws SQLException {
         ArrayList<String> symptoms_set = new ArrayList<>();
         symptoms_set.add(dataset.getString(8));
         symptoms_set.add(dataset.getString(9));
