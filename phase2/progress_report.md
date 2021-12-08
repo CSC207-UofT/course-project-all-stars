@@ -29,7 +29,15 @@ I believe this is one of the major pull requests I worked on this semester. In t
 
 ## Ratantej
 
-N/A
+Ratantej coded up the CLI and improved cloud functionality using Google Cloud SQL. He also implemented the database interfaces following various deisgn documents. He also tested and cleaned up the old code. 
+
+Pull Requests: 
+
+https://github.com/CSC207-UofT/course-project-all-stars/pull/27
+
+https://github.com/CSC207-UofT/course-project-all-stars/pull/22
+
+https://github.com/CSC207-UofT/course-project-all-stars/pull/10
 
 ## Alessandro
 
