@@ -29,7 +29,19 @@ I believe this is one of the major pull requests I worked on this semester. In t
 
 ## Ratantej
 
-N/A
+Ratantej coded up the CLI and improved cloud functionality using Google Cloud SQL. He also implemented the database interfaces following various deisgn documents. He also tested and cleaned up the old code. 
+
+Pull Requests: 
+
+https://github.com/CSC207-UofT/course-project-all-stars/pull/27
+
+https://github.com/CSC207-UofT/course-project-all-stars/pull/22
+
+The pull request merging two cli branches was merging justices work on the CLI with mine. While he cleaned up the code from the previous CLI that I had coded to follow respective solid principles and design patterns, I was working on the main layer of the CLI since it is divind into esstinally 2 layers. Top layer is selcting and initlizing a hospital from the google cloud. And the second layer is the avaible functions that can be performed to that hospital. 
+
+The second pull request merging CLI to main, addressed multiple issues across the board. It allowed us to connect the entire CLI to the various classes everyone else was working on. After that pull request, I made my commits directly to the main branch and addressed various inconsistencies while also improving the functionality of our 2 layred CLI
+
+
 
 ## Alessandro
 
