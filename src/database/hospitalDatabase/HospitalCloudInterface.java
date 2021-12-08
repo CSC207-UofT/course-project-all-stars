@@ -27,4 +27,6 @@ public interface HospitalCloudInterface{
                           String symptomA, String symptomB, String symptomC);
 
     void deleteHospital(String hospital);
+
+    void deletePatient(String hospital, int id);
 }

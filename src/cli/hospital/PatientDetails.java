@@ -55,7 +55,9 @@ public class PatientDetails {
         System.out.println("Symptoms: " + selectedPatient.getSymptoms());
         System.out.println("Diagnosis: " + selectedPatient.getDiagnose());
         System.out.println("Admission Status: " + selectedPatient.getIs_Admitted());
-        System.out.println("Assigned Doctor: " + selectedPatient.getDoctor().getName());
+        if(selectedPatient.getDoctor() != null) {
+            System.out.println("Assigned Doctor: " + selectedPatient.getDoctor().getName());
+        }
         System.out.println();
 
         System.out.println("1. Check Another Patient");

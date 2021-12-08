@@ -182,7 +182,23 @@ public class HospitalDatabaseCloud implements HospitalCloudInterface{
         try {
             Connection conn = connect();
             Statement stmt = conn.createStatement();
-            stmt.executeQuery(sql);
+            stmt.executeUpdate(sql);
+        }
+        catch(SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+    }
+
+    @Override
+    public void deletePatient(String hospital, int id){
+
+        String sql = "DELETE FROM "+ hospital + ".patients WHERE id = " + id;
+
+        try {
+            Connection conn = connect();
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(sql);
         }
         catch(SQLException ex) {
             System.out.println(ex.getMessage());

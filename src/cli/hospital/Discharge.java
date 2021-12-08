@@ -1,5 +1,7 @@
 package cli.hospital;
 
+import database.hospitalDatabase.HospitalCloudInterface;
+import database.hospitalDatabase.HospitalDatabaseCloud;
 import hospital.Hospital;
 import person.Doctor;
 import person.Patient;
@@ -23,6 +25,7 @@ public class Discharge {
         ArrayList<Patient> admittedPatients = hospital.getPriorityTreatment().show_patientList();
         ArrayList<Patient> treatedPatients = new ArrayList<Patient>();
         ArrayList<Integer> treated_patient_id = new ArrayList<Integer>();
+        HospitalCloudInterface database = new HospitalDatabaseCloud();
 
         // If no patients available to treat
         if(admittedPatients.size() < 1){
@@ -46,7 +49,8 @@ public class Discharge {
         // there are patients that can be treated
 
         System.out.println();
-        System.out.println("Enter the ID of the patient you would like to discharge:");
+        System.out.println("Enter the ID of the patient you would like to discharge or press 0 to go back to the main" +
+                "menu:");
         System.out.println();
         for (Patient p : admittedPatients) {
             Doctor doctor = p.getDoctor();
@@ -63,6 +67,9 @@ public class Discharge {
             Scanner option = new Scanner(System.in);
             System.out.println();
             choice = option.nextInt();
+            if(choice == 0){
+                HospitalHomepage.home();
+            }
             if (!treated_patient_id.contains(choice)) {
                 System.out.println();
                 System.out.println("Invalid ID. Please try again.");
@@ -71,6 +78,7 @@ public class Discharge {
         }
 
         hospital.getPriorityTreatment().delete_patient(hospital.dischargePatient(choice));
+        database.deletePatient(hospital.getName(), choice);
 
 
         System.out.println();
