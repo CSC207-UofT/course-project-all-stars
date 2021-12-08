@@ -31,7 +31,11 @@ public class Homepage {
         while (true) {
             Scanner option = new Scanner(System.in);
             System.out.println();
-            choice = option.nextInt();
+            try {
+                choice = option.nextInt();
+            } catch (Exception e) {
+                choice = -1;
+            }
             if ((choice > 5 || choice < 1)) {
                 System.out.println("Invalid Choice. Please try again.");
             } else

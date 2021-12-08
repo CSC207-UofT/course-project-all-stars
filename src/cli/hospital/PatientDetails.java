@@ -16,7 +16,7 @@ public class PatientDetails {
 
     public static void patientDetails() throws SQLException {
 
-        ArrayList<Integer> patients = new ArrayList<Integer>();
+        ArrayList<Integer> patients = new ArrayList<>();
         Patient selectedPatient = null;
 
         for(Patient patient: hospital.getPatientsList()){
@@ -30,7 +30,11 @@ public class PatientDetails {
         while (true) {
             Scanner option = new Scanner(System.in);
             System.out.println();
-            choice = option.nextInt();
+            try {
+                choice = option.nextInt();
+            } catch (Exception e) {
+                choice = -1;
+            }
             if (!patients.contains(choice)) {
                 System.out.println("Invalid ID or Patient by this ID Doesn't Exist. Try Creating a new " +
                         "patient instead. Please try again.");

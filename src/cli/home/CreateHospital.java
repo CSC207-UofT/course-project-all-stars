@@ -12,6 +12,7 @@ import priority.PriorityAdmission;
 import priority.PriorityTreatment;
 
 import java.sql.SQLException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -41,13 +42,24 @@ public class CreateHospital {
         System.out.println();
         System.out.println("Enter the number you would like in your hospital:");
         System.out.println();
-        num_patients = option.nextInt();
+        int num_patients_temp;
+        try {
+            num_patients_temp = option.nextInt();
+        } catch (Exception e) {
+            num_patients_temp = -1;
+        }
+        num_patients = num_patients_temp;
         System.out.println();
+        System.out.println("Generation your new hospital please wait...");
         option.nextLine();
 
         //Initialize Hospital
-        ArrayList<Patient> patients = PatientsFactory.createPatients(num_patients);
-        ArrayList<Doctor> doctors = DoctorsFactory.createDoctors();
+        ArrayList<Patient> patients = null;
+        ArrayList<Doctor> doctors = null;
+        if (num_patients >= 0) {
+            patients = PatientsFactory.createPatients(num_patients);
+            doctors = DoctorsFactory.createDoctors();
+        }
 
         if(!database.listHospitals().contains(name)) {
             database.createHospital(name);

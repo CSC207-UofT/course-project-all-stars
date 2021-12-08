@@ -39,7 +39,11 @@ public class Treat {
             int choice;
             while(true){
                 Scanner option = new Scanner(System.in);
-                choice = option.nextInt();
+                try {
+                    choice = option.nextInt();
+                } catch (Exception e) {
+                    choice = -1;
+                }
                 if((choice > 3 || choice < 1)){
                     System.out.println("Invalid Input!");
                 }
@@ -57,7 +61,11 @@ public class Treat {
                 int choice2;
                 while(true){
                     Scanner option = new Scanner(System.in);
-                    choice2 = option.nextInt();
+                    try {
+                        choice2 = option.nextInt();
+                    } catch (Exception e) {
+                        choice2 = -1;
+                    }
                     if((choice2 > 2 || choice2 < 1)){
                         System.out.println("Invalid Input!");
                     }
@@ -79,7 +87,11 @@ public class Treat {
                     int choice4;
                     while(true){
                         Scanner option = new Scanner(System.in);
-                        choice4 = option.nextInt();
+                        try {
+                            choice4 = option.nextInt();
+                        } catch (Exception e) {
+                            choice4 = -1;
+                        }
                         if((choice4 > 2 || choice4 < 1)){
                             System.out.println("Invalid Input!");
                             System.out.println();
@@ -105,7 +117,11 @@ public class Treat {
                     int choice3;
                     while(true){
                         Scanner option = new Scanner(System.in);
-                        choice3 = option.nextInt();
+                        try {
+                            choice3 = option.nextInt();
+                        } catch (Exception e) {
+                            choice3 = -3;
+                        }
                         if((choice3 > 2 || choice3 < 1)){
                             System.out.println();
                             System.out.println("Invalid Input!");
