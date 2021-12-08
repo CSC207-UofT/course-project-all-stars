@@ -33,5 +33,6 @@ public class Diagnosis {
                 break;
             }
         }
+        p.setDiagnose("No known disease");
     }
 }

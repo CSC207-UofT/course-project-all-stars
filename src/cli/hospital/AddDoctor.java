@@ -29,10 +29,12 @@ public class AddDoctor {
         System.out.println();
         name = option.nextLine();
         System.out.println();
+        System.out.println("Enter Doctor Id Number:");
+        System.out.println();
+
         int id_temp;
         while (true) {
-            System.out.println("Enter Doctor Id Number:");
-            System.out.println();
+            option = new Scanner(System.in);
             try {
                 id_temp = option.nextInt();
                 break;
@@ -51,10 +53,12 @@ public class AddDoctor {
         option.nextLine();
         sex = option.next();
         System.out.println();
+        System.out.println("Enter Age:");
+        System.out.println();
+
         int age_temp;
         while (true) {
-            System.out.println("Enter Age:");
-            System.out.println();
+            option = new Scanner(System.in);
             try {
                 age_temp = option.nextInt();
                 break;
@@ -73,13 +77,8 @@ public class AddDoctor {
 
         Doctor doctor = DoctorsFactory.doctorCreator(specialization, name, address, sex, id, age);
         database.writeDoctorData(hospital.getName(), doctor);
-        hospital.getDoctorsList().add(doctor);
-
-        if(hospital.getDoctorsList().contains(doctor)) {
-            System.out.println("Doctor Added Successfully");
-        }
-        else
-            System.out.println("404. Ops Something went wrong.");
+        String message = hospital.hireDoctor(doctor);
+        System.out.println(message);
     }
 
 }

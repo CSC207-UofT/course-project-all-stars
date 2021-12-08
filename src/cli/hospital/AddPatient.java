@@ -32,15 +32,17 @@ public class AddPatient {
         System.out.println();
         name = option.nextLine();
         System.out.println();
+        System.out.println("Enter Patient Id Number:");
+        System.out.println();
         int id_temp;
         while (true) {
-            System.out.println("Enter Patient Id Number:");
-            System.out.println();
+            option = new Scanner(System.in);
             try {
                 id_temp = option.nextInt();
                 break;
             } catch (Exception e) {
                 System.out.println("Not a valid Id Number (Ids must be integers)");
+                System.out.println();
             }
         }
         id = id_temp;
@@ -55,21 +57,34 @@ public class AddPatient {
         sex = option.next();
         System.out.println();
         int age_temp;
+        System.out.println("Enter Age:");
+        System.out.println();
         while (true) {
-            System.out.println("Enter Age:");
-            System.out.println();
+            option = new Scanner(System.in);
             try {
                 age_temp = option.nextInt();
                 break;
             } catch (Exception e) {
                 System.out.println("Not a valid age (ages must be integers)");
+                System.out.println();
             }
         }
         age = age_temp;
         System.out.println();
         System.out.println("Enter Health:");
         System.out.println();
-        health = option.nextInt();
+        int health_temp;
+        while (true) {
+            option = new Scanner(System.in);
+            try {
+                health_temp = option.nextInt();
+                break;
+            } catch (Exception e) {
+                System.out.println("Not a valid age (ages must be integers)");
+                System.out.println();
+            }
+        }
+        health = health_temp;
         System.out.println();
         System.out.println("Does the Patient have Insurance(y/n):");
         System.out.println();
