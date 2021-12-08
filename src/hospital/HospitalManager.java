@@ -8,11 +8,15 @@ public class HospitalManager {
     /*
     Manages Multiple Hospitals
     */
-    ArrayList<Hospital> hospitals;
+    private ArrayList<Hospital> hospitals;
+
+    public HospitalManager(){
+
+    }
 
     public String addHospital(Hospital hospital){
         //Add Hospital to HospitalManager arraylist of Hospitals
-        hospitals.add(hospital);
+        this.hospitals.add(hospital);
         return hospital.getName() + " has been added to this Hospital network.";
     }
 
@@ -29,7 +33,6 @@ public class HospitalManager {
 
     public String transferPatient(Hospital from, Hospital to,  int patientID){
         //Transfers patient with patientID from from hospital to to hospital
-
         Patient p = from.dischargePatient(patientID);
         if(p != null){
             to.admitPatient(p);

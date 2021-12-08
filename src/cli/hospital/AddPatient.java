@@ -32,9 +32,18 @@ public class AddPatient {
         System.out.println();
         name = option.nextLine();
         System.out.println();
-        System.out.println("Enter Patient Id Number:");
-        System.out.println();
-        id = option.nextInt();
+        int id_temp;
+        while (true) {
+            System.out.println("Enter Patient Id Number:");
+            System.out.println();
+            try {
+                id_temp = option.nextInt();
+                break;
+            } catch (Exception e) {
+                System.out.println("Not a valid Id Number (Ids must be integers)");
+            }
+        }
+        id = id_temp;
         System.out.println();
         System.out.println("Enter Address:");
         System.out.println();
@@ -45,9 +54,18 @@ public class AddPatient {
         option.nextLine();
         sex = option.next();
         System.out.println();
-        System.out.println("Enter Age:");
-        System.out.println();
-        age = option.nextInt();
+        int age_temp;
+        while (true) {
+            System.out.println("Enter Age:");
+            System.out.println();
+            try {
+                age_temp = option.nextInt();
+                break;
+            } catch (Exception e) {
+                System.out.println("Not a valid age (ages must be integers)");
+            }
+        }
+        age = age_temp;
         System.out.println();
         System.out.println("Enter Health:");
         System.out.println();

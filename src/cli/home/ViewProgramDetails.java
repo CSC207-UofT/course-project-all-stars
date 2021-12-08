@@ -30,7 +30,11 @@ public class ViewProgramDetails {
         int choice;
         while (true) {
             Scanner option = new Scanner(System.in);
-            choice = option.nextInt();
+            try {
+                choice = option.nextInt();
+            } catch (Exception e) {
+                choice = -1;
+            }
             if ((choice != 1)) {
                 System.out.println("Invalid Input!");
             } else

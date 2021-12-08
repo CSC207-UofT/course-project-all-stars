@@ -53,7 +53,11 @@ public class ManageHospital {
         int choice2;
         while (true) {
             Scanner option = new Scanner(System.in);
-            choice2 = option.nextInt();
+            try {
+                choice2 = option.nextInt();
+            } catch (Exception e) {
+                choice2 = -1;
+            }
             if ((choice2 != 1)) {
                 System.out.println("Invalid Input!");
             } else

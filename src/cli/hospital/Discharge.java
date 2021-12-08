@@ -17,14 +17,13 @@ public class Discharge {
 
     public Discharge(Hospital hospital)  {
         Discharge.hospital = hospital;
-
     }
 
     public static void discharge() throws SQLException {
 
         ArrayList<Patient> admittedPatients = hospital.getPriorityTreatment().show_patientList();
-        ArrayList<Patient> treatedPatients = new ArrayList<Patient>();
-        ArrayList<Integer> treated_patient_id = new ArrayList<Integer>();
+        ArrayList<Patient> treatedPatients = new ArrayList<>();
+        ArrayList<Integer> treated_patient_id = new ArrayList<>();
         HospitalCloudInterface database = new HospitalDatabaseCloud();
 
         // If no patients available to treat
@@ -37,7 +36,11 @@ public class Discharge {
             while (true) {
                 Scanner option = new Scanner(System.in);
                 System.out.println("Select your option:");
-                choice = option.nextInt();
+                try {
+                    choice = option.nextInt();
+                } catch (Exception e) {
+                    choice = -1;
+                }
                 if ((choice != 1)) {
                     System.out.println("Invalid Input!");
                     System.out.println();
@@ -66,7 +69,11 @@ public class Discharge {
         while (true) {
             Scanner option = new Scanner(System.in);
             System.out.println();
-            choice = option.nextInt();
+            try {
+                choice = option.nextInt();
+            } catch (Exception e) {
+                choice = -1;
+            }
             if(choice == 0){
                 HospitalHomepage.home();
             }
@@ -87,7 +94,11 @@ public class Discharge {
         System.out.println("1. Go Home");
         while (true) {
             Scanner option2 = new Scanner(System.in);
-            choice = option2.nextInt();
+            try {
+                choice = option2.nextInt();
+            } catch (Exception e) {
+                choice = -1;
+            }
             if ((choice != 1)) {
                 System.out.println();
                 System.out.println("Invalid Input!");
