@@ -9,12 +9,8 @@ public class Orthopedist extends Doctor {
     //constructor
     public Orthopedist(int id, String name, String address, String sex, int age){
         super(id, name, address, sex, age);
-        specialization = "Orthopedist";
+        setSpecialization("Orthopedist");
         can_cure.add("Arthritis");
         can_cure.add("Fibromyalgia");
-    }
-    //getter method
-    public String getSpecialization() {
-        return specialization;
     }
 }

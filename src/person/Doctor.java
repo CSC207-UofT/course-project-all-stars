@@ -24,8 +24,8 @@ public class Doctor extends Person {
             "Hemorrhoids", "Decubitus Ulcer", "Celiac Disease"));
 
     final int max_patients = 25;
-    ArrayList<Patient> patients = new ArrayList<Patient>();
-    public String specialization;
+    private ArrayList<Patient> patients = new ArrayList<>();
+    private String specialization;
 
     public Doctor(int id, String name, String address, String sex, int age) {
         super(id, name, address, sex, age);
@@ -66,7 +66,11 @@ public class Doctor extends Person {
 
     public void assignPatient(Patient p){
         //Assigns Patient p to the doctor's patient list
-        patients.add(p);
+        this.patients.add(p);
+    }
+
+    public void setSpecialization(String specialization){
+        this.specialization = specialization;
     }
 
 }

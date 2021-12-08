@@ -13,14 +13,8 @@ public class Neurologist extends Doctor {
     //constructor method
     public Neurologist(int id, String name, String address, String sex, int age) {
         super(id, name, address, sex, age);
-        specialization = "Neurologist";
-
+        setSpecialization("Neurologist");
         can_cure.add("Meningitis");
         can_cure.add("Depression");
-    }
-
-    //getter method
-    public String getSpecialization() {
-        return specialization;
     }
 }

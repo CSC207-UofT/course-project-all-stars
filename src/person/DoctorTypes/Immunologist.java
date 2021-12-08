@@ -7,13 +7,8 @@ public class Immunologist extends Doctor {
 
     public Immunologist(int id, String name, String address, String sex, int age) {
         super(id, name, address, sex, age);
-        specialization = "Immunologist";
+        setSpecialization("Immunologist");
         can_cure.add("Anaphylaxis");
         can_cure.add("Covid");
-    }
-
-    //getter method
-    public String getSpecialization() {
-        return specialization;
     }
 }

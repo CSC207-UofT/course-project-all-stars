@@ -8,17 +8,12 @@ public class Rheumatologist extends Doctor {
     //constructor
     public Rheumatologist(int id, String name, String address, String sex, int age) {
         super(id, name, address, sex, age);
-        specialization = "Rheumatologist";
-        can_cure.add("Tuberculosis");
+        setSpecialization("Rheumatologist");
         can_cure.add("Bronchitis");
         can_cure.add("Fibromyalgia");
         can_cure.add("Strep Throat");
         can_cure.add("Asthma");
         can_cure.add("Upper Respiratory Infection");
         can_cure.add("Pneumonia");
-    }
-    //getter method
-    public String getSpecialization() {
-        return specialization;
     }
 }
