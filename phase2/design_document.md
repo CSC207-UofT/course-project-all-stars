@@ -13,7 +13,7 @@ After phase 1, the group made the _tough decision_ to opt for a **sophisticated 
 
 One of the most important adjustments in Phase 2 was the addition of **more** **functionality** **related to** **increasing** **scope** related to expanding **support for multi-hospital networks**. With that in mind, we previously sought to **separate trivial CLI responsibilities**. The CLI package now contains a separate set of controllers and presenters. This was achieved by using the **Facade Design Pattern** described in the latter part of the document.
 
-In this vein, we have worked on separating responsibilities of our previously trivial CLI. Our Simulation package now contain a set of separate controllers and presenters. This was **achievable through** the application of the **Facade Design Pattern**, which will be discussed in the latter part of the document. However, we ended up fending off different design patterns inclusive of **Factory** **Design Pattern** due to having more than one variation of the same object.
+In this vein, we have worked on separating responsibilities of our previously trivial CLI. Our cli package now contain a set of separate controllers and presenters. This was **achievable through** the application of the **Facade Design Pattern**, which will be discussed in the latter part of the document. However, we ended up fending off different design patterns inclusive of **Factory** **Design Pattern** due to having more than one variation of the same object.
 
 **All the above** will be **discussed in depth** throughout the rest of the design document in each of _its respective section_.
 
