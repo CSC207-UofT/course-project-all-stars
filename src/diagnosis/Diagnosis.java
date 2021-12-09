@@ -33,6 +33,8 @@ public class Diagnosis {
                 break;
             }
         }
-        p.setDiagnose("No known disease");
+        if (p.getDiagnose().equals("Not Yet Diagnosed")) {
+            p.setDiagnose("No known disease");
+        }
     }
 }
