@@ -1,3 +1,22 @@
+# Overview
+	A description of any major design decisions your group has made (along with brief explanations of why you made them).
+
+The status of all subsequent important design decisions is **approved**, **finalized**, and **passed** to the repository by **all** group members. In the following paragraphs, we can speak the _problems_ that inspired our _decisions_, the _modifications_ we've proposed and implemented, as well as their _implications_.
+
+As a result of the **package improvements** from Phase 1, we were able to repurpose many aspects of the program's functionality and design. Most of these are extensions of previous use cases, controllers, and interfaces built in the previous phase, which makes packaging much easier.
+
+The **primary end user** is now the **hospital administrator** instead of _doctors_ -as was the case in previous phases. The **overall purpose** of the program now is to **enable hospital administrators** to better _manage medical professionals_ and _their patients_ in order to **diagnose** and **treat** various ailments more _efficiently_ until **discharge**.
+
+The **Early Diagnosis** feature is now used as a **guide** for **administrators** to **designate an** appropriate **specialist,** rather than a **conclusion that** doctors **themselves can use.** This **is because** building a diagnostic tool required an engine based on natural language processing and machine learning libraries that were difficult to plug into Java programs without using Jython (a Python implementation for Java). To _mitigate the impact_ of a diagnosis engine absence while **maintaining** **accuracy** and **precision**, 240 data points(conditions and their three respective symptoms) were added from **UMLS** or Unified Medical Language System and manually **matched with physicians** of various specialties.
+
+After phase 1, the group made the _tough decision_ to opt for a **sophisticated CLI** over a _web application_ due to the **time and know-how constraints** of the Spring framework. This is to allow the team to **add functionality** while having our main concern and **emphasis be on the design** of the overall program rather than _creating exceptional UI_. Despite concerns regarding the application of the **Seven Design Principles**, which will be discussed in detail in the Accessibility report, this has been the **best course of action** at this **stage of development**.
+
+One of the most important adjustments in Phase 2 was the addition of **more** **functionality** **related to** **increasing** **scope** related to expanding **support for multi-hospital networks**. With that in mind, we previously sought to **separate trivial CLI responsibilities**. The CLI package now contains a separate set of controllers and presenters. This was achieved by using the **Facade Design Pattern** described in the latter part of the document.
+
+In this vein, we have worked on separating responsibilities of our previously trivial CLI. Our Simulation package now contain a set of separate controllers and presenters. This was **achievable through** the application of the **Facade Design Pattern**, which will be discussed in the latter part of the document. However, we ended up fending off different design patterns inclusive of **Factory** **Design Pattern** due to having more than one variation of the same object.
+
+**All the above** will be **discussed in depth** throughout the rest of the design document in each of _its respective section_.
+
 
 # SOLID
 	A brief description of how your project is consistent with the SOLID design principles (if you notice a violation and aren't sure how to fix it, talk about that too!)
@@ -20,7 +39,7 @@ The Interface Segregation Principle states that interfaces should be kept small 
 >**Dependency Inversion Principle (DIP):**
 
 The Dependency Inversion Principle states that the inner layers of the program should not depend on the outer layers of the program. We have incorporated this principle in our program by creating interfaces as an abstraction layer. For example, the PatientArrayList class interacts with the DataInterfaceCloud interface, which is overridden by the PatientDatabaseCloud class.
-
+**![](https://lh6.googleusercontent.com/tsx7-LjkFeZ0PkJ865nkVM-TfMJ9DNNgnZOaKCTy50O6PjwqDkVP5Gc-Zlx6mddf0jfnHtywumX_fLbYfC3xZqyIueTIBW2OYXWA_opPglvKb3pS5fZeVd5cmq0wLaY18A2z8hNz)**
 # **Clean Architecture**
 	A brief description of how your project adheres to Clean Architecture (if you notice a violation and aren't sure how to fix it, talk about that too!)
 
