@@ -16,12 +16,12 @@ The end users have the option to navigate across all different homepages of the 
 > - The ViewProgramDetails option presents general information about the program 
 > - Integrated Cloud SQL Database
 
-### The doctor should be able to do interact with the following options in the hospital homepage:
+### The administrators should be able to do interact with the following options in the hospital homepage:
 
-> - The Treat Patient option should allow the doctor to diagnose and either admit or send the patient home, 
+> - The Treat Patient option should allow the administrator to diagnose and either admit or send the patient home, 
     then move on to the next patient.
 > - The Discharge Patient option should delete the patient that is sent home.
-> - The Add Patient option provides doctors with the ability to create a new instance
+> - The Add Patient option provides administrators with the ability to create a new instance
     of the Patient class.
 > - The Add Doctor option provides administrators with the ability to create a new instance
     of the Patient class.
