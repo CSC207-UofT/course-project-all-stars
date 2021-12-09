@@ -18,4 +18,4 @@ Public IP Address: 34.121.72.40
 Connection Name: stone-dispatch-334004:us-central1:hospitaldatabase
 
 ## Last Release
-Latest Release (November 15, 2021): v1.2.0
+Latest Release (December 8, 2021): v2.0.0
