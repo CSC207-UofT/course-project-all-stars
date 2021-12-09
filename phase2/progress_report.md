@@ -79,9 +79,11 @@ to software design concepts and how we incorporated them in our code.
 
 https://github.com/CSC207-UofT/course-project-all-stars/pull/28
 
-The pull request for the Design branch demonstrates that Roa has contributed to the team’s 
-codebase. This pull request added extra concepts, diseases and symptoms, to the database 
+https://github.com/CSC207-UofT/course-project-all-stars/pull/36
+
+Both pull requests on the Design branch demonstrate that Roa has contributed to the team’s 
+codebase. These pull requests added extra concepts, diseases and symptoms, to the database 
 as well extra functionality to the program by matching specialisations to the new diseases. 
-Thus, it allows the higher-level class Doctor to cure diseases without redundancy that would 
-be violating the Liskov Substitution Principle. In addition, the pull request contains the 
+Hence, this allows the higher-level class Doctor to cure diseases without redundancy that would 
+be violating the Liskov Substitution Principle. In addition, the pull requests contain the 
 aforementioned design document contributions.
