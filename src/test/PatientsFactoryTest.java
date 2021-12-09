@@ -23,11 +23,15 @@ public class PatientsFactoryTest {
     public void testPatientsAreDistinct() throws SQLException {
         Boolean  equalPatients = false;
         ArrayList<Patient> arrayOfTenPatients = PatientsFactory.createPatients(200);
-        for(Patient patient:arrayOfTenPatients){
-            for(Patient secondPatient:arrayOfTenPatients){
-                if(patient.equals(secondPatient) && arrayOfTenPatients.indexOf(patient) ==
-                        arrayOfTenPatients.indexOf(secondPatient)){
-                    equalPatients = true;
+        for(int i = 0; i < arrayOfTenPatients.size(); i++){
+            for(int j = 0; j < arrayOfTenPatients.size(); j++){
+                if (i != j) {
+                    Patient firstPatient = arrayOfTenPatients.get(i);
+                    Patient secondPatient = arrayOfTenPatients.get(j);
+                    if(firstPatient.equals(secondPatient) && arrayOfTenPatients.indexOf(firstPatient) ==
+                            arrayOfTenPatients.indexOf(secondPatient)){
+                        equalPatients = true;
+                    }
                 }
             }
         }

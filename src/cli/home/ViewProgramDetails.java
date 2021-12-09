@@ -18,8 +18,8 @@ public class ViewProgramDetails {
 
         System.out.println();
         System.out.println("The Hospital Management System designed by All Stars, is a state of the art patient " +
-                "managemnet and diagnosis system for Hospitals and Doctors across the board designed for \n" +
-                "improving their operational effecincy and reducing costs by automating patient managemnet. ");
+                "management and diagnosis system for Hospitals and Doctors across the board designed for \n" +
+                "improving their operational efficiency and reducing costs by automating patient management. ");
         System.out.println();
         System.out.println("Designed amd Created By: Ratantej, Roa, Alessandro, Ernest, Euan, Shysta, Justice");
         System.out.println();
