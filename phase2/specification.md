@@ -36,4 +36,4 @@ foundation year and patient capacity.
 - Covid-specific interface as a critical condition
 - Matching doctors in different specialisation with diseases they cure
 - Integrated cloud SQL Database
-- Patient triage
+- Patient triage using health points and insurance coverage
