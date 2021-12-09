@@ -1,7 +1,7 @@
 # Overview
 	A description of any major design decisions your group has made (along with brief explanations of why you made them).
 
-The status of all subsequent important design decisions is **approved**, **finalized**, and **passed** to the repository by **all** group members. In the following paragraphs, we can speak the _problems_ that inspired our _decisions_, the _modifications_ we've proposed and implemented, as well as their _implications_.
+The status of all subsequent important design decisions is **approved**, **finalized**, and **passed** to the repository by **all** group members. In the following paragraphs, we can discuss the _problems_ that inspired our _decisions_, the _modifications_ we've proposed and implemented, as well as their _implications_.
 
 As a result of the **package improvements** from Phase 1, we were able to repurpose many aspects of the program's functionality and design. Most of these are extensions of previous use cases, controllers, and interfaces built in the previous phase, which makes packaging much easier.
 
