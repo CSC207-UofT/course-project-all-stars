@@ -37,3 +37,6 @@ foundation year and patient capacity.
 - Matching doctors in different specialisation with diseases they cure
 - Integrated cloud SQL Database
 - Patient triage using health points and insurance coverage
+
+### Credits
+#### (c) Roa
